@@ -45,7 +45,7 @@
 
 </header>
 
-<section class="content">
+<section class="content d-none">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-10 mx-auto">
@@ -87,6 +87,33 @@
 	<section></section>
 
 	<section></section>
+
+<div class="popup">
+	<div class="close_popup">Закрыть</div>
+
+	<div class="wrap-selection">
+		<div class="selection">
+			<div class="">
+				<img src="/img/main/river.svg" alt="">
+				<p>River</p>
+			</div>
+		</div>
+
+		<div class="selection">
+			<div class="">
+				<img src="/img/main/sea.svg" alt="">
+				<p>Sea</p>
+			</div>
+		</div>
+
+		<div class="selection">
+			<div class="">
+				<img src="/img/main/gulf.svg" alt="">
+				<p>Gulf</p>
+			</div>
+		</div>
+	</div>
+</div>
 
 	<footer>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
