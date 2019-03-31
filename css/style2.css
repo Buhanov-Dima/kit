@@ -1,0 +1,122 @@
+body {
+
+}
+header{
+	position: absolute;
+	width: 100%;
+	max-width: 1440px;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto; 
+	height: 300px;
+}
+@font-face {
+	font-family: "HelveticaNeueCyr";
+	src: url("/fonts/HelveticaNeueCyr-Roman.ttf");
+}
+@font-face {
+	font-family: "HelveticaNeueCyr-Med";
+	src: url("/fonts/HelveticaNeueCyr-Medium.ttf");
+}
+@font-face {
+	font-family: "Oswald";
+	src: url("/fonts/Oswaldregular.ttf");
+}
+a:link {text-decoration: none;}
+p {margin: 0;}
+.content{
+	padding-top: 55px;
+	max-width: 1440px;
+	margin: auto;
+	background: url('/img/bg/bg_main.png') no-repeat center;
+}
+.wrap_head
+{
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding-left:75px;
+	padding-top: 40px;
+}
+
+.menu
+{
+	position: relative;
+	margin-left: 10px;
+	flex-basis: 10%;
+}
+
+.menu a{
+	font-family: HelveticaNeueCyr;
+	font-size: 9px;
+	line-height: normal;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #3B4150;
+}
+.menu a::before
+{
+	content: '';
+	position: absolute;
+	background: url('/img/assets/menu.png') no-repeat;
+	width: 15px;
+	height: 13px;
+	left: -25px;
+	top: 7px;
+}
+
+.nmb_user_basket{
+	justify-content: flex-end;
+}
+.nmb_user_basket a{
+	display: inline-flex;
+	margin-left: 30px;
+}
+.logo{
+
+}
+.nmb_user_basket p{
+	font-family: HelveticaNeueCyr;
+	font-size: 11px;
+	line-height: normal;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #3B4150;
+	margin-right: 10px;
+}
+
+.main_h{
+	font-family: Oswald;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 144px;
+	line-height: 144px;
+	text-align: center;
+	letter-spacing: -5px;
+	text-transform: uppercase;
+	color: #D91F43;
+	margin-top: 102px;
+}
+
+.left_side{
+	display: inline-flex;
+	align-items: center;
+	position: absolute;
+	left: -72px;
+	top: 200px;
+	transform: rotate(-90deg);
+}
+.left_side a {
+	transform: rotate(90deg);
+	margin-right: 15px;
+}
+
+.left_side p{
+	font-family: HelveticaNeueCyr;
+	font-size: 9px;
+	line-height: normal;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #3B4150;
+}
