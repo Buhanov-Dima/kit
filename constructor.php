@@ -22,31 +22,35 @@
 		</div>
 	</div>
 </header>
-<section id="bg">
-	<div class="content line_process">
-		<div class="line_process">
-			<div class="plus" id="first_plus">
-				<img src="/img/constructor/plus.png" alt="plus">
-			</div>
-			<div class="line bigger"></div>
-			<div class="plus">
-				<img src="/img/constructor/plus.png" alt="plus">
-			</div>
-			<div class="line"></div>
-			<div class="plus">
-				<img src="/img/constructor/plus.png" alt="plus">
-			</div>
-			<div class="line"></div>
-			<div class="plus">
-				<img src="/img/constructor/plus.png" alt="plus">
-			</div>
-			<div class="line"></div>
-			<div class="plus">
-				<img src="/img/constructor/plus.png" alt="plus">
-			</div>
-			<div class="line bigger"></div>
-			<div class="dotes">
-				<img src="/img/constructor/dotes.png" alt="dotes">
+<section class="content" id="first_constructor">
+	<div class="conteiner">
+		<div class="row">
+			<div class="col-lg-10 mx-auto">
+				<div class="line_process">
+					<div class="plus" id="first_plus">
+						<img src="/img/constructor/plus.png" alt="plus">
+					</div>
+					<div class="line bigger"></div>
+					<div class="plus">
+						<img src="/img/constructor/plus.png" alt="plus">
+					</div>
+					<div class="line"></div>
+					<div class="plus">
+						<img src="/img/constructor/plus.png" alt="plus">
+					</div>
+					<div class="line"></div>
+					<div class="plus">
+						<img src="/img/constructor/plus.png" alt="plus">
+					</div>
+					<div class="line"></div>
+					<div class="plus">
+						<img src="/img/constructor/plus.png" alt="plus">
+					</div>
+					<div class="line bigger"></div>
+					<div class="dotes">
+						<img src="/img/constructor/dotes.png" alt="dotes">
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -57,7 +61,7 @@
 			<div id="three_div"><p>подставка</p></div>
 			<div id="four_div"><p>столешница</p></div>
 			<div id="five_div"><p>кухонный фартук</p></div>
-			<div id="six_div"><p>ваш кит	33 848 Р</p></div>
+			<div id="six_div"><p>ваш кит 33 848 Р</p></div>
 		</div>	
 	</div>
 	<div class="content choose">

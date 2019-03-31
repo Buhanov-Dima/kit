@@ -7,7 +7,7 @@ header{
 	top: 0;
 	left: 0;
 	right: 0;
-	margin: 0 auto; 	
+	margin: 55px auto 0; 
 }
 @font-face {
 	font-family: "HelveticaNeueCyr";
@@ -21,12 +21,8 @@ header{
 	font-family: "Oswald";
 	src: url("/fonts/Oswaldregular.ttf");
 }
-a:link {
-	text-decoration: none;
-}
-p {
-	margin: 0;
-}
+a:link {text-decoration: none;}
+p {margin: 0;}
 .content{
 	padding-top: 55px;
 	max-width: 1440px;
@@ -36,19 +32,16 @@ p {
 .wrap_head_white
 {
 	display: flex;
-	justify-content: left;
-	padding: 55px 75px;
-	padding-right: 0;	
-	padding-bottom: 0px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 60px;
 }
 
 .menu_white
 {
 	position: relative;
 	margin-left: 10px;
-	display: flex;
-	margin-top: 8px;
-	margin-right: 500px 
+	flex-basis: 10%;
 }
 
 .menu_white a{
@@ -57,45 +50,42 @@ p {
 	line-height: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color: #FFF;
+	color: #3B4150;
 }
 .menu_white a::before
 {
 	content: '';
 	position: absolute;
-	background: url('/img/constructor/menu.png') no-repeat;
+	background: url('/img/assets/menu.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
-	top: -2px;
-}
-.logo_white{
-	margin-right: 363px; 
-}
-.nmb_user_basket_white{	
-	display: flex;
-	justify-content: right;
-}
-.nmb_user_basket_white a{
+	top: 7px;
 }
 
-#first_link{
-	margin-right: 30px;
+.nmb_user_basket{
+	justify-content: flex-end;
 }
-.nmb_user_basket_white p{
+.nmb_user_basket a{
+	display: inline-flex;
+	margin-left: 30px;
+}
+.logo{
+
+}
+.nmb_user_basket p{
 	font-family: HelveticaNeueCyr;
 	font-size: 11px;
 	line-height: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color: #FFF;
-	margin-top: 8px;
-	margin-right: 31px;
-}		
+	color: #3B4150;
+	margin-right: 10px;
+}
 .content.line_process{
 	background: none;
 }
-#bg{
+#first_constructor{
 	margin-top: 0px;
 	height: 667px;
 	background: url('/img/constructor/bg.png') no-repeat center;	
