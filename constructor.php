@@ -23,9 +23,9 @@
 	</div>
 </header>
 <section class="content" id="first_constructor">
-	<div class="conteiner">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-10 mx-auto">
+			<div class="col-lg-12 mx-auto">
 				<div class="line_process">
 					<div class="plus" id="first_plus">
 						<img src="/img/constructor/plus.png" alt="plus">
@@ -52,17 +52,17 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-lg-12 mx-auto"><!--сделать на bootstrap-->
+					<div class="notes">
+						<div id="one_div"><p>кухонная мойка</p></div>
+						<div id="two_div"><p>разделочная доска</p></div>
+						<div id="three_div"><p>подставка</p></div>
+						<div id="four_div"><p>столешница</p></div>
+						<div id="five_div"><p>кухонный фартук</p></div>
+						<div id="six_div"><p>ваш кит 33 848 Р</p></div>
+					</div>	
+			</div>
 		</div>
-	</div>
-	<div class="content notes">
-		<div class="notes">
-			<div id="one_div"><p>кухонная мойка</p></div>
-			<div id="two_div"><p>разделочная доска</p></div>
-			<div id="three_div"><p>подставка</p></div>
-			<div id="four_div"><p>столешница</p></div>
-			<div id="five_div"><p>кухонный фартук</p></div>
-			<div id="six_div"><p>ваш кит 33 848 Р</p></div>
-		</div>	
 	</div>
 	<div class="content choose">
 		<div class="choose">
@@ -90,6 +90,16 @@
 	</div>
 	</div>
 </section>
+
+
+
+
+
+
+
+
+
+
 	<footer>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
