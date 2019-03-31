@@ -1,5 +1,4 @@
 body {
-
 }
 header{
 	position: absolute;
@@ -8,8 +7,7 @@ header{
 	top: 0;
 	left: 0;
 	right: 0;
-	margin: 0 auto; 
-	height: 300px;
+	margin: 0 auto; 	
 }
 @font-face {
 	font-family: "HelveticaNeueCyr";
@@ -23,100 +21,200 @@ header{
 	font-family: "Oswald";
 	src: url("/fonts/Oswaldregular.ttf");
 }
-a:link {text-decoration: none;}
-p {margin: 0;}
+a:link {
+	text-decoration: none;
+}
+p {
+	margin: 0;
+}
 .content{
 	padding-top: 55px;
 	max-width: 1440px;
 	margin: auto;
 	background: url('/img/bg/bg_main.png') no-repeat center;
 }
-.wrap_head
+.wrap_head_white
 {
 	display: flex;
 	justify-content: left;
-	align-items: center;
-	padding-left:75px;
-	padding-top: 40px;
+	padding: 55px 75px;
+	padding-right: 0;	
+	padding-bottom: 0px;
 }
 
-.menu
+.menu_white
 {
 	position: relative;
 	margin-left: 10px;
-	flex-basis: 10%;
+	display: flex;
+	margin-top: 8px;
+	margin-right: 500px 
 }
 
-.menu a{
+.menu_white a{
 	font-family: HelveticaNeueCyr;
 	font-size: 9px;
 	line-height: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color: #3B4150;
+	color: #FFF;
 }
-.menu a::before
+.menu_white a::before
 {
 	content: '';
 	position: absolute;
-	background: url('/img/assets/menu.png') no-repeat;
+	background: url('/img/constructor/menu.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
-	top: 7px;
+	top: -2px;
+}
+.logo_white{
+	margin-right: 363px; 
+}
+.nmb_user_basket_white{	
+	display: flex;
+	justify-content: right;
+}
+.nmb_user_basket_white a{
 }
 
-.nmb_user_basket{
-	justify-content: flex-end;
+#first_link{
+	margin-right: 30px;
 }
-.nmb_user_basket a{
-	display: inline-flex;
-	margin-left: 30px;
-}
-.logo{
-
-}
-.nmb_user_basket p{
+.nmb_user_basket_white p{
 	font-family: HelveticaNeueCyr;
 	font-size: 11px;
 	line-height: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color: #3B4150;
-	margin-right: 10px;
+	color: #FFF;
+	margin-top: 8px;
+	margin-right: 31px;
+}		
+.content.line_process{
+	background: none;
 }
-
-.main_h{
-	font-family: Oswald;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 144px;
-	line-height: 144px;
-	text-align: center;
-	letter-spacing: -5px;
-	text-transform: uppercase;
-	color: #D91F43;
-	margin-top: 102px;
+#bg{
+	margin-top: 0px;
+	height: 667px;
+	background: url('/img/constructor/bg.png') no-repeat center;	
 }
-
-.left_side{
-	display: inline-flex;
+.line_process{	
+	display: flex;
 	align-items: center;
-	position: absolute;
-	left: -72px;
-	top: 200px;
-	transform: rotate(-90deg);
+	padding-top:65px;
+	padding-left: 50px;
 }
-.left_side a {
-	transform: rotate(90deg);
-	margin-right: 15px;
+.plus{
+	display: block;
+	max-width: 10px;
+}
+#first_plus{
+	margin-right: 5px;	
+}
+.line	{
+	margin-top: 6px;
+	margin-left: 5px;
+	margin-right: 4px;	
+	height: 2px;
+	width: 230px;
+	background-color: rgb(115,117,122);
+}
+.line.bigger{
+	width: 224px;	
+}
+.dotes{
+	margin-left: -1px;	
+}
+.content.notes{
+	background: none;
+}
+.notes{
+	margin-top:-57px;	
+	padding-left: 29px;
+}
+.notes div{
+	display: inline-block;			
+	font-family: HelveticaNeueCyr;
+	font-size: 8px;
+	line-height: normal;
+	text-align: center;
+	letter-spacing: 1.3px;
+	text-transform: uppercase;
+	color: rgb(145,147,149);	
+}
+#one_div{
+	margin-right: 140px;
+}
+#two_div{
+	margin-right: 157px;
+}
+#three_div{
+	margin-right: 178px;
+}
+#four_div{
+	margin-right: 159px;
+}
+#five_div{
+	margin-right: 148px;
 }
 
-.left_side p{
+.content.choose{
+	background: none;
+}
+
+.choose{
+	margin-top: 4px;	
+	display: flex;
+	margin-left: 290px;	
+}
+.left_arrow{
+	margin-right: 66px;	
+}
+.name{
+	margin-top: -24px;
 	font-family: HelveticaNeueCyr;
-	font-size: 9px;
+	font-size: 18px;
+	color: rgb(145,147,149);
+	margin-right: 312px;
+}
+
+#name_name{
+	font-size: 36px;
 	line-height: normal;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: #3B4150;
+	font-weight: none;
+	color: white;
+	padding-bottom: 5px;
+}
+.colors{
+	margin-left: -3px;
+	margin-top: 12px;
+	display: flex;
+}
+
+.colors div{
+	margin-right: 13px;
+	border: 1px solid rgb(115,117,122);	
+	border-radius: 11px;
+	height: 22px;
+	width: 22px;
+}
+
+.colors div img{
+	margin-left: 2px;
+	margin-top: -10px;
+}
+
+#info{
+	margin-top: -20px;
+	margin-right: 67px;
+	color: rgb(145,147,149);	
+}
+#info p{
+	margin-top: 13px;
+	font-family: HelveticaNeueCyr;
+	font-size: 18px;
+	line-height: normal;
+	text-align: right;
 }
