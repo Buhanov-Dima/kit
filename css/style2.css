@@ -51,6 +51,7 @@ p {margin: 0;}
 	margin-left: 25px;
 	flex-basis: 13%;
 	margin-top: -16px;
+
 }
 .menu
 {
@@ -58,6 +59,7 @@ p {margin: 0;}
 	margin-left: 24px;
 	flex-basis: 13%;
 	margin-top: -15px;
+
 }
 
 .menu_white a{
@@ -67,6 +69,7 @@ p {margin: 0;}
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: white;
+
 }
 
 .menu a{
@@ -76,6 +79,7 @@ p {margin: 0;}
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: #3B4150;
+
 }
 
 .menu_white a::before{
@@ -91,7 +95,7 @@ p {margin: 0;}
 .menu a::before{
 	content: '';
 	position: absolute;
-	background: url('/img/assets/menu.png') no-repeat;
+	background: url('/img/constructor/menu.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
@@ -100,6 +104,7 @@ p {margin: 0;}
 
 .nmb_user_basket_white{
 	display: inline-flex;
+
 	justify-content: flex-end;
 	align-items: center;
 	margin-top: -10px;
@@ -107,10 +112,12 @@ p {margin: 0;}
 }
 .nmb_user_basket{
 	display: inline-flex;
+
 	justify-content: flex-end;
 	align-items: center;
 	margin-top: -10px;
 	margin-right: 4px;
+
 }
 .nmb_user_basket_white a{
 	margin-left: 30px;
@@ -137,12 +144,27 @@ p {margin: 0;}
 }
 
 .nmb_user_basket p{
+
+}
+.nmb_user_basket_white a{
+	margin-left: 30px;
+	margin-top: -2.5px;
+}
+.logo_white{
+	padding-top: 16px;
+}	
+.nmb_user_basket_white p{
+
 	font-family: HelveticaNeueCyr;
 	font-size: 11px;
 	line-height: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+
 	color: #3B4150;
+
+	color: white;
+
 	margin-top: 2px;
 }
 
@@ -287,7 +309,13 @@ p {margin: 0;}
 	margin-top: 67px;
 }
 
+
 #button_red_arrow{	
+	padding-top: 42px;
+	background: none;
+}
+
+#button_red_arrow{
 	padding-top: 42px;
 	background: none;
 
@@ -620,3 +648,4 @@ h1{
 }
 
 #price-range .ui-slider-handle {z-index: 1;}
+
