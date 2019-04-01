@@ -59,7 +59,6 @@ p {margin: 0;}
 	margin-left: 24px;
 	flex-basis: 13%;
 	margin-top: -15px;
-
 }
 
 .menu_white a{
@@ -95,7 +94,7 @@ p {margin: 0;}
 .menu a::before{
 	content: '';
 	position: absolute;
-	background: url('/img/constructor/menu.png') no-repeat;
+	background: url('/img/assets/menu.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
@@ -104,7 +103,6 @@ p {margin: 0;}
 
 .nmb_user_basket_white{
 	display: inline-flex;
-
 	justify-content: flex-end;
 	align-items: center;
 	margin-top: -10px;
@@ -112,7 +110,6 @@ p {margin: 0;}
 }
 .nmb_user_basket{
 	display: inline-flex;
-
 	justify-content: flex-end;
 	align-items: center;
 	margin-top: -10px;
@@ -127,9 +124,7 @@ p {margin: 0;}
 	margin-left: 30px;
 	margin-top: -2.5px;
 }
-.logo_white{
-	padding-top: 16px;
-}
+
 .logo{
 	padding-top: 16px;
 }	
@@ -144,17 +139,6 @@ p {margin: 0;}
 }
 
 .nmb_user_basket p{
-
-}
-.nmb_user_basket_white a{
-	margin-left: 30px;
-	margin-top: -2.5px;
-}
-.logo_white{
-	padding-top: 16px;
-}	
-.nmb_user_basket_white p{
-
 	font-family: HelveticaNeueCyr;
 	font-size: 11px;
 	line-height: normal;
@@ -162,11 +146,11 @@ p {margin: 0;}
 	text-transform: uppercase;
 
 	color: #3B4150;
-
-	color: white;
-
 	margin-top: 2px;
 }
+.logo_white{
+	padding-top: 16px;
+}	
 
 .content.line_process{
 	background: none;
