@@ -19,9 +19,18 @@ header{
 	src: url("/fonts/HelveticaNeueCyr-Medium.ttf");
 }
 @font-face {
+	font-family: "HelveticaNeueCyr-Bold";
+	src: url("/fonts/HelveticaNeueCyr-Bold.ttf");
+}
+@font-face {
 	font-family: "Oswald";
 	src: url("/fonts/Oswaldregular.ttf");
 }
+@font-face {
+	font-family: "Oswald_extra";
+	src: url("/fonts/Oswaldextralight.ttf");
+}
+
 a:link {text-decoration: none;}
 p {margin: 0;}
 .content{
@@ -347,3 +356,128 @@ p {margin: 0;}
 	transform: rotate(-45deg);
 }
 
+.m_h2 span{
+	font-family: Oswald_extra;
+	font-style: normal;
+	font-size: 48px;
+	line-height: 53px;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+	color: #D91F43;
+}
+
+.m_h2 {
+	margin-top: 77px;
+	font-family: Oswald;
+	font-style: normal;
+	font-size: 48px;
+	line-height: 53px;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+	color: #3B4150;
+}
+
+.m2_img img{
+	max-width: 736px;
+}
+
+.m2_info{
+	width: 42px;
+	height: 42px;
+	background-color: #D91F43;
+	border-radius: 50%;
+	box-shadow: 0px 10px 20px rgba(217, 31, 67, 0.4);
+	position: relative;
+	cursor: pointer;
+	position: absolute;
+	left: 500px;
+	transition: ease-in .5s;
+/*	transform: matrix(-1, 0, 0, 1, 0, 0);*/
+}
+
+.m2_info::before{
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 2px;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.m2_info::after{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 12px;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.m2_txt{
+	position: absolute;
+    top: -233px;
+    left: -228px;
+	width: 270px;
+	height: 262px;
+	background: #D91F43;
+	border-radius: 3px;
+	text-align: left;
+	padding: 11px 20px;
+	transform: rotate(-45deg);
+	opacity: 0;
+	transition: ease-in .5s;
+}
+.m2_info.active {
+	display: block;
+	transform: rotate(45deg);
+
+}
+.m2_info.active .m2_txt{
+    top: -233px;
+    left: -228px;
+    opacity: 1;
+}
+.m2_txt::before{
+	content: '';
+	position: absolute;
+	top: 65px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #3B4150;
+	opacity: 0.2;
+}
+
+.m2_txt span{
+	font-family: HelveticaNeueCyr;
+	font-size: 10px;
+	line-height: normal;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #F7748E;
+}
+
+.m2_txt h4{
+	font-family: HelveticaNeueCyr-Bold;
+	font-size: 17px;
+	line-height: normal;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.m2_txt p{
+	margin-top: 19px;
+	width: 230px;
+	height: 162px;
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 18px;
+	color: #FFFFFF;
+}

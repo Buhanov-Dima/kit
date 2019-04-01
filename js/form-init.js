@@ -1,4 +1,4 @@
-$(function() {
+﻿$(function() {
 
   var $amount = $('#amount');      // Кэшируем поле ввода для цены
   var $range = $('#price-range');  // Кэшируем элемент div для диапазона цен
