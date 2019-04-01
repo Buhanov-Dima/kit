@@ -412,3 +412,36 @@ footer{
 	margin-left: 59px;
 	flex-basis: 20.3%;
 }
+
+#second_constructor{
+	padding-top: 110px;
+	height: 667px;
+	background: url('/img/constructor/bg21.png') no-repeat center;
+}
+
+.wood{
+	margin-top: 63px;
+	font-family: HelveticaNeueCyr;
+	font-size: 18px;
+	color: rgb(145,147,149);
+	margin-left: 51px;
+
+}
+
+#wood_name{
+	font-size: 36px;
+	line-height: normal;
+	font-weight: none;
+	color: white;
+	padding-bottom: 5px;
+}
+
+#second_constructor .left_arrow{
+	text-align: right;
+	margin-right: -18px;
+	margin-top: 87px;
+}
+
+.wood:nth-child(2){ /*Нужно подвинуть строку с ценой*/ 
+	margin: 1px;
+}
