@@ -148,15 +148,15 @@
 						</div>
 					</div>
 					<div class="social_sites">
-						<div class="facebook">
+						<a class="facebook" href="#">
 							<img src="/img/constructor/facebook.png" alt="facebook">
-						</div>
-						<div class="instagram">
+						</a>
+						<a class="instagram" href="#">
 							<img src="/img/constructor/instagram.png" alt="instagram">
-						</div>
-						<div class="vk">
+						</a>
+						<a class="vk" href="#">
 							<img src="/img/constructor/vk.png" alt="vk">
-						</div>
+						</a>
 					</div>
 					<div class="sign">
 						<div class="up_sign">
@@ -165,9 +165,9 @@
 						<div class="down_sign">
 							<p>Получите возможность первыми узнавать о новостях и эксклюзивных предложениях</p>
 						</div>
-						<div class="email_form">
+						<form class="email_form">
 							<input type="email" placeholder="Email">
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>

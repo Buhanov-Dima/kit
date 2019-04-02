@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Kit Kraken</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
 	<link rel="stylesheet" href="/css/style2.css">
 </head>
 <body>
@@ -34,27 +35,113 @@
 					<div class="col-lg-12 mx-auto">
 						<h1>Коллекция кухонных моек и аксессуаров</h1>		
 					</div>
-					<div class="col-lg-3 waf">
+					<div class="col-lg-3 no-gutter lp-0">
 						<div class="left-side">
-							<h3>товары</h3>
+							<h3 class="labels">товары</h3>
 							<form class="radio">
-								<input type="radio"><br>
-								<input type="radio"><br>
-								<input type="radio"><br>
-								<input type="radio"><br>
-								<input type="radio">
+								<input type="radio" name="category" value="all" id="all">
+								<label for="all">Все</label><br>
+								<input type="radio" name="category" value="kitchen sink" id="kitchen sink">
+								<label for="kitchen sink">Кухонные мойки</label><br>
+								<input type="radio" name="category" value="board" id="board">
+								<label for="board">Разделочные доски</label><br>
+								<input type="radio" name="category" value="table top" id="table top">
+								<label for="table top">Столешницы</label><br>
+								<input type="radio" name="category" value="stand" id="stand">
+								<label for="stand">Подставки</label><br>
+								<input type="radio" name="category" value="wall apron" id="wall apron">
+								<label for="wall apron">Фартук</label>
 							</form>
-							<form>
-					        <p id="price">
-					          <label for="amount">Цена</label>
-					          <input type="text" id="amount" />
-					        </p>
-					        <div id="price-range"></div>
-					      </form>
+							<form id="polzun">
+					          <label class="labels">Цена</label><br>
+					          <div id="price-range"></div>
+					      	</form>
+					      	<p class="labels">Цвета</p>
+					      	<form id="choose_colors">
+					      		<div></div>
+					      		<div></div>
+					      		<div></div>
+					      		<div></div>
+					      		<div></div>
+					      	</form>
+					      	<div class="advanced_parameters">
+					      		<p>Дополнительные параметры</p>
+					      	</div>
+						</div>
+						<div id="back_to_constructor">
+							<p>Перейти в конструктор</p>
 						</div>
 					</div>	
-					<div class="col-lg-9 mx-auto">
-						
+					<div class="col-lg-9 mx-auto lp-0 rp-0">
+						<div class="col-lg-12 mx-auto lp-0 rp-0">
+							<div class="view-and-sort">
+								<div class="view">
+									<div id="viewing">
+										показать
+									</div>
+									<div id="nine">
+										9
+									</div>
+									<div id="eighteen">
+										18
+									</div>
+									<div id="thirty-six">
+										36
+									</div>
+								</div>
+								<div class="sort">
+									<div id="sorting">
+										сортировать
+									</div>
+									<div id="by_default">
+										по-умолчанию
+									</div>
+									<div id="by_increase">
+										возрастанию цены
+									</div>
+									<div id="by_decrease">
+										убыванию цены
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 mx-auto">
+							<div class="items">
+								<div class="row only_row">
+									<div class="col-lg-4 mx-auto">
+										<div class="item"></div>
+									</div>
+									<div class="col-lg-4 mx-auto">
+										<div class="item"></div>
+									</div>
+									<div class="col-lg-4 mx-auto">
+										<div class="item"></div>
+									</div>
+								</div>
+								<div class="row only_row">
+									<div class="col-lg-4 mx-auto">
+										<div class="item"></div>
+									</div>
+									<div class="col-lg-4 mx-auto">
+										<div class="item"></div>
+									</div>
+									<div class="col-lg-4 mx-auto">
+										<div class="item"></div>
+									</div>
+								</div>
+								<div class="row only_row">
+									<div class="col-lg-4 mx-auto">
+										<div class="item"></div>
+									</div>
+									<div class="col-lg-4 mx-auto">
+										<div class="item"></div>
+									</div>
+									<div class="col-lg-4 mx-auto">
+										<div class="item"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -94,15 +181,15 @@
 						</div>
 					</div>
 					<div class="social_sites">
-						<div class="facebook">
+						<a class="facebook" href="#">
 							<img src="/img/constructor/facebook.png" alt="facebook">
-						</div>
-						<div class="instagram">
+						</a>
+						<a class="instagram" href="#">
 							<img src="/img/constructor/instagram.png" alt="instagram">
-						</div>
-						<div class="vk">
+						</a>
+						<a class="vk" href="#">
 							<img src="/img/constructor/vk.png" alt="vk">
-						</div>
+						</a>
 					</div>
 					<div class="sign">
 						<div class="up_sign">
@@ -111,9 +198,9 @@
 						<div class="down_sign">
 							<p>Получите возможность первыми узнавать о новостях и эксклюзивных предложениях</p>
 						</div>
-						<div class="email_form">
+						<form class="email_form">
 							<input type="email" placeholder="Email">
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -121,8 +208,10 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script src="/js/jquery-1.11.0.min.js"></script>
-    	<script src="/js/jquery-ui.js"></script>
+    	<script
+			  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+			  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+			  crossorigin="anonymous"></script>
     	<script src="/js/main.js"></script>
 	</footer>
 </body>
