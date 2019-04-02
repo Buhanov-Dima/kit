@@ -22,7 +22,7 @@
 			</div>
 		</div>
 	</header>
-	<section class="content" id="first_constructor">
+	<section class="content" id="second_constructor">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-12 mx-auto">
@@ -64,16 +64,9 @@
 					</div>
 				</div>
 				<div class="col-lg-3 mx-auto">
-						<div class="name">
-							<p id="name_name">Sea</p>
-							<p>8 199 рублей</p>
-							<div class="colors">
-								<div></div>
-								<div><img src="/img/constructor/dark_blue.png" alt="dark_blue"></div>
-								<div><img src="/img/constructor/white.png" alt="white"></div>
-								<div><img src="/img/constructor/brown.png" alt="brown"></div>
-								<div><img src="/img/constructor/black.png" alt="black"></div>
-							</div>
+						<div class="wood">
+							<p id="wood_name">Дуб</p>
+							<p>2 400 рублей</p>
 						</div>
 				</div>
 				<div class="col-lg-3 mx-auto">
