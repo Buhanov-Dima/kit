@@ -465,7 +465,7 @@ footer{
 	margin-top: 91px;
 }
 
-.email_form>input{
+.email_form>input[type="email"]{
 	margin-top:33px;
 	background: transparent;
 	border: 1px solid rgba(255,255,255,0.3);
@@ -475,10 +475,12 @@ footer{
 	font-size: 14px;
 	line-height: 14px;
 	padding: 17px 19px;
-	width: 290px;
-	background: url('/img/constructor/right_arrow.png') no-repeat right 7% center;
+	padding-right:132px;
 }
-
+.email_form>input[type="image"]{
+	margin-left: -48px;
+	margin-top:54px;
+}
 .first_column{
 	margin-left: 59px;
 	flex-basis: 20.3%;

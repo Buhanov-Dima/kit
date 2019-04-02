@@ -311,8 +311,9 @@
 						<div class="down_sign">
 							<p>Получите возможность первыми узнавать о новостях и эксклюзивных предложениях</p>
 						</div>
-						<form class="email_form">
+						<form class="email_form" action="" method="post">
 							<input type="email" placeholder="Email">
+							<input type="image" src="img/constructor/right_arrow.png" alt="ok">
 						</form>
 					</div>
 				</div>
