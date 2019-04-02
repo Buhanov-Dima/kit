@@ -45,10 +45,10 @@
 
 </header>
 
-<section class="content d-none">
+<section id="b1" class="content">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-10 mx-auto">
+			<div class="col-lg-8 mx-auto">
 				<h1 class="main_h">Кварцевые<br>Моики</h1>
 			</div>
 			<div class="col-lg-5 mx-auto">
@@ -66,23 +66,33 @@
 </section>
 
 
-<section>
-	<div class="content">
+<section id="b2" class="content">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<h1 class="m_h2"><span>01.</span><br>Кварцевые<br>мойки</h1>
 					<div class="m2_img text-center">
 						<div class="m2_info">
+							<div id="btn_1" class="m2_txt">
+								<span>материал</span>
+								<h4>кварц</h4>
+								<p>Одно из направлений, в котором мы развиваемся сейчас — изготовление моек для кухонь. В нашей инновационной коллекции кухонных моек KitKraken мы объединили высокое качество, доступное благодаря нашей технической подготовке и европейский дизайн.</p>
+							</div>
+						</div>
+
+						<div id="btn_2" class="m2_info">
 							<div class="m2_txt">
 								<span>материал</span>
 								<h4>кварц</h4>
 								<p>Одно из направлений, в котором мы развиваемся сейчас — изготовление моек для кухонь. В нашей инновационной коллекции кухонных моек KitKraken мы объединили высокое качество, доступное благодаря нашей технической подготовке и европейский дизайн.</p>
 							</div>
 						</div>
-						<img src="/img/main/02.svg" alt="">
+						
+						<div class="wrap_img_cnt">
+							<img src="/img/main/02.svg" alt="">
+						</div>
 					</div>
-					<div class="kit_review">
+					<div class="kit_review right-side">
 						<a href="#">Выбрать мойку</a>
 						<a href="#">Перейти в каталог</a>
 						<a href="#">Собрать свой кит</a>
@@ -90,20 +100,156 @@
 				</div>
 			</div>
 		</div>
+</section>
+
+<section id="b3" class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="m_h2"><span>02.</span><br>Уникальный<br>дизайн</h1>
+					<div class="m2_img text-center">
+
+						<div id="btn_3" class="m2_info">
+							<div class="m2_txt">
+								<span>материал</span>
+								<h4>кварц</h4>
+								<p>Одно из направлений, в котором мы развиваемся сейчас — изготовление моек для кухонь. В нашей инновационной коллекции кухонных моек KitKraken мы объединили высокое качество, доступное благодаря нашей технической подготовке и европейский дизайн.</p>
+							</div>
+						</div>
+						
+						<div class="wrap_img_cnt">
+							<img src="/img/main/03.svg" alt="">
+						</div>
+					</div>
+					<div class="kit_review right-side">
+						<a href="#">Выбрать мойку</a>
+						<a href="#">Перейти в каталог</a>
+						<a href="#">Собрать свой кит</a>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+
+<section id="b4" class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="m_h2"><span>03.</span><br>Поместится<br>все</h1>
+					<div class="m2_img text-center">
+
+						<div id="btn_3" class="m2_info">
+							<div class="m2_txt">
+								<span>материал</span>
+								<h4>кварц</h4>
+								<p>Одно из направлений, в котором мы развиваемся сейчас — изготовление моек для кухонь. В нашей инновационной коллекции кухонных моек KitKraken мы объединили высокое качество, доступное благодаря нашей технической подготовке и европейский дизайн.</p>
+							</div>
+						</div>
+						
+						<div class="wrap_img_cnt">
+							<img src="/img/main/04.svg" alt="">
+						</div>
+					</div>
+					<div class="kit_review right-side">
+						<a href="#">Выбрать мойку</a>
+						<a href="#">Перейти в каталог</a>
+						<a href="#">Собрать свой кит</a>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+
+<section id="b5" class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="m_h2"><span>04.</span><br>Разделочная<br>доска</h1>
+					<div class="m2_img text-center">
+
+						<div id="btn_3" class="m2_info">
+							<div class="m2_txt">
+								<span>материал</span>
+								<h4>кварц</h4>
+								<p>Одно из направлений, в котором мы развиваемся сейчас — изготовление моек для кухонь. В нашей инновационной коллекции кухонных моек KitKraken мы объединили высокое качество, доступное благодаря нашей технической подготовке и европейский дизайн.</p>
+							</div>
+						</div>
+						
+						<div class="wrap_img_cnt">
+							<img src="/img/main/05.svg" alt="">
+						</div>
+					</div>
+					<div class="kit_review right-side">
+						<a href="#">Выбрать мойку</a>
+						<a href="#">Перейти в каталог</a>
+						<a href="#">Собрать свой кит</a>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+
+<section id="b6" class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="m_h2"><span>06.</span><br>Дополнительные<br>аксессуары</h1>
+					<div class="m2_img text-center">
+
+						<div id="btn_3" class="m2_info">
+							<div class="m2_txt">
+								<span>материал</span>
+								<h4>кварц</h4>
+								<p>Одно из направлений, в котором мы развиваемся сейчас — изготовление моек для кухонь. В нашей инновационной коллекции кухонных моек KitKraken мы объединили высокое качество, доступное благодаря нашей технической подготовке и европейский дизайн.</p>
+							</div>
+						</div>
+						
+						<div class="wrap_img_cnt">
+							<img src="/img/main/06.svg" alt="">
+						</div>
+					</div>
+					<div class="kit_review right-side">
+						<a href="#">Выбрать мойку</a>
+						<a href="#">Перейти в каталог</a>
+						<a href="#">Собрать свой кит</a>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+
+
+
+
+
+<section id="b7" class="content last">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto">
+				<h2 class="last_main_h">подберите свой кит</h2>
+
+				<p class="last_main_txt">Одно из направлений, в котором мы развиваемся сейчас — изготовление моек для кухонь. В нашей инновационной коллекции кухонных моек KitKraken мы объединили высокое качество, доступное благодаря нашей технической подготовке и европейский дизайн.</p>
+
+				<p id="showScroll"></p>
+			</div>
+
+		</div>
+	</div>
+	<div class="bg_last_main text-center">
+		<div class="wrap_img_m2">
+			<img src="/img/main/07.svg" alt="">
+		</div>
+		<div class="kit_review last">
+			<a href="#">Выбрать мойку</a>
+			<a href="#">Перейти в каталог</a>
+			<a href="#">Собрать свой кит</a>
+		</div>
 	</div>
 </section>
 
-	<section></section>
 
-	<section></section>
 
-	<section></section>
 
-	<section></section>
-
-	<section></section>
-
-	<section></section>
 
 <div class="popup d-none">
 	<div class="close_popup">Закрыть</div>
