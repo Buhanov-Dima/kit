@@ -25,17 +25,17 @@
 	</header>
 	<section>
 		<div class="content" id="catalog">
-				<div class="other_pages">
-					<p>Главная</p>
-					<p id="slash">\</p>
-					<p>Каталог</p>
-				</div>
+			<div class="other_pages">
+				<p>Главная</p>
+				<p id="slash">\</p>
+				<p>Каталог</p>
+			</div>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-12 mx-auto">
+					<div class="col-lg-12">
 						<h1>Коллекция кухонных моек и аксессуаров</h1>		
 					</div>
-					<div class="col-lg-3 no-gutter lp-0">
+					<div class="col-lg-3 lp-0">
 						<div class="left-side">
 							<h3 class="labels">товары</h3>
 							<form class="radio">
@@ -72,8 +72,8 @@
 							<p>Перейти в конструктор</p>
 						</div>
 					</div>	
-					<div class="col-lg-9 mx-auto lp-0 rp-0">
-						<div class="col-lg-12 mx-auto lp-0 rp-0">
+					<div class="col-lg-9 lp-0 rp-0">
+						<div class="col-lg-12 lp-0 rp-0">
 							<div class="view-and-sort">
 								<div class="view">
 									<div id="viewing">
@@ -105,42 +105,155 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-12 mx-auto">
+						<div class="col-lg-12 lp-0 rp-0">
 							<div class="items">
 								<div class="row only_row">
-									<div class="col-lg-4 mx-auto">
-										<div class="item"></div>
+									<div class="col-lg-4">
+										<div class="item river">
+											<img src="img/catalog/river.png" alt="river">
+											<div class="description">
+												<div class="model">
+													<p>модель</p>
+													<p>River</p>
+												</div>
+												<div class="cost">
+													<p>стоимость</p>
+													<p>7500 &#8381;</p>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="col-lg-4 mx-auto">
-										<div class="item"></div>
+									<div class="col-lg-4">
+										<div class="item duolake mar-lef">
+											<img src="img/catalog/duolake.png" alt="duolake">
+											<div class="description">
+												<div class="model">
+													<p>модель</p>
+													<p>Duolake</p>
+												</div>
+												<div class="cost">
+													<p>стоимость</p>
+													<p>7500 &#8381;</p>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="col-lg-4 mx-auto">
-										<div class="item"></div>
+									<div class="col-lg-4">
+										<div class="item gulf mar-lef">
+											<img src="img/catalog/gulf.png" alt="gulf">
+											<div class="description">
+												<div class="model">
+													<p>модель</p>
+													<p>Gulf</p>
+												</div>
+												<div class="cost">
+													<p>стоимость</p>
+													<p>7500 &#8381;</p>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="row only_row">
-									<div class="col-lg-4 mx-auto">
-										<div class="item"></div>
+									<div class="col-lg-4">
+										<div class="item sea mar-top">
+											<img src="img/catalog/sea.png" alt="sea">
+											<div class="description">
+												<div class="model">
+													<p>модель</p>
+													<p>Sea</p>
+												</div>
+												<div class="cost">
+													<p>стоимость</p>
+													<p>7500 &#8381;</p>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="col-lg-4 mx-auto">
-										<div class="item"></div>
+									<div class="col-lg-4">
+										<div class="item stream mar-top mar-lef">
+											<img src="img/catalog/stream.png" alt="stream">
+											<div class="description">
+												<div class="model">
+													<p>модель</p>
+													<p>Stream</p>
+												</div>
+												<div class="cost">
+													<p>стоимость</p>
+													<p>7500 &#8381;</p>
+												</div> 
+											</div>
+										</div>
 									</div>
-									<div class="col-lg-4 mx-auto">
-										<div class="item"></div>
+									<div class="col-lg-4">
+										<div class="item gulf-and-creek mar-top mar-lef">
+											<img src="img/catalog/gulf-and-creek.png" alt="gulf-and-creek">
+											<div class="description">
+												<div class="model">
+													<p>модель</p>
+													<p>Gulf &#38; Creek</p>
+												</div>
+												<div class="cost">
+													<p>стоимость</p>
+													<p>7500 &#8381;</p>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="row only_row">
-									<div class="col-lg-4 mx-auto">
-										<div class="item"></div>
+									<div class="col-lg-4">
+										<div class="item river mar-top">
+											<img src="img/catalog/river.png" alt="river">
+											<div class="description">
+												<div class="model">
+													<p>модель</p>
+													<p>River</p>
+												</div>
+												<div class="cost">
+													<p>стоимость</p>
+													<p>7500 &#8381;</p>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="col-lg-4 mx-auto">
-										<div class="item"></div>
+									<div class="col-lg-4">
+										<div class="item duolake mar-lef mar-top">
+											<img src="img/catalog/duolake.png" alt="duolake">
+											<div class="description">
+												<div class="model">
+													<p>модель</p>
+													<p>Duolake</p>
+												</div>
+												<div class="cost">
+													<p>стоимость</p>
+													<p>7500 &#8381;</p>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="col-lg-4 mx-auto">
-										<div class="item"></div>
+									<div class="col-lg-4">
+										<div class="item gulf mar-lef mar-top">
+											<img src="img/catalog/gulf.png" alt="gulf">
+											<div class="description">
+												<div class="model">
+													<p>модель</p>
+													<p>Gulf</p>
+												</div>
+												<div class="cost">
+													<p>стоимость</p>
+													<p>7500 &#8381;</p>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="show">
+							<p>показать еще</p>
 						</div>
 					</div>
 				</div>
