@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Kit Kraken</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	
 	<link rel="stylesheet" href="/css/style2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
 	<header>
@@ -61,25 +62,25 @@
 							<a href="#" id="instagram" class="hide"></a>
 						</div>
 					</div>
-					<div class="col-lg-6 mx-auto">
-						<div class="col-lg-2 mx-auto">
-							<p class="center-item">модель</p>
+					<div class="col-lg-6 mx-auto up-32 lp-0 rp-0">
+						<div class="row">
+							<div class="col-lg-2 mx-auto">
+								<p class="helvetica10UpCaseBDBDBD mb-10">модель</p>
+							</div>
 						</div>
-						<div class="col-lg-12">
-							<div class="row">
-								<div class="col-lg-1 mx-auto">
-									<img src="/img/item-card/left_arrow_black.png" alt="left-arrow">
-								</div>
-								<div class="col-lg-1 mx-auto">
-									<p class="center-item">Gult</p>
-								</div>
-								<div class="col-lg-1 mx-auto">
-									<img src="/img/item-card/right_arrow_black.png" alt="right-arrow">
-								</div>
+						<div class="row justify-content-center">
+							<div class="col-lg-1 mx-auto rp-0 lp2">
+								<img src="/img/item-card/left_arrow_black.png" alt="left-arrow">
+							</div>
+							<div class="col-lg-2">
+								<p class="helvetica24NoUpCaseBlack name-center">Gult</p>
+							</div>
+							<div class="col-lg-1 mx-auto lp-0">
+								<img src="/img/item-card/right_arrow_black.png" alt="right-arrow">
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12 mx-auto">
+							<div class="col-lg-3 mx-auto">
 								<div class="colors">
 									<div><img src="/img/item-card/dark-grey.png" alt="dark_grey"></div>
 									<div><img src="/img/constructor/dark_blue.png" alt="dark_blue"></div>
@@ -90,22 +91,26 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-10 mx-auto">
+							<div class="col-lg-9 mx-auto">
 								<img src="img/item-card/gult.png" alt="gult">
 							</div>
 						</div>
-						<div class="col-lg-2 mx-auto">
-							<p>цена</p>
-						</div>
 						<div class="row">
-							<div class="col-lg-3 mx-auto">
-								<p>18 999 рублей</p>
+							<div class="col-lg-2 mx-auto">
+								<p class="helvetica10UpCaseBDBDBD cost-center">цена</p>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12 mx-auto">
-								<div class="number-of-items"><p>1</p></div>
-								<div class="add-to-basket">добавить корзину</div>
+							<div class="col-lg-4 mx-auto">
+								<div class="down-item p-cost">
+									<p class="helvetica24NoUpCaseBlack">18 999 рублей</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 mx-auto down-item">
+								<div class="number-of-items helvetica14NoUpCaseBlack"><p>1</p></div>
+								<div class="add-to-basket"><p>добавить корзину</p></div>
 							</div>
 						</div>
 					</div>
@@ -113,10 +118,22 @@
 						
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="owl-carousel owl-theme">
+						  <div> Slide 1 </div>
+						  <div> Slide 2 </div>
+						  <div> Slide 3 </div>
+						  <div> Slide 4 </div>
+						  <div> Slide 5 </div>
+						  <div> Slide 6 </div>
+						  <div> Slide 7 </div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-	
 	<footer>
 		<div class="content" id="footer_item-card">
 			<div class="footer">
@@ -182,7 +199,8 @@
 			  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
 			  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
 			  crossorigin="anonymous"></script>
-    	<script src="/js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    	<script src="/js/main2.js"></script>
 	</footer>
 </body>
 </html>		
