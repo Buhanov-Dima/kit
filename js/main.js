@@ -15,13 +15,40 @@ $(function() {
       $right.val(ui.values[1]);
     }
   });
-  $amount                          // Устанавливаем начальные значения для amount
+  /*$amount                          // Устанавливаем начальные значения для amount
     .val($range.slider('values', 0)    // Нижняя граница, потом знак ₽
-    + ' - ' + $range.slider('values', 1)  ); // Верхняя граница, потом знак ₽
+    + ' - ' + $range.slider('values', 1)  ); // Верхняя граница, потом знак ₽*/
 
 });
+$('.button-share img[src="/img/item-card/share.png"]').on('mouseover', function(){
+	$(this).css("display","none");
+	$('.button-share img[src="/img/item-card/share_red.png"]').css("display", "block");
+});
+$('.button-share img[src="/img/item-card/share_red.png"]').on('mouseout', function(){
+	$(this).css("display","none");
+	$('.button-share img[src="/img/item-card/share.png"]').css("display", "block");
+});
 
+$('#item-card .colors div').on('mouseover', function(){
+	$(this).css("border","1px solid #3B4150");
+});
 
+$('#item-card .colors div').on('mouseout', function(){
+	$(this).css("border","1px solid rgba(59, 65, 80, .1)");
+});
+
+$('#item-card .colors div').on('click', function(){
+	if($(this).css("border","1px solid #3B4150")){
+		$(this).css("border","1px solid rgba(59, 65, 80, .1)");
+		$(this).on('mouseout');
+		$(this).on('mouseover');
+	}
+	if($(this).css("border","1px solid rgba(59, 65, 80, .1)")){
+	$(this).css("border","1px solid #3B4150");
+	$(this).off('mouseout');
+	$(this).off('mouseover');
+	}
+});
 //скрываем блок скролле, открываем нужный
 /*
 	var i = 0;

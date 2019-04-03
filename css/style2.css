@@ -264,6 +264,7 @@ p {margin: 0;}
 	border-radius: 11px;
 	height: 22px;
 	width: 22px;
+	cursor: pointer;
 }
 
 .colors div img{
@@ -560,8 +561,11 @@ h1{
 	font-size: 48px;
 	line-height: 53px;
 	text-align: center;
-	margin-bottom: 27px;
 	color: #3B4150;
+}
+
+#catalog h1{
+	margin-bottom: 27px;
 }
 
 .left-side{
@@ -767,6 +771,7 @@ p.labels {
 	margin-top: -2px;
 	border-bottom: 1px solid #EEF0F5;
 	margin-bottom: 39px;
+	margin-top: 10px;
 }
 
 .view{
@@ -864,13 +869,13 @@ p.labels {
 	background: linear-gradient(180deg, rgba(226, 239, 240, 0.3) 0%, #E2EFF0 100%);
 }
 
-.description{
+.card{
 	display: flex;
 	justify-content: space-between;	
 	margin-top: 5%;
 }
 
-.description div p:first-child{
+.card div p:first-child{
 	font-family: HelveticaNeueCyr;
 	font-size: 8px;
 	line-height: normal;
@@ -882,7 +887,7 @@ p.labels {
 	margin-bottom: 6px;
 }
 
-.description div p:last-child{
+.card div p:last-child{
 	font-family: HelveticaNeueCyr;
 	font-size: 22px;
 	line-height: normal;
@@ -914,3 +919,127 @@ p.labels {
 	box-shadow: 0px 10px 40px rgba(217, 31, 67, 0.5);
 }
 
+#footer_item-card{
+	margin-top: 1000px; 
+	background: none;
+}
+
+#item-card{
+	padding: 0 60px;
+	padding-top: 120px;
+}
+
+#item-card h1{
+	margin: 0;
+
+}
+
+.description{
+	max-width: 270px;
+	margin-bottom: 165px; 
+}
+
+.description h4{
+	font-family: HelveticaNeueCyr;
+	font-size: 10px;
+	line-height: normal;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #BDBDBD;
+	mix-blend-mode: normal;
+	margin-bottom: 18px;
+}
+.description p{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 24px;
+	color: #3B4150;
+}
+
+.left-picture{
+	margin-bottom: 31px;
+}
+
+.share{
+	display: flex;
+	align-items: center;
+}
+
+.share *{
+	width: 40px;
+	height: 40px;
+	border-radius:21px; 
+}
+.hide{
+	opacity: 0;
+}
+
+.share a{
+}
+
+#telegram{
+	background: #36ADE1 url("/img/item-card/telegram.png") 50% 50% no-repeat;
+}
+
+#whatsapp{
+	background: #00E676 url("/img/item-card/whatsapp.png") 50% 50% no-repeat;
+}
+
+#messenger{
+	background: #2196F3 url("/img/item-card/messenger.png") 50% 50% no-repeat;
+}
+
+#vkontakte{
+	background: #5181B8 url("/img/item-card/vk.png") 50% 50% no-repeat;
+}
+
+#instagram{
+	background: radial-gradient(24.78px at 29.04% 99.59%, #FDDB86 0%, rgba(240, 105, 66, 0) 100%), radial-gradient(32.14px at 31.72% 92.92%, #FFAD05 0%, rgba(255, 63, 0, 0) 100%), linear-gradient(159.86deg, #4263DF 5.92%, rgba(213, 53, 133, 0) 77.32%), #E11B7E url("/img/item-card/instagram.png") 50% 50% no-repeat;
+}
+
+.button-share{
+	mix-blend-mode: normal;
+	cursor: pointer;
+}
+
+.button-share img[src="/img/item-card/share_red.png"]{
+	display: none;
+}
+
+.share p{
+	width: auto;
+	height: auto;
+	font-family: HelveticaNeueCyr;
+	font-size: 10px;
+	line-height: normal;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #BDBDBD;
+	mix-blend-mode: normal;
+	margin-right: 9px;
+}
+
+.center-item{
+	display: inline-block;
+}
+
+#item-card .colors div{
+	border: 1px solid rgba(59, 65, 80, .1);
+}
+
+.number-of-items{
+	width: 50px;
+	height: 50px;
+	mix-blend-mode: normal;
+	border: 1px solid #70727D;
+	box-sizing: border-box;
+	border-radius: 3px;
+}
+.number-of-items p{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
