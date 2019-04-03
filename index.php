@@ -9,6 +9,18 @@
 <body>
 
 <header>
+	<div class="menu_hide">
+		<div class="close_menu">Закрыть</div>
+		<div class="menu_link">
+			<a id="l_1" href="#">Каталог<br><span>Все доступные товары</span></a>
+			<a id="l_2" href="#">Конструктор<br><span>Соберите свой собственный кит</span></a>
+			<a id="l_3" href="#">Личный кабинет<br><span>Подробная информация о доставке и оплате</span></a>
+			<a id="l_4" href="#">О компании<br><span>Узнайте о нас больше</span></a>
+			<a id="l_5" href="#">Контакты<br><span>Где мы и как с нами связаться</span></a>
+		</div>
+	</div>
+
+
 	<div class="wrap_head">
 		<div class="menu">
 			<a href="#">меню</a>

@@ -8,7 +8,7 @@ header{
 	top: 0;
 	left: 0;
 	right: 0;
-	margin: 55px auto 0; 
+	margin: 0 auto 0; 
 }
 @font-face {
 	font-family: "HelveticaNeueCyr";
@@ -556,4 +556,99 @@ p {margin: 0;}
 .wrap_img_m2 img{
 	position: relative;
 	top: -174px;
+}
+
+
+/**********menu**********/
+.menu_hide{
+	background:  url('/img/assets/bg_menu.png') no-repeat;
+	position: absolute;
+	left: -100%;
+	width: 100%;
+	height: 760px;
+	transition: ease-in-out .7s;
+	z-index: 100;
+}
+.menu_link{
+    background: url(/img/assets/menu_lines.png) no-repeat;
+    background-size: contain;
+    width: 685px;
+    height: 725px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 180px;
+}
+.menu_hide.active{
+	left: 0;
+}
+
+.menu_hide.active .menu_link a{
+	opacity: 1;
+}
+
+/* Каталог */
+.menu_link a{
+	font-family: Oswald;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 19px;
+	color: #FFFFFF;
+	margin-bottom: 33px;
+	opacity: 0;
+	transition: 1.5s;
+}
+
+.menu_link span{
+	font-family: HelveticaNeueCyr;
+	font-size: 12px;
+	line-height: normal;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	opacity: 0.3;
+}
+
+.close_menu{
+	font-family: HelveticaNeueCyr;
+	font-size: 9px;
+	line-height: normal;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	cursor: pointer;
+	position: absolute;
+	top: 71px;
+	left: 92px;
+	z-index: 110;
+}
+
+.close_menu::before{
+	    content: '';
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background-color: #fff;
+    top: 0;
+    left: -80px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(45deg);
+}
+.close_menu::after{
+	content: '';
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background-color: #fff;
+    top: 0;
+    left: -80px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(-45deg);
 }

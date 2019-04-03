@@ -1,4 +1,36 @@
+$( document ).ready(function() {
 
+	var activeted = false;
+	$(".m2_info").click(function () {
+    	$(this).toggleClass("active");
+   	});
+
+   	$(".menu").click(function () {
+    	$(".menu_hide").addClass("active");
+    	activeted = true;
+   	});
+
+   	$(".close_menu").click(function () {
+    	$(".menu_hide").removeClass("active");
+   	});
+
+   	if (activeted == true) {
+   		$(function () {
+		   	var menu_links;
+
+		   	menu_links[0] = $("#l_1");
+		   	menu_links[1] = $("#l_2");
+		   	menu_links[2] = $("#l_3");
+		   	menu_links[3] = $("#l_4");
+		   	menu_links[4] = $("#l_5");
+
+			for (var i = 0; i < menu_links.length; i++) {
+		        menu_links[i].delay(100 * i).css({opacity: 0}, 500);
+			}
+   		})
+	}
+
+/*
 $(function() {
 
 	var $left = $('#left_polzun');
@@ -18,7 +50,7 @@ $(function() {
   /*$amount                          // Устанавливаем начальные значения для amount
     .val($range.slider('values', 0)    // Нижняя граница, потом знак ₽
     + ' - ' + $range.slider('values', 1)  ); // Верхняя граница, потом знак ₽*/
-
+/*
 });
 $('.button-share img[src="/img/item-card/share.png"]').on('mouseover', function(){
 	$(this).css("display","none");
@@ -106,3 +138,5 @@ function scroolX(temp){
 
 
 */
+
+});
