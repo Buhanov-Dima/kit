@@ -49,13 +49,14 @@ $('#item-card .colors div').on('click', function(){
 	}
 });
 
-$(function() {
-  // Owl Carousel
-  var owl = $(".owl-carousel");
-  owl.owlCarousel({
-    items: 9,
-    margin: 10,
-    loop: true,
-    nav: true
-  });
+$('.buttons div').on('mouseover', function(){
+	$(this).children("img:eq(0)").css("display","none");
+	$(this).children("img:eq(1)").css("display", "block");
+	$(this).children("p").removeClass('hide');
+});
+
+$('.buttons div').on('mouseout', function(){
+	$(this).children("img:eq(0)").css("display","block");
+	$(this).children("img:eq(1)").css("display", "none");
+	$(this).children("p").addClass("hide");
 });

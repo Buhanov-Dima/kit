@@ -111,7 +111,7 @@
 									<div class="col-lg-4">
 										<div class="item river">
 											<img src="img/catalog/river.png" alt="river">
-											<div class="card">
+											<div class="model-and-cost">
 												<div class="model">
 													<p>модель</p>
 													<p>River</p>
@@ -126,7 +126,7 @@
 									<div class="col-lg-4">
 										<div class="item duolake mar-lef">
 											<img src="img/catalog/duolake.png" alt="duolake">
-											<div class="card">
+											<div class="model-and-cost">
 												<div class="model">
 													<p>модель</p>
 													<p>Duolake</p>
@@ -141,7 +141,7 @@
 									<div class="col-lg-4">
 										<div class="item gulf mar-lef">
 											<img src="img/catalog/gulf.png" alt="gulf">
-											<div class="card">
+											<div class="model-and-cost">
 												<div class="model">
 													<p>модель</p>
 													<p>Gulf</p>
@@ -158,7 +158,7 @@
 									<div class="col-lg-4">
 										<div class="item sea mar-top">
 											<img src="img/catalog/sea.png" alt="sea">
-											<div class="card">
+											<div class="model-and-cost">
 												<div class="model">
 													<p>модель</p>
 													<p>Sea</p>
@@ -173,7 +173,7 @@
 									<div class="col-lg-4">
 										<div class="item stream mar-top mar-lef">
 											<img src="img/catalog/stream.png" alt="stream">
-											<div class="card">
+											<div class="model-and-cost">
 												<div class="model">
 													<p>модель</p>
 													<p>Stream</p>
@@ -188,7 +188,7 @@
 									<div class="col-lg-4">
 										<div class="item gulf-and-creek mar-top mar-lef">
 											<img src="img/catalog/gulf-and-creek.png" alt="gulf-and-creek">
-											<div class="card">
+											<div class="model-and-cost">
 												<div class="model">
 													<p>модель</p>
 													<p>Gulf &#38; Creek</p>
@@ -205,7 +205,7 @@
 									<div class="col-lg-4">
 										<div class="item river mar-top">
 											<img src="img/catalog/river.png" alt="river">
-											<div class="card">
+											<div class="model-and-cost">
 												<div class="model">
 													<p>модель</p>
 													<p>River</p>
@@ -220,7 +220,7 @@
 									<div class="col-lg-4">
 										<div class="item duolake mar-lef mar-top">
 											<img src="img/catalog/duolake.png" alt="duolake">
-											<div class="card">
+											<div class="model-and-cost">
 												<div class="model">
 													<p>модель</p>
 													<p>Duolake</p>
@@ -235,7 +235,7 @@
 									<div class="col-lg-4">
 										<div class="item gulf mar-lef mar-top">
 											<img src="img/catalog/gulf.png" alt="gulf">
-											<div class="card">
+											<div class="model-and-cost">
 												<div class="model">
 													<p>модель</p>
 													<p>Gulf</p>

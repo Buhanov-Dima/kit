@@ -551,6 +551,9 @@ footer{
 	opacity: 0.2;
 	margin-right: 9px;
 }
+.other_pages p:nth-child(odd){
+	cursor: pointer;
+}
 #slash{
 	margin-right: 7px;	
 }
@@ -869,13 +872,13 @@ p.labels {
 	background: linear-gradient(180deg, rgba(226, 239, 240, 0.3) 0%, #E2EFF0 100%);
 }
 
-.card{
+.model-and-cost{
 	display: flex;
 	justify-content: space-between;	
 	margin-top: 5%;
 }
 
-.card div p:first-child{
+.model-and-cost div p:first-child{
 	font-family: HelveticaNeueCyr;
 	font-size: 8px;
 	line-height: normal;
@@ -887,7 +890,7 @@ p.labels {
 	margin-bottom: 6px;
 }
 
-.card div p:last-child{
+.model-and-cost div p:last-child{
 	font-family: HelveticaNeueCyr;
 	font-size: 22px;
 	line-height: normal;
@@ -920,7 +923,6 @@ p.labels {
 }
 
 #footer_item-card{
-	margin-top: 1000px; 
 	background: none;
 }
 
@@ -936,19 +938,19 @@ p.labels {
 	background: none;
 }
 
+.left-column{
+	padding-right: 60px;
+}
+
+.right-column{
+	padding-left: 60px;
+}
+
 .description{
-	max-width: 270px;
 	margin-bottom: 165px; 
 }
 
 .description h4{
-	font-family: HelveticaNeueCyr;
-	font-size: 10px;
-	line-height: normal;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: #BDBDBD;
-	mix-blend-mode: normal;
 	margin-bottom: 18px;
 }
 .description p{
@@ -962,12 +964,16 @@ p.labels {
 	margin-bottom: 31px;
 }
 
-.share{
+.left-picture p{                   /*Это уйдет как только появятся нормальные картинки. Сейчас это тербуется для поднятия нижнего контента на нужный уровень*/
+	margin-top: -19px;
+}
+
+.share, .buttons{
 	display: flex;
 	align-items: center;
 }
 
-.share *{
+.share *, .buttons div a{
 	width: 40px;
 	height: 40px;
 	border-radius:21px; 
@@ -1011,13 +1017,6 @@ p.labels {
 .share p{
 	width: auto;
 	height: auto;
-	font-family: HelveticaNeueCyr;
-	font-size: 10px;
-	line-height: normal;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: #BDBDBD;
-	mix-blend-mode: normal;
 	margin-right: 9px;
 }
 
@@ -1030,7 +1029,6 @@ p.labels {
 	font-family: HelveticaNeueCyr;
 	font-size: 10px;
 	line-height: normal;
-	text-align: center;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: #BDBDBD;
@@ -1041,8 +1039,14 @@ p.labels {
 	font-family: HelveticaNeueCyr;
 	font-size: 14px;
 	line-height: 14px;
-	text-align: center;
 	color: #3B4150;
+}
+
+.helvetica16NoUpCaseBlack{
+	font-family: HelveticaNeueCyr;
+	font-size: 16px;
+	line-height: normal;
+	color: #180607;
 }
 
 .helvetica24NoUpCaseBlack{
@@ -1052,8 +1056,15 @@ p.labels {
 	color: #190708;
 }
 
+.helvetica14NoUpCaseRed{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 14px;
+	color: #D91F43;
+}
 img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_arrow_black.png"]{
 	margin-top: -17px;
+	cursor: pointer;
 } 
 
 #item-card .colors{
@@ -1086,7 +1097,9 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	justify-content: center;
 }
 
-
+.add-to-basket{
+	box-shadow: 0px 10px 40px rgba(217, 31, 67, 0.5);
+}
 .add-to-basket p{
 	padding: 19px 42px;
 	background: #D91F43;
@@ -1099,6 +1112,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	color: #FFFFFF;
 	mix-blend-mode: normal;
 	border-radius: 3px;
+	cursor: pointer;
 }
 
 .up-32{
@@ -1126,3 +1140,95 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 .lp2{
 	padding-left: 38px;
 }
+
+.right-picture{
+	text-align: right;
+	margin-bottom: 16px;
+}
+
+#life-buoy>img:nth-child(2), #credit-card>img:nth-child(2), #package>img:nth-child(2), #refresh>img:nth-child(2), #shield>img:nth-child(2){
+	display: none;
+}
+
+.description_table{
+	margin-bottom: 105px;
+}
+.description_table div{
+	display: flex;
+	justify-content: space-between;
+	padding: 17px 0;
+	border-bottom: 1px solid #DADEE5;
+}
+.description_table div:last-child{
+	border-bottom: none;
+}
+
+.buttons{
+	justify-content: space-between;
+}
+
+.buttons div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.first-block-item-card{
+	margin-bottom: 53px;
+}
+.info-and-buttons>p{
+	margin-bottom: 32px;
+}
+
+.fotorama__nav__frame{
+	padding: 0px !important; /*убрать любые отступы у thumbs (миниатюр)*/
+}
+
+.fotorama__nav__frame.fotorama__active div{ 
+    width: 146.67px; height: 146.67px; border: solid 2px #D91F43; /*неанимированная рамка. можно навесить анимацию, стоит ровно на слайде*/
+} 
+.fotorama__thumb-border{   /*анимированная рамка сдвинутая почему-то, надо разбираться*/
+	display: none;
+}
+.fotorama{
+	margin-bottom: 52px;
+}
+.label-advanced{
+	margin-bottom: 34px;
+}
+.oswald36NoUpCaseBlack{
+	font-family: Oswald;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 48px;
+	text-align: center;
+	color: #3B4150;
+}
+.helvetica12UpCaseBlackHalfOpacity{
+	font-family: HelveticaNeueCyr;
+	font-size: 12px;
+	line-height: normal;
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	mix-blend-mode: normal;
+	opacity: 0.5;
+	color: #3B4150;
+}
+
+.advanced-items>div div{
+	background: linear-gradient(180deg, #F0F3F5 0%, #CFD7E0 100%);
+	border-radius: 6px;
+	height: 400px;
+	width: 300px;
+	padding-top: 40px;
+	cursor: pointer;
+}
+
+.advanced-items{
+	margin-bottom: -6px;
+}
+

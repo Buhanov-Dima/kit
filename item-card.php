@@ -4,9 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Kit Kraken</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/style2.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
 	<header>
@@ -36,21 +35,22 @@
 				<p>Модель Gulf</p>
 			</div>
 			<div class="container-fluid">
-				<div class="row">
+				<div class="row first-block-item-card">
 					<div class="col-lg-12">
 						<h1>Кухонные мойки</h1>		
 					</div>
-					<div class="col-lg-3 lp-0">
+					<div class="col-lg-3 lp-0 left-column">
 						<div class="left-picture">
 							<img src="/img/item-card/mini_river.png" alt="river">
+							<p class="helvetica16NoUpCaseBlack">River</p>
 						</div>
 						<div class="description">
-							<h4>Описание</h4>
+							<h4 class="helvetica10UpCaseBDBDBD">Описание</h4>
 							<p>Мойка с двумя многофункциональными объемными чашами. Мойте в чашах посуду с разным загрязнением или овощи,  промывайте в одной и ополаскивайте в другой или закройте одну из чаш специальной доской или решеткой и используйте под сушку.
 							</p>
 						</div>
 						<div class="share">
-							<p>поделиться</p>
+							<p class="helvetica10UpCaseBDBDBD">поделиться</p>
 							<div class="button-share">
 								<img src="/img/item-card/share.png" alt="share">
 								<img src="/img/item-card/share_red.png" alt="share">
@@ -114,20 +114,106 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 rp-0">
-						
+					<div class="col-lg-3 rp-0 right-column">
+						<div class="right-picture">
+							<img src="/img/item-card/mini-duolake.png" alt="duolake">
+							<p class="helvetica16NoUpCaseBlack">Duolake</p>
+						</div>
+						<div class="description_table">
+							<h4 class="helvetica10UpCaseBDBDBD">Параметры</h4>
+							<div class="material">
+								<p class="helvetica14NoUpCaseBlack">Материал</p>
+								<p class="helvetica14NoUpCaseBlack">Кварц</p>
+							</div>
+							<div class="width">
+								<p class="helvetica14NoUpCaseBlack">Ширина</p>
+								<p class="helvetica14NoUpCaseBlack">250см</p>
+							</div>
+							<div class="height">
+								<p class="helvetica14NoUpCaseBlack">Высота</p>
+								<p class="helvetica14NoUpCaseBlack">250см</p>
+							</div>
+							<div class="bowl-depth">
+								<p class="helvetica14NoUpCaseBlack">Глубина чаши</p>
+								<p class="helvetica14NoUpCaseBlack">21см</p>
+							</div>
+						</div>
+						<div class="info-and-buttons">
+							<p class="helvetica10UpCaseBDBDBD">информация</p>
+							<div class="buttons">
+								<div id="life-buoy">
+									<img src="/img/item-card/life-buoy.png" alt="buoy">
+									<img src="/img/item-card/life-buoy_red.png" alt="buoy">
+									<p class="helvetica14NoUpCaseRed hide">круг</p>
+								</div>
+								<div id="credit-card">
+									<img src="/img/item-card/credit-card.png" alt="credit">
+									<img src="/img/item-card/credit-card_red.png" alt="credit">
+									<p class="helvetica14NoUpCaseRed hide">кредит</p>
+								</div>
+								<div id="package">
+									<img src="/img/item-card/package.png" alt="package">
+									<img src="/img/item-card/package_red.png" alt="package">
+									<p class="helvetica14NoUpCaseRed hide">доставка</p>
+								</div>
+								<div id="refresh">
+									<img src="/img/item-card/refresh.png" alt="refresh">
+									<img src="/img/item-card/refresh_red.png" alt="refresh">
+									<p class="helvetica14NoUpCaseRed hide">обновить</p>
+								</div>
+								<div id="shield">
+									<img src="/img/item-card/shield.png" alt="shield">
+									<img src="/img/item-card/shield_red.png" alt="shield">
+									<p class="helvetica14NoUpCaseRed hide">защита</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 lp-0 rp-0">
+						<div class="fotorama" data-width="100%" data-height="670" data-nav="thumbs" data-thumbwidth="146.67" data-thumbheight="146.67" data-arrows="false">
+						  <a href="/img"><img src="/img/item-card/main-slide-picture.png" alt="main-slide-picture"></a>	
+						  <a href="/img"><img src="/img/item-card/main-slide-picture.png" alt="first-slide-picture"></a>
+						  <a href="/img"><img src="/img/item-card/main-slide-picture.png" alt="second-slide-picture"></a>
+						  <a href="/img"><img src="/img/item-card/main-slide-picture.png" alt="third-slide-picture"></a>
+						  <a href="/img"><img src="/img/item-card/main-slide-picture.png" alt="fourth-slide-picture"></a>
+						  <a href="/img"><img src="/img/item-card/main-slide-picture.png" alt="fifth-slide-picture"></a>
+						  <a href="/img"><img src="/img/item-card/main-slide-picture.png" alt="sixth-slide-picture"></a>
+						  <a href="/img"><img src="/img/item-card/main-slide-picture.png" alt="seventh-slide-picture"></a>
+						  <a href="/img"><img src="/img/item-card/main-slide-picture.png" alt="eighth-slide-picture"></a>
+						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="owl-carousel owl-theme">
-						  <div> Slide 1 </div>
-						  <div> Slide 2 </div>
-						  <div> Slide 3 </div>
-						  <div> Slide 4 </div>
-						  <div> Slide 5 </div>
-						  <div> Slide 6 </div>
-						  <div> Slide 7 </div>
+						<h3 class="oswald36NoUpCaseBlack label-advanced">Дополняющие товары</h3>
+					</div>
+				</div>
+				<div class="row advanced-items">
+					<div class="col-lg-3 mx-auto lp-0 rp-0">
+						<div>
+							<p class="helvetica12UpCaseBlackHalfOpacity">смесители</p>
+							<img src="/img/item-card/water-tap.png" alt="water-tap">
+						</div>
+					</div>
+					<div class="col-lg-3 mx-auto lp-0 rp-0">
+						<div>
+							<p class="helvetica12UpCaseBlackHalfOpacity">разделочные доски</p>
+							<img src="/img/item-card/desk.png" alt="desk">
+						</div>
+					</div>
+					<div class="col-lg-3 mx-auto lp-0 rp-0">
+						<div>
+							<p class="helvetica12UpCaseBlackHalfOpacity">столешницы</p>
+							<img src="/img/item-card/up-desk.png" alt="desk">
+							<img src="/img/item-card/down-desk.png" alt="desk">
+						</div>
+					</div>
+					<div class="col-lg-3 mx-auto rp-0 lp-0 rp-0">
+						<div>
+							<p class="helvetica12UpCaseBlackHalfOpacity">кухонный фартук</p>
+							<img src="/img/item-card/wall.png" alt="wall">
 						</div>
 					</div>
 				</div>
@@ -199,7 +285,7 @@
 			  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
 			  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
 			  crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     	<script src="/js/main2.js"></script>
 	</footer>
 </body>
