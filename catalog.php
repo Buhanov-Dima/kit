@@ -38,7 +38,7 @@
 					<div class="col-lg-3 lp-0">
 						<div class="left-side">
 							<h3 class="labels">товары</h3>
-							<form class="radio">
+							<form class="radio">   <!--вместо формы div-->
 								<input type="radio" name="category" value="all" id="all">
 								<label for="all">Все</label><br>
 								<input type="radio" name="category" value="kitchen sink" id="kitchen sink">
@@ -73,7 +73,7 @@
 						</div>
 					</div>	
 					<div class="col-lg-9 lp-0 rp-0">
-						<div class="col-lg-12 lp-0 rp-0">
+						<div class="col-lg-12 lp-0 rp-0"> <!--здесь начинаются блоки-->
 							<div class="view-and-sort">
 								<div class="view">
 									<div id="viewing">
@@ -106,10 +106,10 @@
 							</div>
 						</div>
 						<div class="col-lg-12 lp-0 rp-0">
-							<div class="items">
+							<div class="items"> <!--убрать бутстрап сделать flex-->
 								<div class="row only_row">
 									<div class="col-lg-4">
-										<div class="item river">
+										<div class="item river"> <!--один итем для всего-->
 											<img src="img/catalog/river.png" alt="river">
 											<div class="model-and-cost">
 												<div class="model">
@@ -253,7 +253,7 @@
 					</div>
 					<div class="col-lg-6">
 						<div class="show">
-							<p>показать еще</p>
+							<p>показать еще</p> <!--перенести в кол лг 9	-->
 						</div>
 					</div>
 				</div>

@@ -25,7 +25,7 @@
 	</header>
 	<section>
 		<div class="content" id="item-card">
-			<div class="other_pages">
+			<div class="other_pages"> <!--bread_crumbs-->
 				<p>Главная</p>
 				<p id="slash">\</p>
 				<p>Каталог</p>
@@ -63,7 +63,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6 mx-auto up-32 lp-0 rp-0">
-						<div class="row">
+						<div class="row"> <!--убрать весь бутстрап из середины-->
 							<div class="col-lg-2 mx-auto">
 								<p class="helvetica10UpCaseBDBDBD mb-10">модель</p>
 							</div>
@@ -82,7 +82,7 @@
 						<div class="row">
 							<div class="col-lg-3 mx-auto">
 								<div class="colors">
-									<div><img src="/img/item-card/dark-grey.png" alt="dark_grey"></div>
+									<div><img src="/img/item-card/dark-grey.png" alt="dark_grey"></div>    <!--убрать image-->
 									<div><img src="/img/constructor/dark_blue.png" alt="dark_blue"></div>
 									<div><img src="/img/constructor/white.png" alt="white"></div>
 									<div><img src="/img/constructor/brown.png" alt="brown"></div>
@@ -187,11 +187,11 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-12">
-						<h3 class="oswald36NoUpCaseBlack label-advanced">Дополняющие товары</h3>
+						<h3 class="oswald36NoUpCaseBlack label-advanced">Дополняющие товары</h3> <!--засунуть в нижний ряд-->
 					</div>
 				</div>
 				<div class="row advanced-items">
-					<div class="col-lg-3 mx-auto lp-0 rp-0">
+					<div class="col-lg-3 mx-auto lp-0 rp-0"> <!--no-gutters везде-->
 						<div>
 							<p class="helvetica12UpCaseBlackHalfOpacity">смесители</p>
 							<img src="/img/item-card/water-tap.png" alt="water-tap">

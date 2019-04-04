@@ -700,6 +700,10 @@ h1{
     position: relative;
 }
 
+.ui-slider-handle.ui-corner-all.ui-state-default{
+	outline: none;
+}
+
 #choose_colors{
 	display: inline-flex;
 	margin-bottom: 45px;
