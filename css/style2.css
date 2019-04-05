@@ -24,6 +24,14 @@ header{
 }
 a:link {text-decoration: none;}
 p {margin: 0;}
+
+.lp-0{
+	padding-left: 0;
+}
+.rp-0{
+	padding-right: 0;
+}
+
 .content{
 	padding-top: 55px;
 	max-width: 1440px;
@@ -209,7 +217,7 @@ p {margin: 0;}
 #first_plus{
 	margin-right: 5px;	
 }
-.line	{
+.line{
 	margin-top: -20px;
 	margin-left: 5px;
 	margin-right: 4px;	
@@ -521,12 +529,6 @@ footer{
 }
 
 
-.lp-0{
-	padding-left: 0;
-}
-.rp-0{
-	padding-right: 0;
-}
 #footer_catalog{
 	background: none;
 }
@@ -534,6 +536,10 @@ footer{
 #catalog{
 	padding: 0 60px;
 	padding-top: 120px;
+}
+
+#catalog.content{
+	background: linear-gradient(rgba(255,255,255,0) 10%, rgb(255,255,255) 30%),  url('/img/bg/bg_main.png') no-repeat top center;
 }
 
 .bread_crumbs{
@@ -597,11 +603,6 @@ h1{
 	margin-bottom: 31px;
 }
 
-.ui-slider-handle.ui-corner-all.ui-state-default p{
-	margin-top: 16px;
-	margin-left: -19px;
-}
-
 .helvetica14NoUpCaseWhite{
 	font-family: HelveticaNeueCyr;
 	font-size: 14px;
@@ -609,10 +610,6 @@ h1{
 	color: #FFFFFF;
 }
 .radio label{
-	font-family: HelveticaNeueCyr;
-	font-size: 14px;
-	line-height: 14px;
-	color: #FFFFFF;
 	cursor: pointer;
 	position: relative;
 	padding-left: 25px;
@@ -643,15 +640,6 @@ h1{
 	border-radius: 18px;
 }
 
-.ui-widget-header{
-	margin-top: 10px;
-	background-color: red;	
-	height: 1px;
-}
-#polzun{
-	margin-bottom: 71px;
-}
-
 #polzun>p{
 	font-family: HelveticaNeueCyr;
 	font-size: 10px;
@@ -660,7 +648,7 @@ h1{
 	text-transform: uppercase;
 	color: #576078;
 	mix-blend-mode: normal;
-	margin-bottom: 27px;
+	margin-bottom: 29px;
 }
 
 #price-range{
@@ -669,7 +657,7 @@ h1{
 }
 .ui-slider-horizontal .ui-slider-handle{
 	top: 0;
-	margin: -7px;
+	margin: -8px;
 	}
 
 .ui-slider .ui-slider-handle {
@@ -699,6 +687,9 @@ h1{
 
 .ui-widget-header {
     background: #D91F43;
+    margin-top: 10px;
+	background-color: red;	
+	height: 1px;
 }
 
 .ui-widget-content {
@@ -717,9 +708,14 @@ h1{
 	outline: none;
 }
 
+.ui-slider-handle.ui-corner-all.ui-state-default p{
+	margin-top: 16px;
+	margin-left: -19px;
+}
+
 #choose_colors{
 	display: inline-flex;
-	margin-bottom: 33px;
+	margin-bottom: 34px;
 	margin-top: 6px; 
 }
 
@@ -765,7 +761,7 @@ h1{
 
 p.labels {
 	margin-top: 70px;
-	margin-bottom: 10px;
+	margin-bottom: 9px;
 }
 
 .advanced_parameters{
@@ -793,7 +789,7 @@ p.labels {
 	justify-content: space-between;
 	margin-top: -2px;
 	border-bottom: 1px solid #EEF0F5;
-	margin-bottom: 38px;
+	margin-bottom: 40px;
 	margin-top: -2px;
 }
 
@@ -850,28 +846,23 @@ p.labels {
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	background: #FFF;
+	padding-right: 7px;
+	padding-left: 9px;
+	margin-bottom: -27px; 
 }
 .item{
 	width: 300px;
-	height: 300px;
-	padding: 23px 28px;
+	height: 300px;	
 	border-radius: 2px;
 	margin-bottom: 40px;
+	margin-right: -5px;
 }
-.items div:last-child{
-	margin:auto;
+.item-image{
+	display: flex;
+	justify-content: center;
 }
-
-.only_row{
-	margin-bottom: 38px;
-}
-
-.pad-left{
-	padding-left: 85px;
-}
-.col-item{
-	margin-left: 10px;
+.item>div{
+	margin-top: 45px;
 }
 .river{
 	background: linear-gradient(180deg, #F5F3F0 0%, #DED8D0 100%);
@@ -887,7 +878,6 @@ p.labels {
 
 .sea{
 	background: linear-gradient(180deg, rgba(236, 236, 236, 0.3) 0%, #DBDBDB 100%);
-	padding-left: 31px; 
 }
 
 .stream{
@@ -902,6 +892,9 @@ p.labels {
 	display: flex;
 	justify-content: space-between;	
 	margin-top: 5%;
+	max-width: 240px; 
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .model-and-cost div p:first-child{
@@ -935,6 +928,7 @@ p.labels {
 	padding: 19px 64px;
 	background-color: #D91F43;
 	box-shadow: 0px 10px 40px rgba(217, 31, 67, 0.5);
+	margin: auto;
 }
 
 #footer_item-card{
@@ -950,25 +944,45 @@ p.labels {
 	margin: 0;
 }
 #item-card.content{
-	background: none;
+	background: linear-gradient(rgba(255,255,255,0) 4%, rgb(255,255,255) 20%),  url('/img/bg/bg_main.png') no-repeat top center;
 }
 
-.left-column{
+.pd-r-60{
 	padding-right: 60px;
 }
 
-.right-column{
+.pd-l-60{
 	padding-left: 60px;
 }
 
-.description{
+.mg-b-165{
 	margin-bottom: 165px; 
 }
 
-.description h4{
+.mg-b-18{
 	margin-bottom: 18px;
 }
-.description p{
+
+.mg-b-51{
+	margin-bottom: 51px;
+}
+.mg-l-10{
+	margin-left: 10px;
+}
+.mg-l-20{
+	margin-left: 20px;
+}
+.mg-l-30{
+	margin-left: 30px;
+}
+
+.mg-l-10 img{
+	margin-top: -54px;
+}
+
+
+
+.helvetica14LineHeight24NoUpCaseBlack{
 	font-family: HelveticaNeueCyr;
 	font-size: 14px;
 	line-height: 24px;
@@ -976,11 +990,13 @@ p.labels {
 }
 
 .left-picture{
-	margin-bottom: 31px;
+	margin-bottom: 63px;
+	padding-top: 9px;
 }
 
-.left-picture p{                   /*Это уйдет как только появятся нормальные картинки. Сейчас это тербуется для поднятия нижнего контента на нужный уровень*/
-	margin-top: -19px;
+.left-picture p{            
+	margin-top: 12px;
+	margin-left: 31px;
 }
 
 .share, .buttons{
@@ -1032,12 +1048,7 @@ p.labels {
 .share p{
 	width: auto;
 	height: auto;
-	margin-right: 9px;
-}
-
-.center-item{
-	display: flex;
-	ju
+	margin-right: 10px;
 }
 
 .helvetica10UpCaseBDBDBD{
@@ -1081,17 +1092,48 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	margin-top: -17px;
 	cursor: pointer;
 } 
-
-#item-card .colors{
+.w-160{
+	max-width: 160px;
+}
+.colors-item-card{
+	margin: 25px 0;	
+}
+.colors-item-card>div{
+	border: none;
+	background: none;
+	width:22px;
+	height:22px;
+	border: 1px solid rgba(59, 65, 80, .1);
+	border-radius: 23px;
 	display: flex;
-	margin-top: 25px; 
-	margin-bottom: 25px;
-	margin-left: -10px;
+	justify-content: center;
+	align-items: center;
 }
 
-#item-card .colors div{
-	border: 1px solid rgba(59, 65, 80, .1);
-	margin-right: 14px; 
+.colors-item-card div{
+	margin: 0;
+}
+
+
+.colors-item-card>div>div{
+	width:16px;
+	height:16px;
+	border-radius: 17px;
+}
+.colors-item-card>div:nth-child(1)>div{
+	background: #44454D;
+}
+.colors-item-card>div:nth-child(2)>div{
+	background: #60667B;
+}
+.colors-item-card>div:nth-child(3)>div{
+	background: white;
+}
+.colors-item-card>div:nth-child(4)>div{
+	background: #7E564E;
+}
+.colors-item-card>div:nth-child(5)>div{
+	background: black;
 }
 
 .number-of-items{
@@ -1106,17 +1148,11 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	align-items: center;
 }
 
-.down-item{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 .add-to-basket{
 	box-shadow: 0px 10px 40px rgba(217, 31, 67, 0.5);
 }
 .add-to-basket p{
-	padding: 19px 42px;
+	padding: 19px 45px;
 	background: #D91F43;
 	font-family: HelveticaNeueCyr;
 	font-size: 10px;
@@ -1130,35 +1166,42 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	cursor: pointer;
 }
 
-.up-32{
+.pd-l-65{
+	padding-left: 65px;
+}
+.pd-r-65{
+	padding-right: 65px;
+}
+.pd-t-32{
 	padding-top: 32px;
 }
 
-.mb-10{
+.mg-b-10{
 	margin-bottom: 10px;
 }
-.name-center{
-	margin-left: 19px;
+
+.mg-t-27{
+	margin-top: 27px;
 }
 
 .cost-center{
 	margin-top: 26px; 
 	margin-bottom: 11px;
 }
-.p-cost{
-	padding-left: 12px;
-	margin-bottom: 28px;
-}
+
 .number-of-items{
 	margin-right: 10px; 
-}
-.lp2{
-	padding-left: 38px;
 }
 
 .right-picture{
 	text-align: right;
-	margin-bottom: 16px;
+	margin-bottom: 62px;
+	padding-top: 9px;
+}
+
+.right-picture p{
+	margin-top: 12px;
+	margin-right: 21px; 
 }
 
 #life-buoy>img:nth-child(2), #credit-card>img:nth-child(2), #package>img:nth-child(2), #refresh>img:nth-child(2), #shield>img:nth-child(2){
@@ -1166,12 +1209,12 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 }
 
 .description_table{
-	margin-bottom: 105px;
+	margin-bottom: 114px;
 }
 .description_table div{
 	display: flex;
 	justify-content: space-between;
-	padding: 17px 0;
+	padding: 16px 0;
 	border-bottom: 1px solid #DADEE5;
 }
 .description_table div:last-child{
@@ -1208,10 +1251,10 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	display: none;
 }
 .fotorama{
-	margin-bottom: 52px;
+	margin-bottom: 55px;
 }
 .label-advanced{
-	margin-bottom: 34px;
+	margin-bottom: 35px;
 }
 .oswald36NoUpCaseBlack{
 	font-family: Oswald;
@@ -1239,11 +1282,37 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	border-radius: 6px;
 	height: 400px;
 	width: 300px;
-	padding-top: 40px;
+	padding-top: 38px;
 	cursor: pointer;
 }
 
 .advanced-items{
-	margin-bottom: -6px;
+	margin-bottom: -8px;
 }
 
+.advanced-items>div:nth-child(2) img{
+	margin-top: -23px;
+	margin-left: 11px;
+}
+
+.advanced-items>div:nth-child(3) img{
+	margin-top: -52px;
+}
+
+
+.mg-l-20 img:nth-child(2){
+	position: relative;
+	z-index: 2;
+	margin-left: 77px;
+	margin-top: 72px;
+}
+
+.mg-l-20 img:nth-child(3){
+	margin-left: 25px;
+	margin-top: -19px;
+}
+
+.mg-l-30 img:nth-child(2){
+	margin-left: -2px;
+	margin-top: 42px;
+}

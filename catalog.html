@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Kit Kraken</title>
@@ -40,17 +40,17 @@
 							<h3 class="labels">товары</h3>
 							<div class="radio">  
 								<input type="radio" name="category" value="all" id="all">
-								<label for="all">Все</label><br>
-								<input type="radio" name="category" value="kitchen sink" id="kitchen sink">
-								<label for="kitchen sink">Кухонные мойки</label><br>
+								<label for="all" class="helvetica14NoUpCaseWhite">Все</label><br>
+								<input type="radio" name="category" value="kitchen_sink" id="kitchen_sink">
+								<label for="kitchen_sink" class="helvetica14NoUpCaseWhite">Кухонные мойки</label><br>
 								<input type="radio" name="category" value="board" id="board">
-								<label for="board">Разделочные доски</label><br>
-								<input type="radio" name="category" value="table top" id="table top">
-								<label for="table top">Столешницы</label><br>
+								<label for="board" class="helvetica14NoUpCaseWhite">Разделочные доски</label><br>
+								<input type="radio" name="category" value="table_top" id="table_top">
+								<label for="table_top" class="helvetica14NoUpCaseWhite">Столешницы</label><br>
 								<input type="radio" name="category" value="stand" id="stand">
-								<label for="stand">Подставки</label><br>
-								<input type="radio" name="category" value="wall apron" id="wall apron">
-								<label for="wall apron">Фартук</label>
+								<label for="stand" class="helvetica14NoUpCaseWhite">Подставки</label><br>
+								<input type="radio" name="category" value="wall_apron" id="wall_apron">
+								<label for="wall_apron" class="helvetica14NoUpCaseWhite">Фартук</label>
 							</div>
 							<div id="polzun">
 					          <p>Цена</p>
@@ -66,12 +66,12 @@
 					      	</div>
 					      	<div class="advanced_parameters">
 					      		<p class="helvetica14NoUpCaseWhite">Дополнительные параметры</p>
-								<div><img src="/img/catalog/triangle_down.png"></div>
+								<div><img src="/img/catalog/triangle_down.png" alt="triangle_down"></div>
 					      	</div>
 						</div>
 						<div id="back_to_constructor">
 							<p class="helvetica14NoUpCaseWhite">Перейти в конструктор</p>
-							<div><img src="/img/catalog/cube.png"></div>
+							<div><img src="/img/catalog/cube.png" alt="cube"></div>
 						</div>
 					</div>	<!--col-lg-3-->
 					<div class="col-lg-9 lp-0 rp-0">
@@ -105,9 +105,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="items"> <!--убрать бутстрап сделать flex-->
-							<div class="item river"> <!--один итем для всего-->
-								<img src="img/catalog/river.png" alt="river">
+						<div class="items">
+							<div class="item river">
+								<div class="item-image"> 
+									<img src="img/catalog/river.png" alt="river">
+								</div>
 								<div class="model-and-cost">
 									<div class="model">
 										<p>модель</p>
@@ -120,7 +122,9 @@
 								</div>
 							</div>
 							<div class="item duolake">
-								<img src="img/catalog/duolake.png" alt="duolake">
+								<div class="item-image">
+									<img src="img/catalog/duolake.png" alt="duolake">
+								</div>
 								<div class="model-and-cost">
 									<div class="model">
 										<p>модель</p>
@@ -133,7 +137,9 @@
 								</div>
 							</div>
 							<div class="item gulf">
-								<img src="img/catalog/gulf.png" alt="gulf">
+								<div class="item-image">
+									<img src="img/catalog/gulf.png" alt="gulf">
+								</div>
 								<div class="model-and-cost">
 									<div class="model">
 										<p>модель</p>
@@ -146,7 +152,9 @@
 								</div>
 							</div>
 							<div class="item sea">
-								<img src="img/catalog/sea.png" alt="sea">
+								<div class="item-image">
+									<img src="img/catalog/sea.png" alt="sea">
+								</div>
 								<div class="model-and-cost">
 									<div class="model">
 										<p>модель</p>
@@ -159,7 +167,9 @@
 								</div>
 							</div>
 							<div class="item stream">
-								<img src="img/catalog/stream.png" alt="stream">
+								<div class="item-image">
+									<img src="img/catalog/stream.png" alt="stream">
+								</div>
 								<div class="model-and-cost">
 									<div class="model">
 										<p>модель</p>
@@ -172,7 +182,9 @@
 								</div>
 							</div>
 							<div class="item gulf-and-creek">
-								<img src="img/catalog/gulf-and-creek.png" alt="gulf-and-creek">
+								<div class="item-image">
+									<img src="img/catalog/gulf-and-creek.png" alt="gulf-and-creek">
+								</div>
 								<div class="model-and-cost">
 									<div class="model">
 										<p>модель</p>
@@ -185,7 +197,9 @@
 								</div>
 							</div>
 							<div class="item river">
-								<img src="img/catalog/river.png" alt="river">
+								<div class="item-image">
+									<img src="img/catalog/river.png" alt="river">
+								</div>
 								<div class="model-and-cost">
 									<div class="model">
 										<p>модель</p>
@@ -198,7 +212,9 @@
 								</div>
 							</div>
 							<div class="item duolake">
-								<img src="img/catalog/duolake.png" alt="duolake">
+								<div class="item-image">
+									<img src="img/catalog/duolake.png" alt="duolake">
+								</div>
 								<div class="model-and-cost">
 									<div class="model">
 										<p>модель</p>
@@ -211,7 +227,9 @@
 								</div>
 							</div>
 							<div class="item gulf">
-								<img src="img/catalog/gulf.png" alt="gulf">
+								<div class="item-image">
+									<img src="img/catalog/gulf.png" alt="gulf">
+								</div>
 								<div class="model-and-cost">
 									<div class="model">
 										<p>модель</p>
@@ -283,7 +301,7 @@
 						<div class="down_sign">
 							<p>Получите возможность первыми узнавать о новостях и эксклюзивных предложениях</p>
 						</div>
-						<form class="email_form" action="" method="post">
+						<form class="email_form" action="#" method="post">
 							<input type="email" placeholder="Email">
 							<input type="image" src="img/constructor/right_arrow.png" alt="ok">
 						</form>

@@ -13,23 +13,23 @@ header{
 }
 @font-face {
 	font-family: "HelveticaNeueCyr";
-	src: url("/fonts/HelveticaNeueCyr-Roman.ttf");
+	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Roman.ttf");
 }
 @font-face {
 	font-family: "HelveticaNeueCyr-Med";
-	src: url("/fonts/HelveticaNeueCyr-Medium.ttf");
+	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Medium.ttf");
 }
 @font-face {
 	font-family: "HelveticaNeueCyr-Bold";
-	src: url("/fonts/HelveticaNeueCyr-Bold.ttf");
+	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Bold.ttf");
 }
 @font-face {
 	font-family: "Oswald";
-	src: url("/fonts/Oswaldregular.ttf");
+	src: url("http://test.watosu.ru/kit/fonts/Oswaldregular.ttf");
 }
 @font-face {
 	font-family: "Oswald_extra";
-	src: url("/fonts/Oswaldextralight.ttf");
+	src: url("http://test.watosu.ru/kit/fonts/Oswaldextralight.ttf");
 }
 
 a:link {text-decoration: none;}
@@ -41,7 +41,7 @@ p {margin: 0;}
 	height: 760px;
 	overflow: hidden;
 	margin: auto;
-	background: url('/img/bg/bg_main.png') no-repeat center;
+	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat center;
 	transition: .4s;
 }
 
@@ -72,7 +72,7 @@ p {margin: 0;}
 {
 	content: '';
 	position: absolute;
-	background: url('/img/assets/menu.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/assets/menu.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
@@ -153,7 +153,7 @@ p {margin: 0;}
 .kit_review a:first-child::after{
 	content: '';
 	position: absolute;
-	background: url('/img/assets/moika.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/assets/moika.png') no-repeat;
 	width: 15px;
 	height: 16px;
 	right: -24px;
@@ -162,7 +162,7 @@ p {margin: 0;}
 .kit_review a::after{
 	content: '';
 	position: absolute;
-	background: url('/img/assets/krest.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/assets/krest.png') no-repeat;
 	width: 17px;
 	height: 17px;
 	right: -24px;
@@ -171,7 +171,7 @@ p {margin: 0;}
 .kit_review a:last-child::after{
 	content: '';
 	position: absolute;
-	background: url('/img/assets/cube.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/assets/cube.png') no-repeat;
 	width: 15px;
 	height: 16px;
 	right: -24px;
@@ -197,7 +197,7 @@ p {margin: 0;}
 }
 .scroll_arrow::after{
 	content: '';
-	background: url('/img/assets/arrow.svg');
+	background: url('http://test.watosu.ru/kit/img/assets/arrow.svg');
 	position: absolute;
 	top: -17px;
 	left: -39px;
@@ -539,7 +539,7 @@ p {margin: 0;}
 }
 
 .content.last{
-	background: url('/img/bg/bg_main.png') no-repeat top -450px center;
+	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat top -450px center;
 }
 /*.wrap_last_bg{
 	background: url('/img/main/07.svg') no-repeat;
@@ -568,7 +568,7 @@ p {margin: 0;}
 .bg_last_main{
 	position: relative;
 	margin-top: 180px;
-	background: url('/img/main/bg_last.svg') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/main/bg_last.svg') no-repeat;
 }
 .kit_review.last{
 	position: absolute;
@@ -590,7 +590,7 @@ p {margin: 0;}
 
 /**********menu**********/
 .menu_hide{
-	background:  url('/img/assets/bg_menu.png') no-repeat;
+	background:  url('http://test.watosu.ru/kit/img/assets/bg_menu.png') no-repeat;
 	position: absolute;
 	top: -55px;
 	left: -100%;
@@ -600,7 +600,7 @@ p {margin: 0;}
 	z-index: 100;
 }
 .menu_link{
-    background: url(/img/assets/menu_lines.png) no-repeat;
+    background: url(http://test.watosu.ru/kit/img/assets/menu_lines.png) no-repeat;
     background-size: contain;
     width: 685px;
     height: 725px;
