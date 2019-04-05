@@ -13,9 +13,7 @@ $( document ).ready(function() {
    	$(".close_menu").click(function () {
     	$(".menu_hide").removeClass("active");
    	});
-   	$(".menu").click(function () {
-    	$(".menu_link a").translate({'-webkit-transform' : 'translate(100px,100px)'});​
-    });
+
 
 
 //постраничная смена секций главной страницы
@@ -45,6 +43,7 @@ $( document ).ready(function() {
 		}
 	});
 //меняем section в зависимости от (положения || value) wheel
+
 	function scroolX(temp){
 
 		console.log(temp);
