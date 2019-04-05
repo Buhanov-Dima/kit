@@ -8,7 +8,8 @@ header{
 	top: 0;
 	left: 0;
 	right: 0;
-	margin: 55px auto 0; 
+	margin: 55px auto 0;
+	z-index: 1000;
 }
 @font-face {
 	font-family: "HelveticaNeueCyr";
@@ -33,14 +34,17 @@ header{
 
 a:link {text-decoration: none;}
 p {margin: 0;}
+#b1{display: block;}
 .content{
 	padding-top: 55px;
 	max-width: 1440px;
-	max-height: 760px;
+	height: 760px;
 	overflow: hidden;
 	margin: auto;
 	background: url('/img/bg/bg_main.png') no-repeat center;
+	transition: .4s;
 }
+
 .wrap_head
 {
 	display: flex;
@@ -654,12 +658,7 @@ p {margin: 0;}
     transform: rotate(-45deg);
 }
 
-
-/*
-#l_1, #l_2, #l_3, #l_4, #l_5
-{
-    opacity: 1;
-    -webkit-transform: translate(-200px, 0px);
-    -moz-transform: translate(-200px, 0px);
+.menu_link a{
+-webkit-transform: translate(-200px, 0);
+-moz-transform: translate(-200px, 0);
 }
-*/
