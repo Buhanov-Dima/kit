@@ -93,7 +93,7 @@ p {margin: 0;}
 .menu_white a::before{
 	content: '';
 	position: absolute;
-	background: url('/img/constructor/menu.png') no-repeat;
+	background: url('/img/assets/menu_white.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
@@ -107,7 +107,7 @@ p {margin: 0;}
 	width: 15px;
 	height: 13px;
 	left: -25px;
-	top: 1px;
+	top: 7px;
 }
 
 .nmb_user_basket_white{
@@ -579,6 +579,15 @@ h1{
 	line-height: 14px;
 	color: #FFFFFF;
 }
+
+.helvetica14NoUpCaseWhiteOpacity03{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 14px;
+	color: #FFFFFF;
+	opacity: 0.3;
+}
+
 .radio label{
 	cursor: pointer;
 	position: relative;
@@ -979,11 +988,18 @@ p.labels {
 	height: 40px;
 	border-radius:21px; 
 }
+
 .hide{
 	opacity: 0;
-}
+}	
 
 .share a{
+	position: absolute;
+	left: 88px;
+}
+
+.share{
+	position: relative;
 }
 
 #telegram{
@@ -1007,8 +1023,10 @@ p.labels {
 }
 
 .button-share{
+	position: relative;
 	mix-blend-mode: normal;
 	cursor: pointer;
+	z-index: 3;
 }
 
 .button-share img[src="/img/item-card/share_red.png"]{
@@ -1084,7 +1102,14 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	margin: 0;
 }
 
-
+.left-arrow-item-card{
+	position: absolute;
+	left: 137px;
+}
+.right-arrow-item-card{
+	position: absolute;
+	right:139px;
+}
 .colors-item-card>div>div{
 	width:16px;
 	height:16px;

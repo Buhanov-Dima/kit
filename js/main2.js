@@ -25,6 +25,8 @@ $(function() {
   $('.ui-slider-handle.ui-corner-all.ui-state-default').children('p').addClass('helvetica14NoUpCaseWhite');
   }); 
 
+
+
 $('.button-share img[src="/img/item-card/share.png"]').on('mouseover', function(){
 	$(this).css("display","none");
 	$('.button-share img[src="/img/item-card/share_red.png"]').css("display", "block");
@@ -34,15 +36,30 @@ $('.button-share img[src="/img/item-card/share_red.png"]').on('mouseout', functi
 	$('.button-share img[src="/img/item-card/share.png"]').css("display", "block");
 });
 
-$('.button-share').on('click', function(){//ЭТО ПИЗДЕЦ - ЗАВТРА
-	
-	$('.share a').removeClass('hide');
-	$('.share a:eq(0)').css({"margin-left":"-111px","margin-top":"-92px" });
-	$('.share a:eq(1)').css({"margin-left":"1px", "margin-top":"-158px"});
-	$('.share a:eq(2)').css({"margin-left":"10px", "margin-top":"-162px"});
-	$('.share a:eq(3)').css({"margin-left":"4px", "margin-top":"-106px"});
-	$('.share a:eq(4)').css({"margin-left":"-22px", "margin-top":"-9px"});
-})
+var k = 1;
+
+$('.button-share').on('click', function(){
+	k++;
+	if(k%2===0){
+		$('.share a').each(function(){
+		$('.share a:eq(0)').delay(100*0).animate({"left":"17px","bottom":"46px", "opacity":"1"}, 100, "linear");	
+		$('.share a:eq(1)').delay(100*1).animate({"left":"57px","bottom":"79px", "opacity":"1"}, 100, "linear");
+		$('.share a:eq(2)').delay(100*2).animate({"left":"109px","bottom":"81px", "opacity":"1"}, 100, "linear");
+		$('.share a:eq(3)').delay(100*3).animate({"left":"152px","bottom":"53px", "opacity":"1"}, 100, "linear");
+		$('.share a:eq(4)').delay(100*4).animate({"left":"170px","bottom":"5px", "opacity":"1"}, 100, "linear");
+		})
+	}
+	if(k%2!==0){
+		$('.share a').each(function(){
+		$('.share a:eq(0)').delay(100*0).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");	
+		$('.share a:eq(1)').delay(100*1).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
+		$('.share a:eq(2)').delay(100*2).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
+		$('.share a:eq(3)').delay(100*3).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
+		$('.share a:eq(4)').delay(100*4).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
+		})
+	}
+
+});
 
 
 
@@ -108,3 +125,10 @@ $('.buttons div').on('mouseout', function(){
 	$(this).children("img:eq(1)").css("display", "none");
 	$(this).children("p").addClass("hide");
 });
+
+
+$('.add-to-basket').on('click', function(){
+	$(this).children('p').css({"background-color":"#278F25;","box-shadow":"0px 22px 32px rgba(39, 143, 37, 0.2), 0px 10px 16px rgba(39, 143, 37, 0.1)", "padding":"19px 70px"});
+	$(this).css("box-shadow","none");
+	$(this).children('p').text('добавлено');
+})
