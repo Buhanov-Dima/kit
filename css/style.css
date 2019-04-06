@@ -12,28 +12,57 @@ header{
 	z-index: 1000;
 }
 @font-face {
+	font-family: "HelveticaNeueCyr-Thin";
+	src: url("/fonts/HelveticaNeueCyr-Thin.ttf");
+}
+@font-face {
 	font-family: "HelveticaNeueCyr";
-	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Roman.ttf");
+	src: url("/fonts/HelveticaNeueCyr-Roman.ttf");
 }
 @font-face {
 	font-family: "HelveticaNeueCyr-Med";
-	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Medium.ttf");
+	src: url("/fonts/HelveticaNeueCyr-Medium.ttf");
 }
 @font-face {
 	font-family: "HelveticaNeueCyr-Bold";
-	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Bold.ttf");
+	src: url("/fonts/HelveticaNeueCyr-Bold.ttf");
 }
 @font-face {
 	font-family: "Oswald";
-	src: url("http://test.watosu.ru/kit/fonts/Oswaldregular.ttf");
+	src: url("/fonts/Oswaldregular.ttf");
 }
 @font-face {
 	font-family: "Oswald_extra";
-	src: url("http://test.watosu.ru/kit/fonts/Oswaldextralight.ttf");
+	src: url("/fonts/Oswaldextralight.ttf");
 }
-
+.dark_body {background-color: #11141A;}
 a:link {text-decoration: none;}
 p {margin: 0;}
+
+.mg-t-690{margin-top: 690px;}
+.mg-t-245{margin-top: 245px;}
+.bread_crumbs{
+	max-width: 1440px;
+	position: absolute;
+	top: 115px;
+	left: 45px;
+	z-index: 50;
+	margin: auto;
+}
+
+.bread_crumbs a, .bread_crumbs span{
+	
+	font-family: HelveticaNeueCyr;
+	font-size: 9px;
+	line-height: 14px;
+	text-transform: capitalize;
+
+	color: #FFFFFF;
+
+	/* White */
+	mix-blend-mode: normal;
+	opacity: 0.2;
+}
 #b1{display: block;}
 .content{
 	padding-top: 55px;
@@ -41,23 +70,36 @@ p {margin: 0;}
 	height: 760px;
 	overflow: hidden;
 	margin: auto;
-	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat center;
-	transition: .4s;
+	background: url('/img/bg/bg_main.png') no-repeat center;
 }
-
+.content.dark{
+	padding-top: 0;
+	max-width: 1440px;
+	height: 100%;
+	overflow: hidden;
+	margin: auto;
+	background: transparent;
+}
 .wrap_head
 {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	padding: 0 60px;
 }
-
+.wrap_head.white .menu a{
+	color: #FFFFFF;
+}
+.wrap_head.white .nmb_user_basket p{
+	color: #FFFFFF;
+}
 .menu
 {
 	position: relative;
 	margin-left: 10px;
+	margin-top: 3px;
 	flex-basis: 16%;
+	line-height: 10px;
 }
 
 .menu a{
@@ -72,15 +114,16 @@ p {margin: 0;}
 {
 	content: '';
 	position: absolute;
-	background: url('http://test.watosu.ru/kit/img/assets/menu.png') no-repeat;
+	background: url('/img/assets/menu.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
-	top: 7px;
+	top: 1px;
 }
 
 .nmb_user_basket{
 	justify-content: flex-end;
+	line-height: 10px;
 }
 .nmb_user_basket a{
 	display: inline-flex;
@@ -97,6 +140,7 @@ p {margin: 0;}
 	text-transform: uppercase;
 	color: #3B4150;
 	margin-right: 10px;
+	margin-top: 4px;
 }
 
 .main_h{
@@ -153,7 +197,7 @@ p {margin: 0;}
 .kit_review a:first-child::after{
 	content: '';
 	position: absolute;
-	background: url('http://test.watosu.ru/kit/img/assets/moika.png') no-repeat;
+	background: url('/img/assets/moika.png') no-repeat;
 	width: 15px;
 	height: 16px;
 	right: -24px;
@@ -162,7 +206,7 @@ p {margin: 0;}
 .kit_review a::after{
 	content: '';
 	position: absolute;
-	background: url('http://test.watosu.ru/kit/img/assets/krest.png') no-repeat;
+	background: url('/img/assets/krest.png') no-repeat;
 	width: 17px;
 	height: 17px;
 	right: -24px;
@@ -171,7 +215,7 @@ p {margin: 0;}
 .kit_review a:last-child::after{
 	content: '';
 	position: absolute;
-	background: url('http://test.watosu.ru/kit/img/assets/cube.png') no-repeat;
+	background: url('/img/assets/cube.png') no-repeat;
 	width: 15px;
 	height: 16px;
 	right: -24px;
@@ -197,7 +241,7 @@ p {margin: 0;}
 }
 .scroll_arrow::after{
 	content: '';
-	background: url('http://test.watosu.ru/kit/img/assets/arrow.svg');
+	background: url('/img/assets/arrow.svg');
 	position: absolute;
 	top: -17px;
 	left: -39px;
@@ -539,7 +583,7 @@ p {margin: 0;}
 }
 
 .content.last{
-	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat top -450px center;
+	background: url('/img/bg/bg_main.png') no-repeat top -450px center;
 }
 /*.wrap_last_bg{
 	background: url('/img/main/07.svg') no-repeat;
@@ -568,7 +612,7 @@ p {margin: 0;}
 .bg_last_main{
 	position: relative;
 	margin-top: 180px;
-	background: url('http://test.watosu.ru/kit/img/main/bg_last.svg') no-repeat;
+	background: url('/img/main/bg_last.svg') no-repeat;
 }
 .kit_review.last{
 	position: absolute;
@@ -590,7 +634,7 @@ p {margin: 0;}
 
 /**********menu**********/
 .menu_hide{
-	background:  url('http://test.watosu.ru/kit/img/assets/bg_menu.png') no-repeat;
+	background:  url('/img/assets/bg_menu.png') no-repeat;
 	position: absolute;
 	top: -55px;
 	left: -100%;
@@ -600,7 +644,7 @@ p {margin: 0;}
 	z-index: 100;
 }
 .menu_link{
-    background: url(http://test.watosu.ru/kit/img/assets/menu_lines.png) no-repeat;
+    background: url(/img/assets/menu_lines.png) no-repeat;
     background-size: contain;
     width: 685px;
     height: 725px;
@@ -709,4 +753,72 @@ p {margin: 0;}
 	position: relative;
 	top: -145px;
 	width: 100%;
+}
+
+/*******company*******/
+
+.company_b1{
+	margin-top: 174px;
+}
+
+.company_b1 img{
+	margin-top: 61px;
+}
+
+#pre_h1{
+	font-family: HelveticaNeueCyr;
+	font-size: 10px;
+	line-height: normal;
+	text-align: center;
+	letter-spacing: 1.1em;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+}
+
+.company_b1 p{
+	font-family: HelveticaNeueCyr-Thin;
+	font-size: 22px;
+	line-height: 34px;
+	text-align: center;
+	color: #FFFFFF;
+	max-width: 736px;
+	margin: 52px auto 0;
+}
+
+.company_b1 span{
+	color: #D91F43;
+}
+
+#bg_company_1{
+	position: relative;
+	padding-top: 55px;
+	padding-bottom: 150px;
+	background: url('/img/global/dark_vector.svg') no-repeat center;
+	background-position-y: 0;
+	z-index: 5;
+}
+#bg_company_2{
+	position: relative;
+	background: url('/img/company/bg_2.svg') no-repeat;
+	background-position-x: -46px;
+	background-position-y: -40px;
+
+	margin-top: -150px;
+	z-index: 0;
+}
+
+.wrap-company-b2{
+	max-width: 460px;
+}
+.wrap-company-b2 span{
+	color: #FFFFFF;
+}
+.wrap-company-b2 p{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 24px;
+
+	color: #59595E;
 }
