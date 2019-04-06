@@ -41,6 +41,18 @@ p {margin: 0;}
 
 .mg-t-690{margin-top: 690px;}
 .mg-t-245{margin-top: 245px;}
+.mg-t-160{margin-top: 160px;}
+.mg-t-47{margin-top: 47px;}
+.mg-t-15{margin-top: -15px;}
+.mg-b-210{margin-bottom: 210px;}
+
+.wrap-crumbs{
+	max-width: 1440px;
+	width: 100%;
+	margin: auto;
+	position: relative;
+}
+
 .bread_crumbs{
 	max-width: 1440px;
 	position: absolute;
@@ -809,6 +821,17 @@ p {margin: 0;}
 	z-index: 0;
 }
 
+#bg_company_3{
+	max-width: 1440px;
+	width: 100%;
+	margin: auto;
+	position: relative;
+	background: url('/img/company/bg_3.svg') no-repeat;
+	background-position-x: -46px;
+	background-position-y: -40px;
+	z-index: 0;
+}
+
 .wrap-company-b2{
 	max-width: 460px;
 }
@@ -821,4 +844,88 @@ p {margin: 0;}
 	line-height: 24px;
 
 	color: #59595E;
+}
+
+
+.bg_c_3_img img{
+	width: 100%;
+}
+
+.bg_c_3_txt{
+	max-width: 275px;
+	padding-left: 20px;
+}
+
+.bg_c_3_txt p{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 24px;
+
+	color: #59595E;
+}
+
+.bg_c_3_txt span{
+	color: #FFFFFF;
+}
+
+
+.wrap_cmpy_cnt{
+	margin-top: 112px;
+}
+
+.wrap_cmpy_cnt p{
+	max-width: 700px;
+	margin: 40px auto 0;
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+
+	color: #59595E;
+}
+
+.wrap_cmpy_cnt a{
+	font-family: HelveticaNeueCyr;
+	display: block;
+	font-size: 22px;
+	line-height: 34px;
+	text-align: center;
+	margin-top: 46px;
+	margin-bottom: 185px;
+	color: #FFFFFF;
+}
+
+.footer .logo_white{
+	background: url('/img/global/bg_foo.svg') no-repeat;
+	height: 205px;
+	position: relative;
+}
+
+.footer .logo_white::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 60px;
+	background: linear-gradient(to top, #FFFFFF 50%, #D91F43 50% );
+	bottom: -30px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.first_column p{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 14px;
+	color: #FFFFFF;
+	opacity: 0.3;
+}
+
+/* Коллекция кухонных м */
+.telephone a, .email a{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 14px;
+	color: #FFFFFF;
+	padding-left: 5px;
 }
