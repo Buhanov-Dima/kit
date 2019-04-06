@@ -921,11 +921,55 @@ p {margin: 0;}
 	opacity: 0.3;
 }
 
-/* Коллекция кухонных м */
 .telephone a, .email a{
 	font-family: HelveticaNeueCyr;
 	font-size: 14px;
 	line-height: 14px;
 	color: #FFFFFF;
 	padding-left: 5px;
+}
+
+
+.cnt-contacts{
+	padding: 160px 0 40px;
+	max-width: 1440px;
+	margin: auto;
+	background: url('/img/bg/bg_main.png') no-repeat center;
+	background-position-y: -120px;
+}
+
+.main_h2{
+	font-family: Oswald;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 53px;
+	text-align: center;
+	margin-bottom: 55px;
+	color: #3B4150;
+}
+
+.map{
+	max-width: 640px;
+	max-height: 470px;
+	background: #FFFFFF;
+	box-shadow: 0px 15px 35px rgba(24, 47, 63, 0.15);
+	border-radius: 3px;
+}
+
+.contacts_form{
+	max-width: 842px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap; 
+}
+
+.contacts_form input{
+	width: 300px;
+	height: 50px;
+	mix-blend-mode: normal;
+	opacity: 0.3;
+	border: 1px solid #70727D;
+	box-sizing: border-box;
+	border-radius: 1px;
 }
