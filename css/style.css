@@ -930,7 +930,7 @@ p {margin: 0;}
 
 
 .cnt-contacts{
-	padding: 160px 0 40px;
+	padding: 160px 40px 40px;
 	max-width: 1440px;
 	margin: auto;
 	background: url('/img/bg/bg_main.png') no-repeat center;
@@ -957,18 +957,101 @@ p {margin: 0;}
 }
 
 .contacts_form{
-	max-width: 842px;
+	max-width: 1322px;
 	margin: auto;
 	display: flex;
-	flex-wrap: wrap; 
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
-.contacts_form input{
+.wrap_contacts_form p{
+	font-family: HelveticaNeueCyr;
+	font-size: 12px;
+	line-height: normal;
+	color: #000000;
+	text-align: center;
+	margin-top: 23px;
+	opacity: 0.5;
+}
+
+#cnt_captcha{
+	width: 170px;
+	height: 50px;
+	mix-blend-mode: normal;
+	border: 1px solid rgba(112, 114, 125, .3);
+	box-sizing: border-box;
+	border-radius: 1px;
+}
+
+.contacts_form>div{
+	display: flex;
+	align-items: center;
+}
+#txt_area{
+	width: 640px;
+	height: 110px;
+	resize: none;
+	mix-blend-mode: normal;
+	border: 1px solid rgba(112, 114, 125, .3);
+	box-sizing: border-box;
+	border-radius: 1px;
+}
+.contacts_submit{
+	margin: 30px auto 0;
+	width: 220px;
+	height: 50px;
+	color: #FFFFFF;
+	background: #D91F43;
+	border-radius: 1px;
+	border: none;
+	box-shadow: 0px 10px 40px rgba(217, 31, 67, 0.5);
+}
+
+.cnt_form_flex{
+	display: flex;
+	flex-direction: column;
+}
+
+.cnt_form_flex div{
+	width: 300px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.cnt_form_flex input:first-child{
+	margin-bottom: 10px;
+}
+
+.cnt_phone, .cnt_mail{
 	width: 300px;
 	height: 50px;
 	mix-blend-mode: normal;
-	opacity: 0.3;
-	border: 1px solid #70727D;
+	border: 1px solid rgba(112, 114, 125, .3);
 	box-sizing: border-box;
 	border-radius: 1px;
+}
+.contacts_mail{
+	margin: 70px 0 40px;
+}
+
+.contacts_mail a{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 22px;
+	text-decoration-line: underline;
+	color: #3B4150;
+}
+
+.contacts_mail p{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: normal;
+	color: #3B4150;
+	opacity: 0.5;
+}
+
+.cnt{
+	max-width: 1440px;
+	margin: auto;
 }

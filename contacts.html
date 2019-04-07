@@ -49,7 +49,7 @@
 			</div>
 
 			<div class="col-lg-6">
-				<div class="map">
+				<div class="map ml-auto">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d128562.95775247761!2d50.26614880584425!3d53.21871373614704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416618e22bd879d3%3A0xba95cda9bb3a030b!2z0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1554575711237!5m2!1sru!2sru" width="100%" height="470" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 			</div>
@@ -58,29 +58,58 @@
 
 </section>
 
-<section class="">
+<section class="cnt">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="main_h2">Напишите нам</h1>
 				<div class="wrap_contacts_form">
 					<form class="contacts_form" action="">
-						<input type="text" class="cnt_phone" placeholder="Ваш телефон*">
-						<input type="text" class="cnt_phone" placeholder="Ваш телефон*">
-						<input type="text" class="cnt_mail" placeholder="Ваш почта*">
-						<img src="/img/contacts/captcha.png" alt="ReCaptcha">
-						<input type="text" class="cnt_captcha" placeholder="Код с картинки*">
-						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<div class="cnt_form_flex">
+							<input type="text" class="cnt_phone" placeholder="Ваш телефон*">
+							<input type="text" class="cnt_phone" placeholder="Ваш телефон*">
+						</div>
+						<div class="cnt_form_flex">
+							<input type="text" class="cnt_mail" placeholder="Ваш почта*">
+							<div class="d-flex">
+								<img src="/img/contacts/captcha.png" alt="ReCaptcha">
+								<input type="text" id="cnt_captcha" placeholder="Код с картинки*">
+							</div>
+						</div>
+						<div>
+							<textarea name="" id="txt_area" placeholder="Ваше сообщение"></textarea>
+						</div>
 						<input type="submit" class="contacts_submit" value="отправить">
 					</form>
+					<p>* Обязательные поля для заполнения</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col"></div>
-			<div class="col"></div>
-			<div class="col"></div>
-			<div class="col"></div>
+			<div class="col">
+				<div class="contacts_mail">
+					<a href="mailto:info@kitkraken.ru">info@kitkraken.ru</a>
+					<p>Вопросы, касающиеся сотрудничества</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="contacts_mail">
+					<a href="mailto:info@kitkraken.ru">info@kitkraken.ru</a>
+					<p>Вопросы, касающиеся сотрудничества</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="contacts_mail">
+					<a href="mailto:info@kitkraken.ru">info@kitkraken.ru</a>
+					<p>Вопросы, касающиеся сотрудничества</p>
+				</div>
+			</div>
+			<div class="col">
+				<div class="contacts_mail">
+					<a href="mailto:info@kitkraken.ru">info@kitkraken.ru</a>
+					<p>Вопросы, касающиеся сотрудничества</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
