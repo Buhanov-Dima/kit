@@ -131,4 +131,32 @@ $('.add-to-basket').on('click', function(){
 	$(this).children('p').css({"background-color":"#278F25;","box-shadow":"0px 22px 32px rgba(39, 143, 37, 0.2), 0px 10px 16px rgba(39, 143, 37, 0.1)", "padding":"19px 70px"});
 	$(this).css("box-shadow","none");
 	$(this).children('p').text('добавлено');
-})
+	$('.nmb_user_basket').children("a:eq(1)").css('background','radial-gradient(circle closest-side at 11px 9px, red 100%, rgba(255,255,255,0)) 100%');
+});
+
+$('.nmb_user_basket a:eq(1)').on('click', function(e){
+	e.preventDefault();
+	$(".basket").css('display', 'block');
+});
+
+$('.minus').on('click', function(){
+	if($(this).siblings(".value").text() == 0) return;
+	var r = $(this).siblings(".value").text();
+	$(this).siblings(".value").text(r-1);
+});
+
+$('.plus').on('click', function(){
+	var r = $(this).siblings(".value").text();
+	$(this).siblings(".value").text(1+(+r));
+});
+
+$('.close-button').on('click', function(){
+	$(this).parents	('.basket-item').remove();
+});
+
+$(document).mouseup(function (e) {
+    var container = $(".basket");
+    if (container.has(e.target).length === 0){
+        container.css('display', 'none');
+    }
+});

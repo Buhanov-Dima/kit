@@ -137,7 +137,7 @@ p {margin: 0;}
 .logo{
 	padding-top: 16px;
 }	
-.nmb_user_basket_white p{
+.nmb_user_basket_white>p{
 	font-family: HelveticaNeueCyr;
 	font-size: 11px;
 	line-height: normal;
@@ -147,13 +147,12 @@ p {margin: 0;}
 	margin-top: 2px;
 }
 
-.nmb_user_basket p{
+.nmb_user_basket>p{
 	font-family: HelveticaNeueCyr;
 	font-size: 11px;
 	line-height: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-
 	color: #3B4150;
 	margin-top: 2px;
 }
@@ -1056,6 +1055,13 @@ p.labels {
 	color: #3B4150;
 }
 
+.helvetica14NoUpCaseBlackNorm{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: normal;
+	color: #3B4150;
+}
+
 .helvetica16NoUpCaseBlack{
 	font-family: HelveticaNeueCyr;
 	font-size: 16px;
@@ -1178,12 +1184,26 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 .mg-t-27{
 	margin-top: 27px;
 }
+.pd-b-113{
+	padding-bottom:113px;
+}
 
+.mg-t--15{
+	margin-top: -15px;
+}
+.mg-t-11{
+	margin-top: 11px;
+}
+.mg-b-139{
+	margin-bottom: 139px;
+}
 .cost-center{
 	margin-top: 26px; 
 	margin-bottom: 11px;
 }
-
+.number-and-basket{
+	margin-top: 28px;
+}
 .number-of-items{
 	margin-right: 10px; 
 }
@@ -1310,4 +1330,108 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 .mg-l-30 img:nth-child(2){
 	margin-left: -2px;
 	margin-top: 42px;
+}
+
+
+.basket{
+	display: none;	
+	background: #FFF;
+	position: absolute;
+	top: 10px;
+	z-index: 5;
+	width: 330px;
+	right:50px;
+	border-radius: 6px;
+
+}
+
+.helvetica8UpCaseBlackOpacity03{
+	font-family: HelveticaNeueCyr;
+	font-size: 8px;
+	line-height: normal;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #3B4150;
+	mix-blend-mode: normal;
+	opacity: 0.3;
+}
+
+.close-button{
+	cursor: pointer;
+	display: inline-block;
+	margin-top: -18px;
+}
+.basket-item{
+	margin: 0 20px;
+	margin-top: 13px;
+}
+.basket-item-header{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 17px;
+	margin-bottom: 22px;
+}
+
+.basket-item-header p{
+	max-width: 170px;
+	width: 170px;
+}
+
+.cost-number-total{
+	display: flex;
+	justify-content: space-between;
+}
+
+.number-basket>div{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 8px;
+	align-items: center;
+}
+.number-basket>div>p{
+	padding: 7px 11px;
+	border: 1px solid #EEF0F5;
+	box-sizing: border-box;
+	border-radius: 1px;
+}
+
+.number-basket>div>div:not(p){
+	cursor:pointer;
+}
+
+.cost-basket p:nth-child(2), .total p:nth-child(2){
+	margin-top: 13px;
+}
+
+.basket-item:not(:first-child){
+	border-top: 1px solid #EEF0F5;
+}
+
+.basket-item:nth-child(2){
+	margin-bottom: 20px;
+}
+
+.go-to-basket{
+	height: 56px;
+	background: #3B4150;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	cursor: pointer;
+}
+
+.go-to-basket p{
+	margin-left: -25px;
+	position: relative;
+}
+.go-to-basket p:after{
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 133px;
+	top: -2px;
+	background: url('/img/global/shopping-bag.png') no-repeat;
 }
