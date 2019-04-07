@@ -954,6 +954,7 @@ p {margin: 0;}
 	background: #FFFFFF;
 	box-shadow: 0px 15px 35px rgba(24, 47, 63, 0.15);
 	border-radius: 3px;
+	position: relative;
 }
 
 .contacts_form{
@@ -1054,4 +1055,46 @@ p {margin: 0;}
 .cnt{
 	max-width: 1440px;
 	margin: auto;
+}
+
+.map-info{
+	background: #FFFFFF;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 26px;
+	left: 30px;
+	padding: 16px;
+	width: 265px;
+	height: 265px;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.map-info p{
+	font-family: HelveticaNeueCyr;
+	width: 100%;
+	font-size: 14px;
+	line-height: 18px;
+	color: #3B4150;
+	border-bottom: 1px solid #EEF0F5;
+	padding-bottom: 6px;
+}
+.map-info p:last-child{
+	border-bottom: none;
+}
+
+.map-info span{
+	font-family: HelveticaNeueCyr;
+	font-size: 10px;
+	line-height: normal;
+	text-align: center;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
+	color: #576078;
+
+	mix-blend-mode: normal;
+	opacity: 0.6;
 }
