@@ -62,15 +62,6 @@ $('.button-share').on('click', function(){
 });
 
 
-
-
-
-
-
-
-
-
-
 $('#catalog #choose_colors>div').on('mouseover', function(){
 	$(this).css("border","1px solid rgba(255,255,255, 1)");
 });
@@ -92,23 +83,45 @@ $('#catalog #choose_colors>div').on('click', function(){
 	}
 });
 
-$('.colors-item-card>div').on('mouseover', function(){
+$('.colors>div').on('mouseover', function(){
 	$(this).css("border","1px solid #3B4150");
 });
 
-$('.colors-item-card>div').on('mouseout', function(){ 
+$('.colors>div').on('mouseout', function(){ 
 	$(this).css("border","1px solid rgba(59, 65, 80, .1)");
 });
 
-$('.colors-item-card>div').on('click', function(){
+$('.colors>div').on('click', function(){
 	if($(this).css("border","1px solid #3B4150")){
 		$(this).css("border","1px solid rgba(59, 65, 80, .1)");
 		$(this).on('mouseout');
 		$(this).on('mouseover');
 	}
 	if($(this).css("border","1px solid rgba(59, 65, 80, .1)")){
-		$('.colors-item-card>div').css("border","1px solid rgba(59, 65, 80, .1)");
+		$('.colors>div').css("border","1px solid rgba(59, 65, 80, .1)");
 		$(this).css("border","1px solid #3B4150");
+		$(this).off('mouseout');
+		$(this).off('mouseover');
+	}
+});
+
+$('#first_constructor .colors>div').on('mouseover', function(){
+	$(this).css("border","1px solid rgba(255, 255, 255, 1)");
+});
+
+$('#first_constructor .colors>div').on('mouseout', function(){ 
+	$(this).css("border","1px solid rgba(255, 255, 255, .2)");
+});
+
+$('#first_constructor .colors>div').on('click', function(){
+	if($(this).css("border","1px solid rgba(255, 255, 255, 1)")){
+		$(this).css("border","1px solid rgba(255, 255, 255, .2)");
+		$(this).on('mouseout');
+		$(this).on('mouseover');
+	}
+	if($(this).css("border","1px solid rgba(255, 255, 255, .2)")){
+		$('#first_constructor .colors>div').css("border","1px solid rgba(255, 255, 255, .2)");
+		$(this).css("border","1px solid rgba(255, 255, 255, 1)");
 		$(this).off('mouseout');
 		$(this).off('mouseover');
 	}
@@ -139,6 +152,11 @@ $('.nmb_user_basket a:eq(1)').on('click', function(e){
 	$(".basket").css('display', 'block');
 });
 
+$('.nmb_user_basket_white a:eq(1)').on('click', function(e){
+	e.preventDefault();
+	$(".basket").css('display', 'block');
+});
+
 $('.minus').on('click', function(){
 	if($(this).siblings(".value").text() == 0) return;
 	var r = $(this).siblings(".value").text();
@@ -156,6 +174,19 @@ $('.close-button').on('click', function(){
 
 $(document).mouseup(function (e) {
     var container = $(".basket");
+    if (container.has(e.target).length === 0){
+        container.css('display', 'none');
+    }
+});
+
+
+$('#info_symbol').on('click', function(e){
+	e.preventDefault();
+	$(".show-parameters").css('display', 'block');
+});
+
+$(document).mouseup(function (e) {
+    var container = $(".show-parameters");
     if (container.has(e.target).length === 0){
         container.css('display', 'none');
     }
