@@ -491,8 +491,27 @@ footer{
 	background: url('/img/constructor/bg22.png') no-repeat center;
 }
 
-#third_constructor>.line-process{
-	margin-bottom: 20px;
+#fourth_constructor{
+	padding-top: 110px;
+	height: 667px;
+	background: url('/img/constructor/bg23.png') no-repeat center;
+}
+
+#fifth_constructor{
+	padding-top: 110px;
+	height: 667px;
+	background: url('/img/constructor/bg24.png') no-repeat center;
+}
+
+#sixth_constructor{
+	padding-top: 110px;
+	height: 667px;
+	background: url('/img/constructor/bg25.png') no-repeat center;
+}
+
+.pd-l-r-48{
+	padding-left:48px !important;
+	padding-right: 48px  !important;	
 }
 
 #footer_catalog{
