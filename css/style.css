@@ -79,7 +79,6 @@ p {margin: 0;}
 .content{
 	padding-top: 55px;
 	max-width: 1440px;
-	height: 760px;
 	overflow: hidden;
 	margin: auto;
 	background: url('/img/bg/bg_main.png') no-repeat center;

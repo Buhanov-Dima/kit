@@ -307,6 +307,7 @@ p {margin: 0;}
 #button_red_arrow{	
 	margin-top: 30px;
 	background: none;
+	margin-bottom: 31px;
 }
 
 .button_add{
@@ -342,11 +343,8 @@ p {margin: 0;}
 }
 
 footer{
-	position: absolute;
 	width: 100%;
 	max-width: 1440px;
-	left: 0;
-	right: 0;
 	margin: 0 auto; 
 }
 
@@ -373,7 +371,7 @@ footer{
 .wrap_foot{
 	display: flex;
 	justify-content: space-between;
-	padding-top: 39px;
+	padding-top: 71px;
 	padding-bottom: 50px;
 }
 .telephone{
@@ -503,7 +501,7 @@ footer{
 
 #catalog{
 	padding: 0 60px;
-	padding-top: 120px;
+	padding-top: 156px;
 }
 
 #catalog.content{
@@ -530,15 +528,6 @@ footer{
 }
 .slash{
 	margin-right: 7px;	
-}
-h1{
-	font-family: Oswald;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 48px;
-	line-height: 53px;
-	text-align: center;
-	color: #3B4150;
 }
 
 #catalog h1{
@@ -825,7 +814,7 @@ p.labels {
 	flex-wrap: wrap;
 	padding-right: 7px;
 	padding-left: 9px;
-	margin-bottom: -27px; 
+	margin-bottom: 27px; 
 }
 .item{
 	width: 300px;
@@ -914,7 +903,7 @@ p.labels {
 
 #item-card{
 	padding: 0 60px;
-	padding-top: 120px;
+	padding-top: 156px;
 }
 
 #item-card h1{
@@ -1303,7 +1292,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 }
 
 .advanced-items{
-	margin-bottom: -8px;
+	margin-bottom: 47px;
 }
 
 .advanced-items>div:nth-child(2) img{
