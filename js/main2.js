@@ -191,3 +191,23 @@ $(document).mouseup(function (e) {
         container.css('display', 'none');
     }
 });
+
+$('.left-arrow-item-card').on('click', function(){
+	var c = $('.central-item img').attr('src');
+	var l = $('.left-picture img').attr('src');
+	var r = $('.right-picture img').attr('src');
+
+	$('.central-item img').attr('src', r);	
+	$('.left-picture img').attr('src', c);
+	$('.right-picture img').attr('src', l);
+});
+
+$('.right-arrow-item-card').on('click', function(){
+	var c = $('.central-item img').attr('src');
+	var l = $('.left-picture img').attr('src');
+	var r = $('.right-picture img').attr('src');
+
+	$('.central-item img').attr('src', l);	
+	$('.left-picture img').attr('src', r);
+	$('.right-picture img').attr('src', c);
+})

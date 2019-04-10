@@ -2,3 +2,5 @@
 .m2_info {left: 349px;} #btn_3{left: 632px;} #btn_4{left: 300px;} #btn_4-1{left: 440px;}
 #btn_4-2 {left: 740px;} #btn_5{left: 525px;} #btn_5-1{left: 770px;} #btn_6{left: 630px;}
 .wrap_img_m2 img{width: 100%;} .m_h2{margin-left: 50px;} 
+
+.left-picture, .right-picture{display:none;} .descript{max-width: none; text-align: center;}
