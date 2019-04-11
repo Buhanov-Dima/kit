@@ -6,4 +6,7 @@ h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{margin-top:
 #btn_3{top: 461px; left: 432px;} #btn_4{top: 380px; left: 294px;} #btn_4-1{top: 340px; left: 328px;}
 #btn_4-2{left: 522px; top: 380px;} #btn_5-1{top: 405px; left: 550px;} #btn_5{left: 382px; top: 325px;}
 #btn_6{top: 344px; left: 480px;} .wrap_img_m2{max-height: 285px;} .scroll_bar{top: 50px;}
-.m_img img {margin-top: 37px;}
+.m_img img {margin-top: 37px;} .bg_c_3_txt{max-width: 220px; margin: auto; margin-top: 20px; padding-left: 0;}
+.wrap-company-b2{margin-top: 60px; margin-bottom: 60px; max-width: 290px;} #bg_company_3{background-size: contain; background-position: bottom; padding: 0 60px;}
+.bg_c_3_txt.mg-t-15{margin-top: -35px;} .wrap-company-b2 p, .bg_c_3_txt p{line-height: 18px;} .wrap_cmpy_cnt{margin-top: 60px;} .wrap_cmpy_cnt a{margin-bottom: 40px;}
+.content.dark{padding: 0;} #bg_company_3, #bg_company_2{max-width: 993px;}

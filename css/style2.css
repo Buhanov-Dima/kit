@@ -721,9 +721,11 @@ footer{
 	justify-content: center;
 	align-items: center;
 }
-.active{
+/******RTFM******/
+/*.active{ просил же не весить стили на основные классы
 	border: 1px solid rgba(255,255,255, 1) !important;
-}
+}*/
+/******RTFM******/
 #choose_colors>div:first-child{
 	margin-left: -4px;
 }
