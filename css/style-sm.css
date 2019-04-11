@@ -1,1 +1,6 @@
-.menu_link {background: url(/img/assets/menu_lines.png) no-repeat;}
+.menu_link {background: url(/img/assets/menu_lines.png) no-repeat; height: 450px; padding: 0; left: 10px; top: 10px; background-size: 225px 450px; width: 100%; padding: 110px 0 0 35px;}
+header {margin-top: 14px;} h1.main_h{font-size: 48px;} .wrap_head{padding: 0 15px;} .sm-open{display: block!important;}
+.nmb_user_basket a{margin-left: 20px;} .menu a::before{left: -5px; top: -3px;} .main_h{font-size: 44px; line-height: 44px; letter-spacing: -2px; margin-top: 0;}
+.main_content {height: 465px; border: 1px solid black;} .menu_hide{height: 470px; top: -20px; width: 250px; background-size: 250px 470px;}
+.left_side{top: 285px; left: -100px;} .kit_review{top: 330px; right: -20px;} .sm-none{display: none!important;} .m_img img{max-width: 206px;} .m_img{text-align: center;}
+.menu_link a{font-size: 24px; line-height: 24px; margin-bottom: 25px;}.close_menu{top: 32px; left: 44px; }

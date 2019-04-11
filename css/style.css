@@ -1367,4 +1367,4 @@ p {margin: 0;}
 	padding-bottom: 40px;
 	margin-top: 40px;
 }
-.md-open{display: none!important;}
+.md-open, .sm-open{display: none!important;}
