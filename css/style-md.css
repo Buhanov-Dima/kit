@@ -1,7 +1,7 @@
 h1.main_h {font-size: 96px;} .md-close{display: none!important;} .md-open{display: block!important;} .left_side{position: absolute; left: -80px; top: 385px;}
 .kit_review{transform: rotate(-90deg); position: absolute; top: 430px; right: 0;} .menu_link span{display: none;} .menu_link a{font-size: 40px; line-height: 48px;}
 .menu_link{width: 460px; padding: 100px 0 50px 80px; background: url(/img/assets/menu_lines.png) no-repeat; background-size: 403px 600px; height: 620px;}
-.menu {flex-basis: 25%;} .m_img img{margin-top: 37px;} .main_content {height: 640px;} .menu_hide{height: 640px; background-size: 440px 640px} .close_menu{top: 55px; left: 68px;}
+.menu {flex-basis: 25%;} .m_img img{margin-top: 37px;} .main_content {height: 640px;  display: block!important;} .menu_hide{height: 640px; background-size: 440px 640px} .close_menu{top: 55px; left: 68px;}
 .m2_info{display: none;} .kit_review.right-side, .kit_review.last{display: none;} .m2_img img, #main_05{max-width: 420px;} #main_06{max-width: 298px;} .bg_last_main{background: none; margin-top: auto;}
 /*****CONFLICT*****/
 .bg_last_main{height: 640px;} .wrap_img_m2 img{position: absolute; top: auto; bottom: 323px; left: 0;}
