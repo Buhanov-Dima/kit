@@ -41,21 +41,34 @@ var k = 1;
 $('.button-share').on('click', function(){
 	k++;
 	if(k%2===0){
-		$('.share a').each(function(){
-		$('.share a:eq(0)').delay(100*0).animate({"left":"17px","bottom":"46px", "opacity":"1"}, 100, "linear");	
-		$('.share a:eq(1)').delay(100*1).animate({"left":"57px","bottom":"79px", "opacity":"1"}, 100, "linear");
-		$('.share a:eq(2)').delay(100*2).animate({"left":"109px","bottom":"81px", "opacity":"1"}, 100, "linear");
-		$('.share a:eq(3)').delay(100*3).animate({"left":"152px","bottom":"53px", "opacity":"1"}, 100, "linear");
-		$('.share a:eq(4)').delay(100*4).animate({"left":"170px","bottom":"5px", "opacity":"1"}, 100, "linear");
+		$('.share a').each(function(index){
+			if($('.share').siblings('.descript')) index = index;
+			if($('.share').siblings('.description_table')) index = index-5;
+			if(index == 0){
+				$(this).delay(100*index).animate({"left":"17px","bottom":"60px", "opacity":"1"}, 100, "linear");	
+			}
+			if(index == 1){
+				$(this).delay(100*index).animate({"left":"57px","bottom":"93px", "opacity":"1"}, 100, "linear");
+			}
+			if(index == 2){
+				$(this).delay(100*index).animate({"left":"109px","bottom":"95px", "opacity":"1"}, 100, "linear");
+			}
+			if(index == 3){
+				$(this).delay(100*index).animate({"left":"152px","bottom":"67px", "opacity":"1"}, 100, "linear");
+			}
+			if(index == 4){
+				$(this).delay(100*index).animate({"left":"170px","bottom":"18px", "opacity":"1"}, 100, "linear");
+			}
 		})
 	}
+
 	if(k%2!==0){
-		$('.share a').each(function(){
-		$('.share a:eq(0)').delay(100*0).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");	
-		$('.share a:eq(1)').delay(100*1).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
-		$('.share a:eq(2)').delay(100*2).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
-		$('.share a:eq(3)').delay(100*3).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
-		$('.share a:eq(4)').delay(100*4).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
+		$('.share a').each(function(index){
+		$(this).delay(100*index).animate({"left":"88px","bottom":"13px", "opacity":"0"}, 100, "linear");	
+		/*$('.share a:eq(6)').delay(100*1).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
+		$('.share a:eq(7)').delay(100*2).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
+		$('.share a:eq(8)').delay(100*3).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");
+		$('.share a:eq(9)').delay(100*4).animate({"left":"88px","bottom":"0px", "opacity":"0"}, 100, "linear");*/
 		})
 	}
 
@@ -170,6 +183,7 @@ $('.plus').on('click', function(){
 
 $('.close-button').on('click', function(){
 	$(this).parents	('.basket-item').remove();
+	if(!($('basket').is('.basket-item'))) $('.basket').css("display","none");
 });
 
 $(document).mouseup(function (e) {
@@ -178,7 +192,6 @@ $(document).mouseup(function (e) {
         container.css('display', 'none');
     }
 });
-
 
 $('#info_symbol').on('click', function(e){
 	e.preventDefault();
@@ -193,21 +206,41 @@ $(document).mouseup(function (e) {
 });
 
 $('.left-arrow-item-card').on('click', function(){
-	var c = $('.central-item img').attr('src');
+	var c = $('.central-item>img').attr('src');
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
 
-	$('.central-item img').attr('src', r);	
+	$('.central-item>img').attr('src', r);	
 	$('.left-picture img').attr('src', c);
 	$('.right-picture img').attr('src', l);
 });
 
 $('.right-arrow-item-card').on('click', function(){
-	var c = $('.central-item img').attr('src');
+	var c = $('.central-item>img').attr('src');
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
 
-	$('.central-item img').attr('src', l);	
+	$('.central-item>img').attr('src', l);	
 	$('.left-picture img').attr('src', r);
 	$('.right-picture img').attr('src', c);
-})
+});
+
+$('.little-left-arrow').on('click', function(){
+	var c = $('.central-item>img').attr('src');
+	var l = $('.left-picture img').attr('src');
+	var r = $('.right-picture img').attr('src');
+
+	$('.central-item>img').attr('src', r);	
+	$('.left-picture img').attr('src', c);
+	$('.right-picture img').attr('src', l);
+});
+
+$('.little-right-arrow').on('click', function(){
+	var c = $('.central-item>img').attr('src');
+	var l = $('.left-picture img').attr('src');
+	var r = $('.right-picture img').attr('src');
+
+	$('.central-item>img').attr('src', l);	
+	$('.left-picture img').attr('src', r);
+	$('.right-picture img').attr('src', c);
+});

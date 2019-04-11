@@ -3,4 +3,5 @@
 #btn_4-2 {left: 740px;} #btn_5{left: 525px;} #btn_5-1{left: 770px;} #btn_6{left: 630px;}
 .wrap_img_m2 img{width: 100%;} .m_h2{margin-left: 50px;} 
 
-.left-picture, .right-picture{display:none;} .descript{max-width: none; text-align: center;}
+.left-picture, .right-picture{display:none;} .descript{max-width: none; text-align: center;} .mg-t-20-lg{margin-top: 20px;} .description_table{width: 270px; margin-bottom: 0; margin-top: 20px; max-width: 567px; width: 100%;}
+.descript{margin-bottom: 0;} .info-and-buttons>p{margin-bottom: 0; margin-right: 25px;}

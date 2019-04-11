@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="/css/style-xs.css" media="only screen and (max-width:320px)">
 </head>
 <body>
-	<header>
+	<header class="d-sm-none">
 		<div class="wrap_head">
 			<div class="menu">
 				<a href="#">меню</a>
@@ -106,7 +106,7 @@
 	</header>
 	<section>
 		<div class="content" id="item-card">
-			<div class="bread_crumbs"> <!--bread_crumbs-->
+			<div class="bread_crumbs d-sm-none"> <!--bread_crumbs-->
 				<p>Главная</p>
 				<p class="slash">\</p>
 				<p>Каталог</p>
@@ -116,21 +116,22 @@
 				<p>Модель Gulf</p>
 			</div>
 			<div class="container-fluid">
-				<div class="row mg-b-64">
+				<div class="row mg-b-30">
 					<div class="col-lg-12">
-						<h1 class="main_h2">Кухонные мойки</h1>		
+						<h1 class="main_h2 d-sm-none d-md-block">Кухонные мойки</h1>
+						<h1 class="d-sm-block d-md-none main-label">Кухонная мойка <span>Sea K850</span></h1>
 					</div>
-					<div class="col-xl-3 col-lg-8 mx-lg-auto">
+					<div class="col-xl-3 col-lg-8 mx-lg-auto mg-t-20-lg lp-0">
 						<div class="left-picture">
 							<img src="/img/catalog/duolake.png" alt="river">
 							<p class="helvetica16NoUpCaseBlack">River</p>
 						</div>
-						<div class="descript">
+						<div class="descript d-sm-none d-md-block">
 							<h4 class="helvetica10UpCaseBDBDBD mg-b-18">Описание</h4>
 							<p class="helvetica14LineHeight24NoUpCaseBlack">Мойка с двумя многофункциональными объемными чашами. Мойте в чашах посуду с разным загрязнением или овощи,  промывайте в одной и ополаскивайте в другой или закройте одну из чаш специальной доской или решеткой и используйте под сушку.
 							</p>
 						</div>
-						<div class="share">
+						<div class="share d-sm-none d-xl-flex">
 							<p class="helvetica10UpCaseBDBDBD">поделиться</p>
 							<div class="button-share">
 								<img src="/img/item-card/share.png" alt="share">
@@ -143,11 +144,11 @@
 							<a href="#" id="instagram" class="hide"></a>
 						</div>
 					</div>
-					<div class="col-lg-6 mx-auto pd-t-32 lp-0 rp-0">
+					<div class="col-xl-6 mx-auto pd-t-32 lp-0 rp-0 col-lg-8 col-sm-12">
 						<div class="d-flex justify-content-center mg-b-10">
-							<p class="helvetica10UpCaseBDBDBD">модель</p>
+							<p class="helvetica10UpCaseBDBDBD d-sm-none d-md-block">модель</p>
 						</div>
-						<div class="d-flex justify-content-around">
+						<div class="d-md-flex justify-content-around d-sm-none">
 							<div class="left-arrow-item-card">
 								<img src="/img/item-card/left_arrow_black.png" alt="left-arrow">
 							</div>
@@ -156,7 +157,7 @@
 								<img src="/img/item-card/right_arrow_black.png" alt="right-arrow">
 							</div>
 						</div>
-						<div class="colors d-flex justify-content-between w-160 mx-auto">
+						<div class="colors d-md-flex justify-content-between w-160 mx-auto d-sm-none">
 							<div><div></div></div>
 							<div><div></div></div>
 							<div><div></div></div>
@@ -164,20 +165,42 @@
 							<div><div></div></div>
 						</div>
 						<div class="mx-auto central-item">
+							<div>
+								<img src="img/item-card/little-left-arrow.png" alt="left-arrow" class="d-sm-block d-md-none little-left-arrow">
+							</div>
 							<img src="img/item-card/gult.png" alt="gult">
+							<div>
+								<img src="img/item-card/little-right-arrow.png" alt="right-arrow" class="d-sm-block d-md-none little-right-arrow">
+							</div>
 						</div>
-						<div class="d-flex justify-content-center">
-							<p class="helvetica10UpCaseBDBDBD cost-center">цена</p>
+						<div class="d-sm-flex d-md-none justify-content-between">
+							<div>
+								<p class="helvetica8UpCaseBlackOpacity03 mg-b-15">цена</p>
+								<p class="helvetica14NoUpCaseBlack">18 999 рублей</p>
+							</div>
+							<div class="colors d-flex justify-content-between w-160">
+								<div><div></div></div>
+								<div><div></div></div>
+								<div><div></div></div>
+								<div><div></div></div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div class="add-to-basket"><p class="helvetica10UpCaseWhite">добавить корзину</p></div>
+							</div>
+						</div>
+						<div class="d-md-flex d-sm-none justify-content-md-center justify-content-sm-left">
+							<p class="helvetica10UpCaseBDBDBD cost-center d-sm-none d-md-block">цена</p>
 						</div>	
-						<div class="d-flex justify-content-center">
-							<p class="helvetica24NoUpCaseBlack">18 999 рублей</p>
+						<div class="d-md-flex d-sm-none justify-content-md-center justify-content-sm-left">
+							<p class="helvetica24NoUpCaseBlack d-sm-none d-md-block">18 999 рублей</p>
 						</div>
-						<div class="d-flex justify-content-center mg-t-27">
-							<div class="number-of-items helvetica14NoUpCaseBlack"><p>1</p></div>
+						<div class="d-md-flex d-sm-none justify-content-center mg-t-27">
+							<div class="number-of-items helvetica14NoUpCaseBlack d-sm-none d-md-flex"><p>1</p></div>
 							<div class="add-to-basket"><p class="helvetica10UpCaseWhite">добавить корзину</p></div>
 						</div>
-					</div>
-					<div class="col-lg-3 rp-0 d-flex justify-content-end">
+						</div>
+					<div class="col-xl-3 rp-0 justify-content-xl-end col-lg-8 mx-lg-auto justify-content-lg-center d-md-flex flex-md-wrap col-md-8 mx-md-auto d-sm-none">
 						<div class="right-picture">
 							<img src="/img/item-card/table-top-white.png" alt="duolake">
 							<p class="helvetica16NoUpCaseBlack">Duolake</p>
@@ -201,7 +224,19 @@
 								<p class="helvetica14NoUpCaseBlack">21см</p>
 							</div>
 						</div>
-						<div class="info-and-buttons position-absolute">
+						<div class="share d-lg-flex d-xl-none">
+							<p class="helvetica10UpCaseBDBDBD">поделиться</p>
+							<div class="button-share">
+								<img src="/img/item-card/share.png" alt="share">
+								<img src="/img/item-card/share_red.png" alt="share">
+							</div>
+							<a href="#" id="telegram" class="hide"></a>
+							<a href="#" id="whatsapp" class="hide"></a>
+							<a href="#" id="messenger" class="hide"></a>
+							<a href="#" id="vkontakte" class="hide"></a>
+							<a href="#" id="instagram" class="hide"></a>
+						</div>
+						<div class="info-and-buttons d-lg-flex align-items-lg-center d-xl-block">
 							<p class="helvetica10UpCaseBDBDBD">информация</p>
 							<div class="buttons">
 								<div id="life-buoy">
@@ -250,37 +285,78 @@
 				</div>
 				<div class="row advanced-items">
 					<div class="col-lg-12 lp-0 rp-0">
-						<h3 class="oswald36NoUpCaseBlack label-advanced">Дополняющие товары</h3> 
+						<h3 class="oswald36NoUpCaseBlack label-advanced d-sm-none d-md-block">Дополняющие товары</h3> 
+						<h3 class="oswald20NoUpCaseBlack label-advanced d-sm-block d-md-none">Дополняющие товары</h3> 
 					</div>
-					<div class="col-lg-3"> 
+					<div class="col-lg-3 col-md-3 col-sm-3"> 
 						<div>
 							<p class="helvetica12UpCaseBlackHalfOpacity">смесители</p>
 							<img src="/img/item-card/water-tap.png" alt="water-tap">
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-3">
 						<div>
 							<p class="helvetica12UpCaseBlackHalfOpacity">разделочные доски</p>
 							<img src="/img/item-card/desk.png" alt="desk">
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-3">
 						<div>
 							<p class="helvetica12UpCaseBlackHalfOpacity">столешницы</p>
 							<img src="/img/item-card/desks.png" alt="desks">
 						</div>
 					</div>
-					<div class="col-lg-3 ">
+					<div class="col-lg-3 col-md-3 col-sm-3">
 						<div>
 							<p class="helvetica12UpCaseBlackHalfOpacity">кухонный фартук</p>
 							<img src="/img/item-card/wall.png" alt="wall">
 						</div>
 					</div>
 				</div>
+				<div class="row d-sm-flex d-md-none">
+					<div class="col-sm-6">
+						<div class="description_table">
+							<h4 class="helvetica8UpCaseBlackOpacity05">Параметры</h4>
+							<div class="material">
+								<p class="helvetica14NoUpCaseBlack">Материал</p>
+								<p class="helvetica14NoUpCaseBlack">Кварц</p>
+							</div>
+							<div class="width">
+								<p class="helvetica14NoUpCaseBlack">Ширина</p>
+								<p class="helvetica14NoUpCaseBlack">250см</p>
+							</div>
+							<div class="height">
+								<p class="helvetica14NoUpCaseBlack">Высота</p>
+								<p class="helvetica14NoUpCaseBlack">250см</p>
+							</div>
+							<div class="bowl-depth">
+								<p class="helvetica14NoUpCaseBlack">Глубина чаши</p>
+								<p class="helvetica14NoUpCaseBlack">21см</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="descript">
+							<h4 class="helvetica8UpCaseBlackOpacity05 mg-b-18">Описание</h4>
+							<p class="helvetica14LineHeight24NoUpCaseBlack">Внешне материал схож с натуральным камнем, эстетично смотрится и прост в уходе. Материал отлично смотрится и визуально расширяет пространство, обладает повышенной влагостойкостью. Внешне материал схож с натуральным камнем, эстетично смотрится и прост в уходе.
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="tablet-share">
+							<p class="helvetica8UpCaseBlackOpacity05">поделиться</p>
+							<div class="d-flex">
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-	<footer>
+	<footer class="d-sm-none">
 			<div class="footer">
 				<div class="logo_white">
 					<img src="/img/global/logo2.png" alt="logo">

@@ -10,3 +10,8 @@ h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{margin-top:
 .wrap-company-b2{margin-top: 60px; margin-bottom: 60px; max-width: 290px;} #bg_company_3{background-size: contain; background-position: bottom; padding: 0 60px;}
 .bg_c_3_txt.mg-t-15{margin-top: -35px;} .wrap-company-b2 p, .bg_c_3_txt p{line-height: 18px;} .wrap_cmpy_cnt{margin-top: 60px;} .wrap_cmpy_cnt a{margin-bottom: 40px;}
 .content.dark{padding: 0;} #bg_company_3, #bg_company_2{max-width: 993px;}
+.m_img img {margin-top: 37px;}
+
+.left-picture, .right-picture{display:none;} .descript{max-width: none; text-align: center;} .mg-t-20-lg{margin-top: 20px;} .description_table{width: 270px; margin-bottom: 0; margin-top: 20px; max-width: 567px; width: 100%;}
+.descript{margin-bottom: 0;} .info-and-buttons>p{text-align: center; margin-bottom: 10px;} .advanced-items>div div{height: 300px;}
+
