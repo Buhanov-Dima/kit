@@ -1111,7 +1111,8 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	max-width: 160px;
 }
 .colors{
-	margin: 25px 0;	
+	margin: 25px 0;
+	position: relative;	
 }
 .colors>div{
 	border: none;
@@ -1559,4 +1560,9 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 
 .main-label span{
 	color: #D91F43;
+}
+
+.colors span{
+	position: absolute;
+	top: 0;
 }

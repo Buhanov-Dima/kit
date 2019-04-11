@@ -69,6 +69,19 @@ header {margin-top: 14px;} h1.main_h{font-size: 48px;} .wrap_head{padding: 0 15p
 	padding: 10px 0;
 }
 
+.tablet-share p{
+	margin-bottom:15px;
+}
+
+.tablet-share{
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.tablet-share div{
+	width: 110px;
+}
+
 .tablet-share a{
 	margin-right: 15px;
 	border: 1px solid rgba(112, 114, 125, .3);
@@ -84,4 +97,8 @@ header {margin-top: 14px;} h1.main_h{font-size: 48px;} .wrap_head{padding: 0 15p
 }
 .tablet-share a:nth-child(3){
 	background: url('/img/item-card/vk-tablet.png') center center no-repeat;
+}
+
+.display-none-mobile{
+	display: none !important;
 }
