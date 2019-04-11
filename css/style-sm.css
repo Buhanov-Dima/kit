@@ -25,11 +25,11 @@ header {margin-top: 14px;} h1.main_h{font-size: 48px;} .wrap_head{padding: 0 15p
     width: 78px !important; height: 78px !important; border: solid 2px #D91F43; /*неанимированная рамка. можно навесить анимацию, стоит ровно на слайде*/
 } 
 .fotorama{
-	margin-bottom:33px;
+	margin-bottom:22px;
 }
 
 .advanced-items{
-	margin-bottom: 39px;
+	margin-bottom: 21px;
 }
 
 .advanced-items p{
@@ -46,6 +46,7 @@ header {margin-top: 14px;} h1.main_h{font-size: 48px;} .wrap_head{padding: 0 15p
 
 .description_table{
 	margin-top: 0;
+	margin-bottom: 20px;
 }
 
 .description_table h4{
@@ -63,6 +64,9 @@ header {margin-top: 14px;} h1.main_h{font-size: 48px;} .wrap_head{padding: 0 15p
 	line-height: 18px;
 	max-width: 436px;
 	width: 106%;
+}
+.descript{
+	margin-bottom: 10px;
 }
 
 .description_table div{
@@ -103,6 +107,48 @@ header {margin-top: 14px;} h1.main_h{font-size: 48px;} .wrap_head{padding: 0 15p
 	display: none !important;
 }
 
-.content{
-	padding: 0 10px !important;
+#item-card{
+	padding: 0 10px;
+	padding-top: 71px;
+}
+
+.central-item{
+	margin-top: -118px;
+	margin-bottom: 0;
+}
+
+.central-item img{
+	min-width: 0;
+	max-width: 200px;
+}
+
+.mg-t--67{
+	margin-top: -67px;
+}
+
+.add-to-basket{
+	margin-top: 32px;
+}
+
+.add-to-basket p {
+	padding: 14px 88px;
+}
+
+.advanced-items>div div{
+	padding-top: 20px;
+	height: 185px;
+}
+
+.advanced-items img{
+	width: 50%;
+}
+
+.add-to-basket p{
+	padding: 0;
+	line-height: 40px;
+	text-align: center;
+}
+
+.flex-basis-manual{
+	flex-basis:100%;
 }

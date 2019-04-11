@@ -105,7 +105,13 @@ h1.main_h {font-size: 96px;} .md-close{display: none!important;} .md-open{displa
 	background: url('/img/item-card/vk-tablet.png') center center no-repeat;
 }
 
+/*****CONFLICT*****/
 .pd-r-l-5{
 	padding-right: 5px !important;
 	padding-left: 5px !important;
 }
+
+.advanced-items img{
+	width: 50%;
+}
+/*****CONFLICT*****/
