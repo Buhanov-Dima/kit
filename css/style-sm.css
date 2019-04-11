@@ -102,3 +102,7 @@ header {margin-top: 14px;} h1.main_h{font-size: 48px;} .wrap_head{padding: 0 15p
 .display-none-mobile{
 	display: none !important;
 }
+
+.content{
+	padding: 0 10px !important;
+}
