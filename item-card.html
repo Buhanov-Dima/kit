@@ -13,22 +13,35 @@
 	<link rel="stylesheet" href="/css/style-lg.css" media="only screen and (max-width:993px)">
 	<link rel="stylesheet" href="/css/style-md.css" media="only screen and (max-width:768px)">
 	<link rel="stylesheet" href="/css/style-sm.css" media="only screen and (max-width:576px)">
-	<link rel="stylesheet" href="/css/style-xs.css" media="only screen and (max-width:320px)">
 </head>
 <body>
-	<header class="d-sm-none">
-		<div class="wrap_head">
-			<div class="menu">
-				<a href="#">меню</a>
-			</div>
-			<div class="logo">
-				<img src="/img/logo.png" alt="">
-			</div>
-			<div class="nmb_user_basket">
-				<p>+7 495 780 65 65</p>
-				<a href="#"><img src="/img/assets/user.png" alt="user"></a>
-				<a href="#"><img src="/img/assets/shopping-bag.png" alt="basket"></a>
-				<div class="basket">
+	<header>
+	<div class="menu_hide">
+		<div class="close_menu">Закрыть</div>
+		<div class="menu_link">
+			<a id="l_1" href="/catalog.html">Каталог<br><span>Все доступные товары</span></a>
+			<a id="l_2" href="/constructor.html">Конструктор<br><span>Соберите свой собственный кит</span></a>
+			<a id="l_3" href="#">Личный кабинет<br><span>Подробная информация о доставке и оплате</span></a>
+			<a id="l_4" href="#">О компании<br><span>Узнайте о нас больше</span></a>
+			<a id="l_5" href="#">Контакты<br><span>Где мы и как с нами связаться</span></a>
+		</div>
+	</div>
+	<div class="wrap_head">
+		<div class="menu">
+			<a href="#" class="md-close">меню</a>
+			<a href="#" class="md-open"></a>
+		</div>
+		<div class="logo">
+			<img class="md-close" src="/img/logo.png" alt="">
+			<img class="md-open" src="/img/mobile/logo.png" alt="">
+		</div>
+		<div class="nmb_user_basket d-flex">
+			<p class="md-close">+7 495 780 65 65</p>
+			<a href=""></a>
+			<a href="tel:+74957806565" class="md-open"><img src="/img/mobile/phone.png" alt=""></a>
+			<a href="#" class="md-close"><img src="/img/assets/user.png" alt="user"></a>
+			<a href="#"><img src="/img/assets/shopping-bag.png" alt="basket"></a>
+			<div class="basket">
 					<div class="basket-item">
 						<div class="basket-item-header">
 							<div>
@@ -101,9 +114,9 @@
 						</div>
 					</div>	
 				</div>
-			</div>
 		</div>
-	</header>
+	</div>
+</header>
 	<section>
 		<div class="content" id="item-card">
 			<div class="bread_crumbs d-sm-none"> <!--bread_crumbs-->
@@ -118,7 +131,7 @@
 			<div class="container-fluid">
 				<div class="row mg-b-30">
 					<div class="col-lg-12">
-						<h1 class="main_h2 d-sm-none d-md-block">Кухонные мойки</h1>
+						<h1 class="main_h2 d-sm-none d-md-block display-none-mobile">Кухонные мойки</h1>
 						<h1 class="d-sm-block d-md-none main-label">Кухонная мойка <span>Sea K850</span></h1>
 					</div>
 					<div class="col-xl-3 col-lg-8 mx-lg-auto mg-t-20-lg lp-0">
@@ -178,7 +191,8 @@
 								<p class="helvetica8UpCaseBlackOpacity03 mg-b-15">цена</p>
 								<p class="helvetica14NoUpCaseBlack">18 999 рублей</p>
 							</div>
-							<div class="colors d-flex justify-content-between w-160">
+							<div class="colors d-flex justify-content-between w-160 align-items-end">
+								<span class="helvetica8UpCaseBlackOpacity03">Цвет</span>
 								<div><div></div></div>
 								<div><div></div></div>
 								<div><div></div></div>
@@ -283,30 +297,30 @@
 						</div>
 					</div>
 				</div>
-				<div class="row advanced-items">
+				<div class="row advanced-items sm-no-gutters">
 					<div class="col-lg-12 lp-0 rp-0">
 						<h3 class="oswald36NoUpCaseBlack label-advanced d-sm-none d-md-block">Дополняющие товары</h3> 
 						<h3 class="oswald20NoUpCaseBlack label-advanced d-sm-block d-md-none">Дополняющие товары</h3> 
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-3"> 
+					<div class="col-lg-3 col-md-3 col-sm-3 pd-r-l-5"> 
 						<div>
 							<p class="helvetica12UpCaseBlackHalfOpacity">смесители</p>
 							<img src="/img/item-card/water-tap.png" alt="water-tap">
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="col-lg-3 col-md-3 col-sm-3 pd-r-l-5">
 						<div>
 							<p class="helvetica12UpCaseBlackHalfOpacity">разделочные доски</p>
 							<img src="/img/item-card/desk.png" alt="desk">
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="col-lg-3 col-md-3 col-sm-3 pd-r-l-5">
 						<div>
 							<p class="helvetica12UpCaseBlackHalfOpacity">столешницы</p>
 							<img src="/img/item-card/desks.png" alt="desks">
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="col-lg-3 col-md-3 col-sm-3 pd-r-l-5">
 						<div>
 							<p class="helvetica12UpCaseBlackHalfOpacity">кухонный фартук</p>
 							<img src="/img/item-card/wall.png" alt="wall">
@@ -356,7 +370,7 @@
 			</div>
 		</div>
 	</section>
-	<footer class="d-sm-none">
+	<footer>
 			<div class="footer">
 				<div class="logo_white">
 					<img src="/img/global/logo2.png" alt="logo">
@@ -384,6 +398,7 @@
 							<img src="/img/global/vk.png" alt="vk">
 						</a>
 					</div>
+					<p class="helvetica14NoUpCaseWhiteOpacity03 d-md-block d-lg-none">&#169; 2019, все права защищены</p>
 					<div class="sign">
 						<div class="up_sign">
 							<p>Подпишитесь на рассылку</p>
@@ -400,7 +415,6 @@
 			</div>
 			</div>
 	</footer>
-
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

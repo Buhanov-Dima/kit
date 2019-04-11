@@ -74,11 +74,25 @@ h1.main_h {font-size: 96px;} .md-close{display: none!important;} .md-open{displa
 	padding: 10px 0;
 }
 
+.tablet-share p{
+	margin-bottom:15px;
+}
+
+.tablet-share{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
 .tablet-share a{
 	margin-right: 15px;
 	border: 1px solid rgba(112, 114, 125, .3);
 	width: 20px;
 	height: 20px;
+}
+
+
+.tablet-share div{
+	width: 110px;
 }
 
 .tablet-share a:nth-child(1){
@@ -90,4 +104,8 @@ h1.main_h {font-size: 96px;} .md-close{display: none!important;} .md-open{displa
 .tablet-share a:nth-child(3){
 	background: url('/img/item-card/vk-tablet.png') center center no-repeat;
 }
-/*****CONFLICT*****/
+
+.pd-r-l-5{
+	padding-right: 5px !important;
+	padding-left: 5px !important;
+}
