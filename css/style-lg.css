@@ -7,3 +7,6 @@ h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{margin-top:
 #btn_4-2{left: 522px; top: 380px;} #btn_5-1{top: 405px; left: 550px;} #btn_5{left: 382px; top: 325px;}
 #btn_6{top: 344px; left: 480px;} .wrap_img_m2{max-height: 285px;} .scroll_bar{top: 50px;}
 .m_img img {margin-top: 37px;}
+
+.left-picture, .right-picture{display:none;} .descript{max-width: none; text-align: center;} .mg-t-20-lg{margin-top: 20px;} .description_table{width: 270px; margin-bottom: 0; margin-top: 20px; max-width: 567px; width: 100%;}
+.descript{margin-bottom: 0;} .info-and-buttons>p{text-align: center; margin-bottom: 10px;} .advanced-items>div div{height: 300px;}
