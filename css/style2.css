@@ -948,8 +948,8 @@ p.labels {
 	margin-bottom: 18px;
 }
 
-.mg-b-51{
-	margin-bottom: 51px;
+.mg-b-64{
+	margin-bottom: 64px;
 }
 .mg-l-10{
 	margin-left: 10px;
@@ -1005,7 +1005,7 @@ p.labels {
 }
 
 .share{
-	position: relative;
+	
 }
 
 #telegram{
@@ -1223,6 +1223,11 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	padding-top: 9px;
 }
 
+.right-picture img{
+	width: 155px;
+	height: auto;
+}
+
 .right-picture p{
 	margin-top: 12px;
 	margin-right: 21px; 
@@ -1233,7 +1238,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 }
 
 .description_table{
-	margin-bottom: 114px;
+	max-width: 270px;
 }
 .description_table div{
 	display: flex;
@@ -1247,6 +1252,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 
 .buttons{
 	justify-content: space-between;
+	width: 270px;
 }
 
 .buttons div{
@@ -1260,8 +1266,18 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 .first-block-item-card{
 	margin-bottom: 53px;
 }
+
+.info-and-buttons{
+	bottom: -13px;
+	max-width: 270px;
+}
+
 .info-and-buttons>p{
 	margin-bottom: 32px;
+}
+
+#life-buoy{
+	margin-right: 15px;
 }
 
 .fotorama__nav__frame{
@@ -1276,6 +1292,11 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 }
 .fotorama{
 	margin-bottom: 55px;
+	position: relative;
+}
+
+.fotorama__nav-wrap{
+	margin-top:0;
 }
 .label-advanced{
 	margin-bottom: 35px;
@@ -1305,42 +1326,28 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	background: linear-gradient(180deg, #F0F3F5 0%, #CFD7E0 100%);
 	border-radius: 6px;
 	height: 400px;
-	width: 300px;
+	width:100%;
+	max-width: 300px;
 	padding-top: 38px;
 	cursor: pointer;
+	position: relative;
 }
+
+.advanced-items img{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 90%;
+}
+
+
+.advanced-items>div:nth-child(4) img{
+	bottom: 36px;
+}		
 
 .advanced-items{
-	margin-bottom: 47px;
+	margin-bottom: 58px;
 }
-
-.advanced-items>div:nth-child(2) img{
-	margin-top: -23px;
-	margin-left: 11px;
-}
-
-.advanced-items>div:nth-child(3) img{
-	margin-top: -52px;
-}
-
-
-.mg-l-20 img:nth-child(2){
-	position: relative;
-	z-index: 2;
-	margin-left: 77px;
-	margin-top: 72px;
-}
-
-.mg-l-20 img:nth-child(3){
-	margin-left: 25px;
-	margin-top: -19px;
-}
-
-.mg-l-30 img:nth-child(2){
-	margin-left: -2px;
-	margin-top: 42px;
-}
-
 
 .basket{
 	display: none;	
@@ -1446,3 +1453,53 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 }
 
 
+.central-item{
+	width: 500px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.central-item img{
+	min-width: 300px;
+	max-height: 300px;
+	width: auto;
+}
+
+.left-picture img, .right-picture img{
+	min-width: 100px;
+	width: auto;
+	max-width: 154px;
+	height: auto;
+	max-height: 100px;
+
+}
+
+.left-picture, .right-picture{
+	width: 155px;
+	height: 131px;
+	position:relative;
+	text-align: center;
+}
+
+.left-picture p{
+	position:absolute;
+	right: 0px;
+	left: 0;
+	margin: auto;
+	text-align: center;
+	bottom: 0;
+}
+
+.right-picture p{
+	position:absolute;
+	right: 0px;
+	left: 0;
+	margin: auto;
+	text-align: center;
+}
+
+.descript{
+	max-width: 270px;
+}
