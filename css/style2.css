@@ -12,15 +12,15 @@ header{
 }
 @font-face {
 	font-family: "HelveticaNeueCyr";
-	src: url("/fonts/HelveticaNeueCyr-Roman.ttf");
+	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Roman.ttf");
 }
 @font-face {
 	font-family: "HelveticaNeueCyr-Med";
-	src: url("/fonts/HelveticaNeueCyr-Medium.ttf");
+	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Medium.ttf");
 }
 @font-face {
 	font-family: "Oswald";
-	src: url("/fonts/Oswaldregular.ttf");
+	src: url("http://test.watosu.ru/kit/fonts/Oswaldregular.ttf");
 }
 a:link {text-decoration: none;}
 p {margin: 0;}
@@ -36,7 +36,7 @@ p {margin: 0;}
 	padding-top: 55px;
 	max-width: 1440px;
 	margin: auto;
-	background: url('/img/bg/bg_main.png') no-repeat top;
+	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat top;
 }
 .wrap_head_white
 {
@@ -93,7 +93,7 @@ p {margin: 0;}
 .menu_white a::before{
 	content: '';
 	position: absolute;
-	background: url('/img/assets/menu_white.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/assets/menu_white.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
@@ -103,7 +103,7 @@ p {margin: 0;}
 .menu a::before{
 	content: '';
 	position: absolute;
-	background: url('/img/assets/menu.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/assets/menu.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
@@ -157,7 +157,7 @@ p {margin: 0;}
 #first_constructor{
 	padding-top: 110px;
 	height: 667px;
-	background: url('/img/constructor/bg.png') no-repeat center;
+	background: url('http://test.watosu.ru/kit/img/constructor/bg.png') no-repeat center;
 }
 .line_process{	
 	display: flex;
@@ -445,7 +445,7 @@ footer{
 #second_constructor{
 	padding-top: 110px;
 	height: 667px;
-	background: url('/img/constructor/bg21.png') no-repeat center;
+	background: url('http://test.watosu.ru/kit/img/constructor/bg21.png') no-repeat center;
 }
 #second_constructor .name{
 	margin-top:63px;
@@ -477,25 +477,25 @@ footer{
 #third_constructor{
 	padding-top: 110px;
 	height: 667px;
-	background: url('/img/constructor/bg22.png') no-repeat center;
+	background: url('http://test.watosu.ru/kit/img/constructor/bg22.png') no-repeat center;
 }
 
 #fourth_constructor{
 	padding-top: 110px;
 	height: 667px;
-	background: url('/img/constructor/bg23.png') no-repeat center;
+	background: url('http://test.watosu.ru/kit/img/constructor/bg23.png') no-repeat center;
 }
 
 #fifth_constructor{
 	padding-top: 110px;
 	height: 667px;
-	background: url('/img/constructor/bg24.png') no-repeat center;
+	background: url('http://test.watosu.ru/kit/img/constructor/bg24.png') no-repeat center;
 }
 
 #sixth_constructor{
 	padding-top: 110px;
 	height: 667px;
-	background: url('/img/constructor/bg25.png') no-repeat center;
+	background: url('http://test.watosu.ru/kit/img/constructor/bg25.png') no-repeat center;
 }
 
 .pd-l-r-48{
@@ -513,7 +513,7 @@ footer{
 }
 
 #catalog.content{
-	background: linear-gradient(rgba(255,255,255,0) 10%, rgb(255,255,255) 30%),  url('/img/bg/bg_main.png') no-repeat top center;
+	background: linear-gradient(rgba(255,255,255,0) 10%, rgb(255,255,255) 30%),  url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat top center;
 }
 
 .bread_crumbs{
@@ -639,7 +639,7 @@ footer{
     z-index: 2;
     width: 5px;
     height: 5px;
-    background: url('/img/catalog/polzun.png') 50% 50% no-repeat;
+    background: url('http://test.watosu.ru/kit/img/catalog/polzun.png') 50% 50% no-repeat;
     cursor: pointer;
     padding: 5.5px;
     border: 3px solid #D91F43;
@@ -923,7 +923,7 @@ p.labels {
 	margin: 0;
 }
 #item-card.content{
-	background: linear-gradient(rgba(255,255,255,0) 4%, rgb(255,255,255) 20%),  url('/img/bg/bg_main.png') no-repeat top center;
+	background: linear-gradient(rgba(255,255,255,0) 4%, rgb(255,255,255) 20%),  url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat top center;
 }
 
 .pd-r-40{
@@ -1007,23 +1007,23 @@ p.labels {
 }
 
 #telegram{
-	background: #36ADE1 url("/img/item-card/telegram.png") 50% 50% no-repeat;
+	background: #36ADE1 url("http://test.watosu.ru/kit/img/item-card/telegram.png") 50% 50% no-repeat;
 }
 
 #whatsapp{
-	background: #00E676 url("/img/item-card/whatsapp.png") 50% 50% no-repeat;
+	background: #00E676 url("http://test.watosu.ru/kit/img/item-card/whatsapp.png") 50% 50% no-repeat;
 }
 
 #messenger{
-	background: #2196F3 url("/img/item-card/messenger.png") 50% 50% no-repeat;
+	background: #2196F3 url("http://test.watosu.ru/kit/img/item-card/messenger.png") 50% 50% no-repeat;
 }
 
 #vkontakte{
-	background: #5181B8 url("/img/item-card/vk.png") 50% 50% no-repeat;
+	background: #5181B8 url("http://test.watosu.ru/kit/img/item-card/vk.png") 50% 50% no-repeat;
 }
 
 #instagram{
-	background: radial-gradient(24.78px at 29.04% 99.59%, #FDDB86 0%, rgba(240, 105, 66, 0) 100%), radial-gradient(32.14px at 31.72% 92.92%, #FFAD05 0%, rgba(255, 63, 0, 0) 100%), linear-gradient(159.86deg, #4263DF 5.92%, rgba(213, 53, 133, 0) 77.32%), #E11B7E url("/img/item-card/instagram.png") 50% 50% no-repeat;
+	background: radial-gradient(24.78px at 29.04% 99.59%, #FDDB86 0%, rgba(240, 105, 66, 0) 100%), radial-gradient(32.14px at 31.72% 92.92%, #FFAD05 0%, rgba(255, 63, 0, 0) 100%), linear-gradient(159.86deg, #4263DF 5.92%, rgba(213, 53, 133, 0) 77.32%), #E11B7E url("http://test.watosu.ru/kit/img/item-card/instagram.png") 50% 50% no-repeat;
 }
 
 .button-share{
@@ -1033,7 +1033,7 @@ p.labels {
 	z-index: 3;
 }
 
-.button-share img[src="/img/item-card/share_red.png"]{
+.button-share img[src="http://test.watosu.ru/kit/img/item-card/share_red.png"]{
 	display: none;
 }
 
@@ -1097,7 +1097,7 @@ p.labels {
 	line-height: 14px;
 	color: #D91F43;
 }
-img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_arrow_black.png"]{
+img[src="http://test.watosu.ru/kit/img/item-card/left_arrow_black.png"], img[src="http://test.watosu.ru/kit/img/item-card/right_arrow_black.png"]{
 	margin-top: -17px;
 	cursor: pointer;
 } 
@@ -1463,7 +1463,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	height: 15px;
 	left: 133px;
 	top: -2px;
-	background: url('/img/global/shopping-bag.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/global/shopping-bag.png') no-repeat;
 }
 
 
@@ -1597,19 +1597,19 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	height: 14px;
 }
 .down-mobile-links a:nth-child(1):before{
-	background: url('/img/item-card/life-buoy-little.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/item-card/life-buoy-little.png') no-repeat;
 }
 .down-mobile-links a:nth-child(2):before{
-	background: url('/img/item-card/credit-card-little.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/item-card/credit-card-little.png') no-repeat;
 }
 .down-mobile-links a:nth-child(3):before{
-	background: url('/img/item-card/package-little.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/item-card/package-little.png') no-repeat;
 }
 .down-mobile-links a:nth-child(4):before{
-	background: url('/img/item-card/refresh-little.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/item-card/refresh-little.png') no-repeat;
 }
 .down-mobile-links a:nth-child(5):before{
-	background: url('/img/item-card/shield-little.png') no-repeat;
+	background: url('http://test.watosu.ru/kit/img/item-card/shield-little.png') no-repeat;
 }
 
 .flex-basis-manual{
@@ -1627,8 +1627,9 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	text-align: center;
 	position: relative;
 	margin-right: 18px;
-	margin-bottom: 14px;
 	cursor: pointer;
+	line-height: 35px;
+	position: relative;
 }
 
 .filter:after{
@@ -1636,8 +1637,12 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	position: absolute;
 	width: 14px;
 	height: 14px;
-	margin-left: 5px;
-	background: url('/img/catalog/tablet/filter-picture.png') center center no-repeat;
+	
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	margin-left: 8px;
+	background: url('http://test.watosu.ru/kit/img/catalog/tablet/filter-picture.png') center center no-repeat;
 }
 
 .filter-window>div{
@@ -1697,7 +1702,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	width: 8px;
 	height: 8px;
 	right: 10px;
-	background: url('/img/catalog/triangle_down.png') center center no-repeat;
+	background: url('http://test.watosu.ru/kit/img/catalog/triangle_down.png') center center no-repeat;
 }
 
 .hide-filter.show-filter{

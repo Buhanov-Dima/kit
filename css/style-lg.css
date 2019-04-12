@@ -36,3 +36,6 @@ h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{margin-top:
 	display: block;
 }
 /**********CONFLICT**********/
+
+.item-image img{max-width: 164px;} .left-side{padding: 15px;} .show{width: 300px; text-align: center; padding: 0; line-height: 50px;} 
+.view div, .sort div {font-size: 8px;} .model-and-cost{position: absolute; left: 0; bottom: 10px; width: 100%; padding: 0 10px;} .item{position: relative;}
