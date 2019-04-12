@@ -13,6 +13,26 @@ h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{margin-top:
 .m_img img {margin-top: 37px;}
 
 .left-picture, .right-picture{display:none;} .descript{max-width: none; text-align: center;} .mg-t-20-lg{margin-top: 20px;} .description_table{width: 270px; margin-bottom: 0; margin-top: 20px; max-width: 567px; width: 100%;}
+/**********CONFLICT**********/
 .descript{margin-bottom: 0;} .info-and-buttons>p{text-align: center; margin-bottom: 10px;} .advanced-items>div div{height: 300px;}.logo{position: absolute; left: 0; right: 0; text-align: center;} .logo img{margin: auto;}
 .cnt_form_flex {width: 48%;} .txt_input{width: 100%;} #cnt_captcha{max-width: none;} #txt_area{margin-top: 10px;}
 .email_form>input[type="email"]{padding-right: 70px;} .sign{margin-right: 0;} .first_column{flex-basis: 28%;}
+/**********CONFLICT**********/
+.descript{margin-bottom: 0;} .info-and-buttons>p{text-align: center; margin-bottom: 10px;} .advanced-items>div div{height: 300px;} 
+
+
+.item{
+	width:50%;
+}
+.view-and-sort{
+	justify-content: center;
+}
+
+#sorting{
+	margin-left: 0;
+}
+
+.price-range>span>p{
+	display: block;
+}
+/**********CONFLICT**********/

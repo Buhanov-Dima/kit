@@ -1,8 +1,11 @@
 $(function() {
   
-  
-  var $range = $('#price-range');  
-  $('#price-range').slider({       
+  var $width = $(document).width();
+  if($width >=769){
+  	$('.price-range:eq(0)').remove();
+  }
+  var $range = $('.price-range');  
+  $('.price-range').slider({       
     range: true,                  
     min: 0,                      
     max: 20000,                     
@@ -12,19 +15,22 @@ $(function() {
     		$('.ui-slider-handle.ui-corner-all.ui-state-default:eq(0)').text('');
      		$('.ui-slider-handle.ui-corner-all.ui-state-default:eq(0)').append('<p>' + ui.values[ui.handleIndex] + '</p>');
      		$('.ui-slider-handle.ui-corner-all.ui-state-default:eq(0)').children('p').addClass('helvetica14NoUpCaseWhite');
+     		$('.from').text("от " + ui.values[ui.handleIndex] + " руб");
      	}
      	if(ui.handleIndex == 1){
     		$('.ui-slider-handle.ui-corner-all.ui-state-default:eq(1)').text('');
      		$('.ui-slider-handle.ui-corner-all.ui-state-default:eq(1)').append('<p>' + ui.values[ui.handleIndex] + '</p>');
      		$('.ui-slider-handle.ui-corner-all.ui-state-default:eq(1)').children('p').addClass('helvetica14NoUpCaseWhite');
+     		$('.to').text("до " + ui.values[ui.handleIndex] + " руб");
      	}
     }
   });
-  $('.ui-slider-handle.ui-corner-all.ui-state-default:eq(0)').append('<p>' + $('#price-range').slider('values',0) + '</p>');
-  $('.ui-slider-handle.ui-corner-all.ui-state-default:eq(1)').append('<p>' + $('#price-range').slider('values',1) + '</p>');
+  $('.ui-slider-handle.ui-corner-all.ui-state-default:eq(0)').append('<p>' + $('.price-range').slider('values',0) + '</p>');
+  $('.ui-slider-handle.ui-corner-all.ui-state-default:eq(1)').append('<p>' + $('.price-range').slider('values',1) + '</p>');
   $('.ui-slider-handle.ui-corner-all.ui-state-default').children('p').addClass('helvetica14NoUpCaseWhite');
+  $('.to').text("до " + $('.price-range').slider('values',1) + " руб");
+  $('.from').text("от " + $('.price-range').slider('values',0) + " руб");
   }); 
-
 
 
 $('.button-share img[src="/img/item-card/share.png"]').on('mouseover', function(){
@@ -243,4 +249,8 @@ $('.little-right-arrow').on('click', function(){
 	$('.central-item>img').attr('src', l);	
 	$('.left-picture img').attr('src', r);
 	$('.right-picture img').attr('src', c);
+});
+
+$('.filter').on('click', function(){
+	$('.hide-filter').toggleClass('show-filter');
 });
