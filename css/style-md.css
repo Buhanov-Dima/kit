@@ -112,3 +112,42 @@ h1.main_h {font-size: 96px;} .md-close{display: none!important;} .md-open{displa
 .advanced-items img{
 	width: 50%;
 }
+#catalog{
+	padding-top: 69px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.left-side{
+	max-width: 100%;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.col-md-4.col-lg-3.col-12{
+	padding-right: 0;
+}
+.price-range>span>p{
+	display: none;
+}
+.price-range{
+	margin-top:-11px;
+}
+
+.view-and-sort{
+	margin-bottom: 15px;
+}
+
+.sort>div{
+	font-size: 8px;
+	padding-bottom: 15px;
+}
+	
+.item{
+	max-width: 330px;
+}
+
+.show{
+	width: 100%;
+	text-align: center;
+}

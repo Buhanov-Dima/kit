@@ -623,7 +623,7 @@ footer{
 	border-radius: 18px;
 }
 
-#polzun>p{
+.polzun>p{
 	font-family: HelveticaNeueCyr;
 	font-size: 10px;
 	line-height: normal;
@@ -634,7 +634,7 @@ footer{
 	margin-bottom: 29px;
 }
 
-#price-range{
+.price-range{
 	margin-top: 19px;
 	margin-bottom: 20px;
 }
@@ -762,11 +762,12 @@ p.labels {
 	border-radius: 2px;
 	margin-right: -10px;
 	padding: 13px 29px;	
-	width: 300px;
+	max-width: 300px;
 	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;	
+	align-items: center;
+	width: 100%;	
 }
 
 .view-and-sort{
@@ -836,11 +837,13 @@ p.labels {
 	margin-bottom: 27px; 
 }
 .item{
-	width: 300px;
+	max-width: 300px;
 	height: 300px;	
 	border-radius: 2px;
 	margin-bottom: 40px;
 	margin-right: -5px;
+	width: 32%;
+	padding: 0 20px;
 }
 .item-image{
 	display: flex;
@@ -1319,6 +1322,17 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	text-align: center;
 	color: #3B4150;
 }
+
+.oswald24NoUpCaseBlack{
+	font-family: Oswald;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	letter-spacing: -1px;
+	color: #3B4150;
+}
 .helvetica12UpCaseBlackHalfOpacity{
 	font-family: HelveticaNeueCyr;
 	font-size: 12px;
@@ -1609,4 +1623,100 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 
 .flex-basis-manual{
 	flex-basis: 0;
+}
+
+.filter{
+	font-family: HelveticaNeueCyr;
+	font-size: 10px;
+	line-height: normal;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	text-align: center;
+	position: relative;
+	margin-right: 18px;
+	margin-bottom: 14px;
+	cursor: pointer;
+}
+
+.filter:after{
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	margin-left: 5px;
+	background: url('/img/catalog/tablet/filter-picture.png') center center no-repeat;
+}
+
+.filter-window>div{
+	color:white;
+	max-width: 318px;
+	width: 48%;
+	height: 40px;
+}
+
+.filter-window>div:nth-child(2), .filter-window>div:nth-child(1){
+	margin-bottom: 20px;
+}
+
+.filter-window>div:not(:nth-child(2)){
+	border: 1px solid #3B4150;
+}
+
+.cancel-and-find>div{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.find{
+	background-color: #D91F43;
+}
+.from, .to{
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	border: 1px solid #3B4150;
+}
+.from{
+	border-right: 0.5px solid #3B4150;
+}
+.to{
+	border-left: 0.5px solid #3B4150;
+}
+
+.choose-category{
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	position: relative;
+	margin-right: 13px;
+}
+
+.choose-category p{
+	margin-left: 15px;
+}
+
+.choose-category p:after{
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	right: 10px;
+	background: url('/img/catalog/triangle_down.png') center center no-repeat;
+}
+
+.hide-filter.show-filter{
+	display: block;
+}
+
+.hide-filter{
+	display: none;
+}
+
+.price-range>span>p{
+	display: block;
 }
