@@ -1,2 +1,2 @@
-.m_h2 {margin-left: 45px;} .kit_review.right-side{margin-right: 80px;} .menu{flex-basis: 19%;}
+.m_h2 {margin-left: 45px;} .kit_review.right-side{margin-right: 80px;} .menu{flex-basis: 19%; z-index: 15;}
 #bg_company_2{background: url(/img/company/bg_2.svg) no-repeat center;} 

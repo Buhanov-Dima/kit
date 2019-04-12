@@ -93,5 +93,41 @@ $( document ).ready(function() {
 	};
 
 //кнопка скролл вниз
-
+$('.md-open').on('click', function(e){
+	e.preventDefault();
 });
+$('.md-close').on('click', function(e){
+	e.preventDefault();
+});
+
+	$(window).scroll(function(){
+		if ($(window).scrollTop() > 100) {
+	    	$('header').addClass('fixed');
+		}
+		else {
+	    	$('header').removeClass('fixed');
+		};
+	});
+});
+
+
+//выравнивание по высоте на мобилке на главной странице блока left-side и kit_review
+	var winHeight = $(window).height();
+	var winWidth = $(window).width();
+
+	if (winWidth <= 993) {
+		var lside = winHeight - 165;
+		var rside = winHeight - 120;
+
+		console.log(rside);
+		$('.left_side').addClass('left_side_mob');
+		$('.kit_review').addClass('right_side_mob');
+		if (lside <= 140){
+			lside = 200;
+		}
+		if (rside <= 180) {
+			rside = 240;
+		}
+		$('.left_side_mob').css('top', lside);
+		$('.right_side_mob').css('top', rside);
+	}
