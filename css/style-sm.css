@@ -1,4 +1,4 @@
-.menu_link {background: url('http://test.watosu.ru/kit/img/assets/menu_lines.png') no-repeat; height: 450px; padding: 0; left: 10px; top: 10px; background-size: 225px 450px; width: 100%; padding: 110px 0 0 35px;}
+.menu_link {background: url('/img/assets/menu_lines.png') no-repeat; height: 450px; padding: 0; left: 10px; top: 10px; background-size: 225px 450px; width: 100%; padding: 110px 0 0 35px;}
 h1.main_h{font-size: 48px;} .wrap_head{padding: 0;} .sm-open{display: block!important;}
 .nmb_user_basket a{margin-left: 20px;} .menu a::before{left: -5px; top: -3px;} .main_h{font-size: 44px; line-height: 44px; letter-spacing: -2px; margin-top: 0;}
 .main_content {height: auto;} .menu_hide{height: 470px; top: -20px; width: 250px; background-size: 250px 470px;}
@@ -94,13 +94,13 @@ h1.main_h{font-size: 48px;} .wrap_head{padding: 0;} .sm-open{display: block!impo
 }
 
 .tablet-share a:nth-child(1){
-	background: url('http://test.watosu.ru/kit/img/item-card/facebook-tablet.png') center center no-repeat;
+	background: url('/img/item-card/facebook-tablet.png') center center no-repeat;
 }
 .tablet-share a:nth-child(2){
-	background: url('http://test.watosu.ru/kit/img/item-card/instagram-tablet.png') center center no-repeat;
+	background: url('/img/item-card/instagram-tablet.png') center center no-repeat;
 }
 .tablet-share a:nth-child(3){
-	background: url('http://test.watosu.ru/kit/img/item-card/vk-tablet.png') center center no-repeat;
+	background: url('/img/item-card/vk-tablet.png') center center no-repeat;
 }
 
 .display-none-mobile{
@@ -229,3 +229,7 @@ h1.main_h{font-size: 44px; line-height: 44px; letter-spacing: -2px;}
 
 .item-image img{max-width: 90px;} .cnt-contacts{padding: 100px 10px}
 .map-info {width: 100%; left: 0; bottom: 0;} .cnt_form_flex{width: 100%; margin-bottom: 10px;}
+.item_sells{flex-wrap: wrap; height: auto; position: relative; text-align: center; padding: 5px 0;} .in_radio{flex-direction: column;} .pay_card{width: auto; max-width: 330px;}
+.sell_content{padding: 65px 0 0;} .product{display: none;} .item_sell{flex-basis: 100%;}
+.item_cost, .items_sell, .items_cost {flex-basis: 31%;} .delete_item{position: absolute; right: 0; top: 0;}
+.delete_item .close_sell_item{font-size: 30px;} .item_sells div{margin: auto;} .item_sell{padding-right: 20px;}

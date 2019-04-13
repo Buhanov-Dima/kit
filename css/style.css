@@ -13,27 +13,27 @@ header{
 }
 @font-face {
 	font-family: "HelveticaNeueCyr-Thin";
-	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Thin.ttf");
+	src: url("/fonts/HelveticaNeueCyr-Thin.ttf");
 }
 @font-face {
 	font-family: "HelveticaNeueCyr";
-	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Roman.ttf");
+	src: url("/fonts/HelveticaNeueCyr-Roman.ttf");
 }
 @font-face {
 	font-family: "HelveticaNeueCyr-Med";
-	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Medium.ttf");
+	src: url("/fonts/HelveticaNeueCyr-Medium.ttf");
 }
 @font-face {
 	font-family: "HelveticaNeueCyr-Bold";
-	src: url("http://test.watosu.ru/kit/fonts/HelveticaNeueCyr-Bold.ttf");
+	src: url("/fonts/HelveticaNeueCyr-Bold.ttf");
 }
 @font-face {
 	font-family: "Oswald";
-	src: url("http://test.watosu.ru/kit/fonts/Oswaldregular.ttf");
+	src: url("/fonts/Oswaldregular.ttf");
 }
 @font-face {
 	font-family: "Oswald_extra";
-	src: url("http://test.watosu.ru/kit/fonts/Oswaldextralight.ttf");
+	src: url("/fonts/Oswaldextralight.ttf");
 }
 .dark_body {background-color: #11141A;}
 a:link {text-decoration: none;}
@@ -82,7 +82,7 @@ p {margin: 0;}
 	padding: 55px 60px 0;
 	max-width: 1440px;
 	margin: auto;
-	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat center;
+	background: url('/img/bg/bg_main.png') no-repeat center;
 }
 .main_content{
 	padding-top: 55px;
@@ -90,7 +90,7 @@ p {margin: 0;}
 	height: 760px;
 	overflow: hidden;
 	margin: auto;
-	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat center;
+	background: url('/img/bg/bg_main.png') no-repeat center;
 }
 .content.dark{
 	padding-top: 0;
@@ -104,7 +104,7 @@ p {margin: 0;}
 	padding: 155px 60px 0;
 	max-width: 1440px;
 	margin: auto;
-	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat top;
+	background: url('/img/bg/bg_main.png') no-repeat top;
 }
 .wrap_head
 {
@@ -140,7 +140,7 @@ p {margin: 0;}
 {
 	content: '';
 	position: absolute;
-	background: url('http://test.watosu.ru/kit/img/assets/menu.png') no-repeat;
+	background: url('/img/assets/menu.png') no-repeat;
 	width: 15px;
 	height: 13px;
 	left: -25px;
@@ -225,7 +225,7 @@ p {margin: 0;}
 .kit_review a:first-child::after{
 	content: '';
 	position: absolute;
-	background: url('http://test.watosu.ru/kit/img/assets/moika.png') no-repeat;
+	background: url('/img/assets/moika.png') no-repeat;
 	width: 15px;
 	height: 16px;
 	right: -24px;
@@ -234,7 +234,7 @@ p {margin: 0;}
 .kit_review a::after{
 	content: '';
 	position: absolute;
-	background: url('http://test.watosu.ru/kit/img/assets/krest.png') no-repeat;
+	background: url('/img/assets/krest.png') no-repeat;
 	width: 17px;
 	height: 17px;
 	right: -24px;
@@ -243,7 +243,7 @@ p {margin: 0;}
 .kit_review a:last-child::after{
 	content: '';
 	position: absolute;
-	background: url('http://test.watosu.ru/kit/img/assets/cube.png') no-repeat;
+	background: url('/img/assets/cube.png') no-repeat;
 	width: 15px;
 	height: 16px;
 	right: -24px;
@@ -270,7 +270,7 @@ p {margin: 0;}
 }
 .scroll_arrow::after{
 	content: '';
-	background: url('http://test.watosu.ru/kit/img/assets/arrow.svg');
+	background: url('/img/assets/arrow.svg');
 	position: absolute;
 	top: -17px;
 	left: -39px;
@@ -613,10 +613,10 @@ p {margin: 0;}
 }
 
 .content.last{
-	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat top -450px center;
+	background: url('/img/bg/bg_main.png') no-repeat top -450px center;
 }
 /*.wrap_last_bg{
-	background: url('http://test.watosu.ru/kit/img/main/07.svg') no-repeat;
+	background: url('/img/main/07.svg') no-repeat;
 }
 */
 
@@ -642,7 +642,7 @@ p {margin: 0;}
 .bg_last_main{
 	position: relative;
 	margin-top: 180px;
-	background: url('http://test.watosu.ru/kit/img/main/bg_last.svg') no-repeat;
+	background: url('/img/main/bg_last.svg') no-repeat;
 }
 .kit_review.last{
 	position: absolute;
@@ -664,7 +664,7 @@ p {margin: 0;}
 
 /**********menu**********/
 .menu_hide{
-	background:  url('http://test.watosu.ru/kit/img/assets/bg_menu.png') no-repeat;
+	background:  url('/img/assets/bg_menu.png') no-repeat;
 	position: absolute;
 	top: -55px;
 	left: -100%;
@@ -674,7 +674,7 @@ p {margin: 0;}
 	z-index: 100;
 }
 .menu_link{
-    background: url('http://test.watosu.ru/kit/img/assets/menu_lines.png') no-repeat;
+    background: url('/img/assets/menu_lines.png') no-repeat;
     background-size: contain;
     width: 685px;
     height: 725px;
@@ -825,13 +825,13 @@ p {margin: 0;}
 	position: relative;
 	padding-top: 55px;
 	padding-bottom: 150px;
-	background: url('http://test.watosu.ru/kit/img/global/dark_vector.svg') no-repeat center;
+	background: url('/img/global/dark_vector.svg') no-repeat center;
 	background-position-y: 0;
 	z-index: 5;
 }
 #bg_company_2{
 	position: relative;
-	background: url('http://test.watosu.ru/kit/img/company/bg_2.svg') no-repeat;
+	background: url('/img/company/bg_2.svg') no-repeat;
 	background-position-x: -46px;
 	background-position-y: -40px;
 
@@ -844,7 +844,7 @@ p {margin: 0;}
 	width: 100%;
 	margin: auto;
 	position: relative;
-	background: url('http://test.watosu.ru/kit/img/company/bg_3.svg') no-repeat;
+	background: url('/img/company/bg_3.svg') no-repeat;
 	background-position-x: -46px;
 	background-position-y: -40px;
 	z-index: 0;
@@ -914,7 +914,7 @@ p {margin: 0;}
 }
 
 .footer .logo_white{
-	background: url('http://test.watosu.ru/kit/img/global/bg_foo.svg') no-repeat;
+	background: url('/img/global/bg_foo.svg') no-repeat;
 	height: 205px;
 	position: relative;
 }
@@ -952,7 +952,7 @@ p {margin: 0;}
 	padding: 160px 40px 40px;
 	max-width: 1440px;
 	margin: auto;
-	background: url('http://test.watosu.ru/kit/img/bg/bg_main.png') no-repeat center;
+	background: url('/img/bg/bg_main.png') no-repeat center;
 	background-position-y: -120px;
 }
 
@@ -1135,14 +1135,14 @@ p {margin: 0;}
 	padding-bottom: 15px;
 }
 .product{
-	flex-basis: 40%;
+	flex-basis: 40.5%;
 	padding-left: 27px;
 }
 .product_costs{
 	flex-basis: 18.5%;
 }
 .product_items{
-	flex-basis: 21%;
+	flex-basis: 20%;
 }
 .product_all{
 	flex-basis: 20%;
@@ -1207,6 +1207,7 @@ p {margin: 0;}
 	line-height: normal;
 	text-align: center;
 	color: #3B4150;
+	margin: 0 5px;
 }
 
 .items_sell span{
@@ -1300,8 +1301,50 @@ p {margin: 0;}
 	font-family: HelveticaNeueCyr;
 	font-size: 14px;
 	line-height: 24px;
-
 	color: #3B4150;
+}
+
+.pay_card{
+	width: 330px;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(33, 56, 69, 0.1);
+    font-family: HelveticaNeueCyr;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(59, 65, 80, .5);
+    position: absolute;
+    left: -154px;
+    top: -128px;
+    opacity: 0;
+    z-index: -20;
+    transition: ease-in .3s;
+}
+
+.pay_card_hov{
+	position: absolute;
+	left: 200px;
+	top: 64px;
+}
+
+.pay_card_hov:hover .pay_card{
+	opacity: 1;
+	z-index: 20;
+}
+
+
+.pay_card::before{
+	position: absolute;
+    bottom: -5px;
+    left: 48%;
+    content: ' ';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0px 0px 12px 12px;
+    border-color: transparent transparent transparent #ffffff;
+    line-height: 0px;
+    transform: rotate(-135deg);
 }
 .sell_input input, .sell_input select{
 	max-width: 300px;
