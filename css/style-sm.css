@@ -222,6 +222,7 @@ h1.main_h{font-size: 44px; line-height: 44px; letter-spacing: -2px;}
 	padding: 0px 20px;
 	left: 0;
 }
+/*****CONFLICT*****/
 .item-image{
 	max-height: 100px;
 }
@@ -233,3 +234,4 @@ h1.main_h{font-size: 44px; line-height: 44px; letter-spacing: -2px;}
 .sell_content{padding: 65px 0 0;} .product{display: none;} .item_sell{flex-basis: 100%;}
 .item_cost, .items_sell, .items_cost {flex-basis: 31%;} .delete_item{position: absolute; right: 0; top: 0;}
 .delete_item .close_sell_item{font-size: 30px;} .item_sells div{margin: auto;} .item_sell{padding-right: 20px;}
+/*****CONFLICT*****/
