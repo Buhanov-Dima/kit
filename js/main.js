@@ -44,6 +44,7 @@ $( document ).ready(function() {
 	});
 //меняем section в зависимости от (положения || value) wheel
 
+
 	function scroolX(temp){
 
 		console.log(temp);
@@ -51,6 +52,7 @@ $( document ).ready(function() {
 			{
 				$(".main_content").addClass("d-none");
 				$("#b1").removeClass("d-none");
+
 			}
 			else if(temp > 400 && temp < 799)
 			{
@@ -92,42 +94,86 @@ $( document ).ready(function() {
 			}
 	};
 
-//кнопка скролл вниз
-$('.md-open').on('click', function(e){
-	e.preventDefault();
-});
-$('.md-close').on('click', function(e){
-	e.preventDefault();
-});
+
+
+	//кнопка скролл вниз
+	$('.md-open').on('click', function(e){
+		e.preventDefault();
+	});
+	$('.md-close').on('click', function(e){
+		e.preventDefault();
+	});
 
 	$(window).scroll(function(){
-		if ($(window).scrollTop() > 100) {
+		if ($(window).scrollTop() > 50) {
 	    	$('header').addClass('fixed');
 		}
 		else {
 	    	$('header').removeClass('fixed');
 		};
 	});
+
+
+
+	$('#tab_box a').click(function(e) {
+    e.preventDefault();
+        $('#tab_box .active').removeClass('active');
+        $(this).addClass('active');
+        var tab = $(this).attr('href');
+        $('.tab_order').not(tab).css({'display':'none'});
+        $(tab).fadeIn(400);
+	})
+
+	
+//progress_bar
+
+
+
+//tracking_bar
+/*
+
+	var arr_track = new Array($('.tracking_bar').length);
+
+	$('.tracking_bar').each(function(index){
+		var r = 0;
+		for(let i = 0; i < $(this).children('.active').length; i++){
+			r++;
+		}
+		arr_track[index] = r;
+	})
+	for(var i = 0; i < arr_track[i]; ++i){
+		if (arr_track[i] < 5) {
+			$('.tracking_bar div:last-child').removeClass('active');
+			$('.tracking_bar div:last-child').addClass('weiting');
+		}
+		if(arr_track[i] == 5){
+			$(this).removeClass('active');
+			$(this).addClass('sucsses');
+		}
+	}
+	*/
+//tracking_bar
+	
 });
 
 
 //выравнивание по высоте на мобилке на главной странице блока left-side и kit_review
-	var winHeight = $(window).height();
-	var winWidth = $(window).width();
+var winHeight = $(window).height();
+var winWidth = $(window).width();
 
-	if (winWidth <= 993) {
-		var lside = winHeight - 165;
-		var rside = winHeight - 120;
+if (winWidth <= 993) {
+	var lside = winHeight - 165;
+	var rside = winHeight - 120;
 
-		console.log(rside);
-		$('.left_side').addClass('left_side_mob');
-		$('.kit_review').addClass('right_side_mob');
-		if (lside <= 140){
-			lside = 200;
-		}
-		if (rside <= 180) {
-			rside = 240;
-		}
-		$('.left_side_mob').css('top', lside);
-		$('.right_side_mob').css('top', rside);
+	console.log(rside);
+	$('.left_side').addClass('left_side_mob');
+	$('.kit_review').addClass('right_side_mob');
+	if (lside <= 140){
+		lside = 200;
 	}
+	if (rside <= 180) {
+		rside = 240;
+	}
+	$('.left_side_mob').css('top', lside);
+	$('.right_side_mob').css('top', rside);
+}
