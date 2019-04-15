@@ -255,7 +255,13 @@ $('.filter').on('click', function(){
 	$('.hide-filter').toggleClass('show-filter');
 });
 
-
+$('.fotorama').on(
+  'fotorama:show fotorama:showend',
+  function (e, fotorama, extra) {
+    console.log(e.type + (extra.user ? ' after user’s touch' : ''));
+    console.log('transition duration: ' + extra.time);
+  }
+);
 
 
 

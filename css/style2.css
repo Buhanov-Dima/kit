@@ -2016,3 +2016,6 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	top: -84px;
 }
 
+.fotorama__stage__shaft{
+	transition-duration: 1000px !important;
+}
