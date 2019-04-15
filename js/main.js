@@ -1,6 +1,8 @@
 $( document ).ready(function() {
 
 
+
+
 //кнопка доп инфы на главной странице
 	$(".m2_info").click(function () {
     	$(this).toggleClass("active");
@@ -15,19 +17,21 @@ $( document ).ready(function() {
    	});
 
 
-
+/*
 //постраничная смена секций главной страницы
 //считаем прокрутку колеса
 	var max = 3200;
 	var i = 0;
+	var pro_height = 0;
+	var k = i;
 	$(window).bind('mousewheel DOMMouseScroll', function(event){
-		if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+//		pro_height = pro_height + ($(window).height() / 30);
+		
+		if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
 			i -= 100;
-			scroolX(i);
-	//		console.log(i);
-		}
-		else if(i < 0){
-			i = 100;
+			if(i < 0){
+				i = 0;
+			}
 			scroolX(i);
 	//		console.log(i);
 		}
@@ -41,60 +45,78 @@ $( document ).ready(function() {
 			i += 100;
 	//		console.log(i);
 		}
+		if(k < i){
+			pro_height += ($(window).height() / 21.2);
+		}
+		if(k > i){
+			pro_height -= ($(window).height() / 21.2);
+		}
+		k = i;
+
 	});
 //меняем section в зависимости от (положения || value) wheel
-
+*/
+/*	
 
 	function scroolX(temp){
 
 		console.log(temp);
-			if(temp >= 0 && temp < 399)
+			if(temp == 400)
 			{
-				$(".main_content").addClass("d-none");
-				$("#b1").removeClass("d-none");
-
+				$(".main_content").fadeOut(400).css("display", "none");
+				$("#b1").fadeIn(400);
+				$('#progress').css('height', pro_height);
 			}
-			else if(temp > 400 && temp < 799)
+			else if(temp == 800)
 			{
-				$(".main_content").addClass("d-none");
-				$("#b2").removeClass("d-none");
+				$(".main_content").fadeOut(400).css("display", "none");
+				$("#b2").fadeIn(400);
+				$('#progress').css('height', pro_height);
 			}
-			else if(temp > 800 && temp < 1199)
+			else if(temp == 1200)
 			{
-				$(".main_content").addClass("d-none");
-				$("#b3").removeClass("d-none");
+				$(".main_content").fadeOut(400).css("display", "none");
+				$("#b3").fadeIn(400);
+				$('#progress').css('height', pro_height);
 			}
-			else if(temp > 1200 && temp < 1599)
+			else if(temp == 1600)
 			{
-				$(".main_content").addClass("d-none");
-				$("#b4").removeClass("d-none");
+				$(".main_content").fadeOut(400).css("display", "none");
+				$("#b4").fadeIn(400);
+				$('#progress').css('height', pro_height);
 			}
-			else if(temp > 1600 && temp < 1999)
+			else if(temp == 2000)
 			{
-				$(".main_content").addClass("d-none");
-				$("#b5").removeClass("d-none");
+				$(".main_content").fadeOut(400).css("display", "none");
+				$("#b5").fadeIn(400);
+				$('#progress').css('height', pro_height);
 			}
-			else if(temp > 2000 && temp < 2399)
+			else if(temp == 2400)
 			{
-				$(".main_content").addClass("d-none");
-				$("#b6").removeClass("d-none");
+				$(".main_content").fadeOut(400).css("display", "none");
+				$("#b6").fadeIn(400);
+				$('#progress').css('height', pro_height);
 			}
-			else if(temp > 2400 && temp < 2799)
+			else if(temp == 2800)
 			{
-				$(".main_content").addClass("d-none");
-				$("#b6").removeClass("d-none");
+				$(".main_content").fadeOut(400).css("display", "none");
+				$("#b6").fadeIn(400);
+				$('#progress').css('height', pro_height);
 			}
-			else if(temp > 2800 && temp < 3200)
+			else if(temp == 3200)
 			{
-				$(".main_content").addClass("d-none");
-				$("#b7").removeClass("d-none");
+				$(".main_content").fadeOut(400).css("display", "none");
+				$("#b7").fadeIn(400);
+				$('#progress').css('height', pro_height);
 			}
 			else{
 				
 			}
 	};
 
+*/
 
+//	main_stop(main_height);
 
 	//кнопка скролл вниз
 	$('.md-open').on('click', function(e){
@@ -114,7 +136,6 @@ $( document ).ready(function() {
 	});
 
 
-
 	$('#tab_box a').click(function(e) {
     e.preventDefault();
         $('#tab_box .active').removeClass('active');
@@ -125,8 +146,6 @@ $( document ).ready(function() {
 	})
 
 	
-//progress_bar
-
 
 
 //tracking_bar
@@ -177,3 +196,128 @@ if (winWidth <= 993) {
 	$('.left_side_mob').css('top', lside);
 	$('.right_side_mob').css('top', rside);
 }
+
+	
+	$(".slaider_washes").owlCarousel({
+		items: 3,
+		stagePadding: 50,
+		autoWidth: true,
+		center: true,
+		loop: true,
+		nav:true
+	});
+
+	$(".slaider_desks").owlCarousel({
+		items: 3,
+		stagePadding: 50,
+		autoWidth: true,
+		center: true,
+		loop: true
+	});
+
+	
+	
+	
+
+
+			
+	$(document).on('scroll', function(){
+		var scrollBottom = $(window).scrollTop() + $(window).height();
+		var r = $(window).scrollTop();
+//		console.log(r);
+//		main_stop(scrollBottom);
+		
+		});
+	
+	var main_height = $('.main_content:eq(0)').height();
+
+	
+
+	$(window).bind('mousewheel DOMMouseScroll', function(event){
+		var elem1 = $('.main_content:eq(0)').hasClass('active');
+		var elem2 = $('.main_content:eq(1)').hasClass('active');
+		var elem3 = $('.main_content:eq(2)').hasClass('active');
+		var elem4 = $('.main_content:eq(3)').hasClass('active'); 
+		var elem5 = $('.main_content:eq(4)').hasClass('active');
+		var elem6 = $('.main_content:eq(5)').hasClass('active');
+		var elem7 = $('.main_content:eq(6)').hasClass('active');
+
+		if(elem2){
+			$('.sb_2').addClass('active');
+		}
+
+		if(elem3){
+			$('.sb_3').addClass('active');
+		}
+		if(elem4 || elem5){
+			$('.sb_4').addClass('active');
+		}
+		else{
+			$('.sb_4').removeClass('active');
+		}
+		if($('.main_content:eq(4)').hasClass('active') && $('.main_content:eq(5)').hasClass('active')){
+			$('.sb_5').addClass('active');
+		}
+		else{
+			$('.sb_5').removeClass('active');
+		}
+		if($('.main_content:eq(5)').hasClass('active') || ){
+			$('.sb_6').addClass('active');
+		}
+		else{
+			$('.sb_6').removeClass('active');
+		}
+	});
+
+	
+
+/*	
+	if($('.main_content:eq(1)').hasClass('active')){
+		$('.sb_2').addClass('active');
+	}
+	if($('.main_content:eq(2)').hasClass('active')){
+		$('.sb_3').addClass('active');
+	}
+	if($('.main_content:eq(3)').hasClass('active')){
+		$('.sb_4').addClass('active');
+	}
+	if($('.main_content:eq(4)').hasClass('active')){
+		$('.sb_5').addClass('active');
+	}
+	if($('.main_content:eq(5)').hasClass('active')){
+		$('.sb_6').addClass('active');
+	}
+	if($('.main_content:eq(6)').hasClass('active')){
+		$('.sb_7').addClass('active');
+	}
+*/
+/*
+	function main_stop(scrollBottom){
+		
+		if(scrollBottom >= main_height){
+			var divide = $(document).height() - ($(document).height() - $('.main_content:eq(0)').height())
+			$(document).scrollTop(divide);
+			main_height = $('.main_content:eq(0)').height() + $('.main_content:eq(1)').height();
+		}
+
+
+	}
+
+*/
+
+$(".main").onepage_scroll({
+   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+   pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+   keyboard: true,                  // You can activate the keyboard controls
+   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                    // the browser's width is less than 600, the fallback will kick in.
+   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+});
