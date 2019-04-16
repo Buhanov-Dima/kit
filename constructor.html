@@ -4,8 +4,15 @@
 	<meta charset="UTF-8">
 	<title>Kit Kraken</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/OwlCarousel/dist/assets/owl.carousel.min.css" />
+	<!--<link rel="stylesheet" href="/OwlCarousel/dist/assets/owl.theme.default.css" />-->
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/style2.css">
+	<link rel="stylesheet" href="/css/style-xxl.css" media="only screen and (max-width:1280px)">
+	<link rel="stylesheet" href="/css/style-xl.css" media="only screen and (max-width:1201px)">
+	<link rel="stylesheet" href="/css/style-lg.css" media="only screen and (max-width:993px)">
+	<link rel="stylesheet" href="/css/style-md.css" media="only screen and (max-width:768px)">
+	<link rel="stylesheet" href="/css/style-sm.css" media="only screen and (max-width:576px)">
 </head>
 <body>
 	<header>
@@ -24,7 +31,7 @@
 				<div class="basket-item">
 					<div class="basket-item-header">
 						<div>
-							<img src="/img/item-card/gult.png" alt="gult" width="64" height="39">
+							<img src="/img/item-card/gult.png" alt="gult">
 						</div>
 						<p class="helvetica14NoUpCaseBlackNorm">Кухонная мойка Gulf</p>
 						<div class="close-button">
@@ -128,16 +135,11 @@
 		</div>
 	</div>-->
 	<section class="content tab_constructor" id="first_constructor">
-		<div class="container-fluid">
+		<div class="container-fluid pr-0 pl-0">
 			<div class="row">
-				<div class="col-lg-3 mx-auto">
-					<div class="left_arrow">
-						<img src="/img/constructor/left_arrow.png" alt="left_arrow">
-					</div>
-				</div>
-				<div class="col-lg-3 mx-auto">
+				<div class="col-lg-6 mx-auto d-flex justify-content-end">
 						<div class="name">
-							<p class="name_name">Lake</p>
+							<p class="name_name">Creek</p>
 							<p class="constructor-cost">8 199 рублей</p>
 							<div class="colors d-flex">
 								<div><div></div></div>
@@ -148,9 +150,9 @@
 							</div>
 						</div>
 				</div>
-				<div class="col-lg-3 mx-auto">
-						<div id="info">
-							<div id="info_symbol">
+				<div class="col-lg-6 mx-auto d-flex justify-content-start align-items-center">
+						<div class="info">
+							<div class="info_symbol">
 								<img src="/img/constructor/info.png" alt="info">
 							</div>
 							<p>Параметры</p>
@@ -176,26 +178,17 @@
 						</div>
 						</div>
 				</div>
-				<div class="col-lg-3 mx-auto">
-					<div class="right_arrow">
-						<img src="/img/constructor/right_arrow.png" alt="right_arrow">
-					</div>
-				</div>
 				<div class="col-lg-12 d-flex washes">
-					<div class="pre-left-constructor-item">
-						<img src="/img/constructor/washes/Creek-У-900M/black.png" alt="#">
-					</div>
-					<div class="left-constructor-item">
-						<img src="/img/constructor/washes/Gulf-K-850.2B/black.png" alt="#">
-					</div>
-					<div class="central-constructor-item">
-						<img src="/img/constructor/washes/Lake-О-510/black.png" alt="#">
-					</div>
-					<div class="right-constructor-item">
-						<img src="/img/constructor/washes/Ocean-К-600/black.png" alt="#">
-					</div>
-					<div class="pre-right-constructor-item">
-						<img src="/img/constructor/washes/Pond-K-850M/black.png" alt="#">
+					<div class="owl-carousel owl-theme owl_constructor_1">
+					    <div class="washes_slide"> <img src="/img/constructor/washes/Creek_Y900M/black.png" alt=""> </div>
+					    <div class="washes_slide"> <img src="/img/constructor/washes/Gulf_K850.2B/black.png" alt=""> </div>
+					    <div class="washes_slide"> <img src="/img/constructor/washes/Lake_510/black.png" alt=""> </div>
+					    <div class="washes_slide"> <img src="/img/constructor/washes/Ocean_К600/black.png" alt=""> </div>
+					    <div class="washes_slide"> <img src="/img/constructor/washes/Pond_K850M/black.png" alt=""> </div>
+					    <div class="washes_slide"> <img src="/img/constructor/washes/River_K775/black.png" alt=""> </div>
+					    <div class="washes_slide"> <img src="/img/constructor/washes/Sea_K850/black.png" alt=""> </div>
+					    <div class="washes_slide"> <img src="/img/constructor/washes/Spring_C510/black.png" alt=""> </div>
+					    <div class="washes_slide"> <img src="/img/constructor/washes/Stream_С510М/black.png" alt=""> </div>
 					</div>
 				</div>
 			</div>
@@ -203,26 +196,21 @@
 	</section>
 	<!--Вторая часть-->
 	<section class="content tab_constructor" id="second_constructor">
-		<div class="container-fluid">
+		<div class="container-fluid pr-0 pl-0">
 			<div class="row">
-				<div class="col-lg-3 mx-auto">
-					<div class="left_arrow">
-						<img src="/img/constructor/left_arrow.png" alt="left_arrow">
-					</div>
-				</div>
-				<div class="col-lg-3 mx-auto">
+				<div class="col-lg-6 mx-auto d-flex justify-content-end">
 						<div class="name">
 							<p class="name_name">Дуб</p>
 							<p class="constructor-cost">2 400 рублей</p>
 						</div>
 				</div>
-				<div class="col-lg-3 mx-auto">
-						<div id="info">
-							<div id="info_symbol">
-								<img src="/img/constructor/info.png" alt="info">
-							</div>
-							<p>Параметры</p>
-							<div class="show-parameters">
+				<div class="col-lg-6 mx-auto d-flex">
+					<div class="info">
+						<div class="info_symbol">
+							<img src="/img/constructor/info.png" alt="info">
+						</div>
+						<p>Параметры</p>
+						<div class="show-parameters">
 							<div class="description_table">
 								<div class="material">
 									<p class="helvetica14NoUpCaseBlack">Материал</p>
@@ -242,28 +230,19 @@
 								</div>
 							</div>
 						</div>
-						</div>
-				</div>
-				<div class="col-lg-3 mx-auto">
-					<div class="right_arrow">
-						<img src="/img/constructor/right_arrow.png" alt="right_arrow">
 					</div>
 				</div>
 				<div class="col-lg-12 d-flex desks">
-					<div class="pre-left-constructor-item">
-						<img src="/img/constructor/washes/Creek-У-900M/black.png" alt="#">
-					</div>
-					<div class="left-constructor-item">
-						<img src="/img/constructor/washes/Gulf-K-850.2B/black.png" alt="#">
-					</div>
-					<div class="central-constructor-item">
-						<img src="/img/constructor/washes/Lake-О-510/black.png" alt="#">
-					</div>
-					<div class="right-constructor-item">
-						<img src="/img/constructor/washes/Ocean-К-600/black.png" alt="#">
-					</div>
-					<div class="pre-right-constructor-item">
-						<img src="/img/constructor/washes/Pond-K-850M/black.png" alt="#">
+					<div class="owl-carousel owl-theme owl_constructor_2">
+					    <div class="desks_slide"> <img src="/img/constructor/desks/Creek_Y900M/black.png" alt=""> </div>
+					    <div class="desks_slide"> <img src="/img/constructor/desks/Gulf_K850.2B/black.png" alt=""> </div>
+					    <div class="desks_slide"> <img src="/img/constructor/desks/Lake_О510/black.png" alt=""> </div>
+					    <div class="desks_slide"> <img src="/img/constructor/desks/Ocean_К600/black.png" alt=""> </div>
+					    <div class="desks_slide"> <img src="/img/constructor/desks/Pond_K850M/black.png" alt=""> </div>
+					    <div class="desks_slide"> <img src="/img/constructor/desks/River_K775/black.png" alt=""> </div>
+					    <div class="desks_slide"> <img src="/img/constructor/desks/Sea_K850/black.png" alt=""> </div>
+					    <div class="desks_slide"> <img src="/img/constructor/desks/Spring_C510/black.png" alt=""> </div>
+					    <div class="desks_slide"> <img src="/img/constructor/desks/Stream_С510М/black.png" alt=""> </div>
 					</div>
 				</div>
 			</div>
@@ -271,22 +250,17 @@
 	</section>
 	<!--Третья часть-->
 	<section class="content tab_constructor" id="third_constructor">
-		<div class="container-fluid">
+		<div class="container-fluid rp-0 lp-0">
 			<div class="row">
-				<div class="col-lg-3 mx-auto">
-					<div class="left_arrow">
-						<img src="/img/constructor/left_arrow.png" alt="left_arrow">
-					</div>
-				</div>
-				<div class="col-lg-3 mx-auto">
+				<div class="col-lg-6 mx-auto d-flex justify-content-end">
 					<div class="name">
 						<p class="name_name">Красная</p>
 						<p class="constructor-cost">2 400 рублей</p>
 					</div>
 				</div>
-				<div class="col-lg-3 mx-auto">
-						<div id="info">
-							<div id="info_symbol">
+				<div class="col-lg-6 mx-auto d-flex">
+						<div class="info">
+							<div class="info_symbol">
 								<img src="/img/constructor/info.png" alt="info">
 							</div>
 							<p>Параметры</p>
@@ -312,27 +286,163 @@
 							</div>
 						</div>
 				</div>
-				<div class="col-lg-3 mx-auto">
-					<div class="right_arrow">
-						<img src="/img/constructor/right_arrow.png" alt="right_arrow">
+				<div class="col-lg-12 d-flex stands">
+					<div class="owl-carousel owl-theme owl_constructor_3">
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Creek_Y900M/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Gulf_K850.2B/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Lake_О510/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Ocean_К600/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Pond_K850M/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/River_K775/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Sea_K850/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Spring_C510/black.png" alt=""> </div>
 					</div>
 				</div>
-				<div class="col-lg-12 d-flex stands">
-					<div class="pre-left-constructor-item">
-						<img src="/img/constructor/stands/Creek-У-900M/black.png" alt="#">
+			</div>
+		</div>
+	</section>
+	<!--Четвертая часть-->
+	<section class="content tab_constructor" id="fourth_constructor">
+		<div class="container-fluid rp-0 lp-0">
+			<div class="row">
+				<div class="col-lg-6 mx-auto d-flex justify-content-end">
+					<div class="name">
+						<p class="name_name">Сосна</p>
+						<p class="constructor-cost">9 999 рублей</p>
 					</div>
-					<div class="left-constructor-item">
-						<img src="/img/constructor/washes/Gulf-K-850.2B/black.png" alt="#">
+				</div>
+				<div class="col-lg-6 mx-auto d-flex">
+						<div class="info">
+							<div class="info_symbol">
+								<img src="/img/constructor/info.png" alt="info">
+							</div>
+							<p>Параметры</p>
+							<div class="show-parameters">
+								<div class="description_table">
+									<div class="material">
+										<p class="helvetica14NoUpCaseBlack">Материал</p>
+										<p class="helvetica14NoUpCaseBlack">Дуб</p>
+									</div>
+									<div class="width">
+										<p class="helvetica14NoUpCaseBlack">Ширина</p>
+										<p class="helvetica14NoUpCaseBlack">250 см</p>
+									</div>
+									<div class="height">
+										<p class="helvetica14NoUpCaseBlack">Высота</p>
+										<p class="helvetica14NoUpCaseBlack">250 см</p>
+									</div>
+									<div class="bowl-depth">
+										<p class="helvetica14NoUpCaseBlack">Глубина</p>
+										<p class="helvetica14NoUpCaseBlack">5см</p>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="col-lg-12 d-flex countertops">
+					<div class="owl-carousel owl-theme owl_constructor_4">
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Creek_Y900M/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Gulf_K850.2B/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Lake_О510/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Ocean_К600/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Pond_K850M/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/River_K775/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Sea_K850/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Spring_C510/black.png" alt=""> </div>
 					</div>
-					<div class="central-constructor-item">
-						<img src="/img/constructor/washes/Lake-О-510/black.png" alt="#">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Пятая часть-->
+	<section class="content tab_constructor" id="fifth_constructor">
+		<div class="container-fluid rp-0 lp-0">
+			<div class="row">
+				<div class="col-lg-6 mx-auto d-flex justify-content-end">
+					<div class="delegate_left"></div>
+					<div class="name">
+						<p class="name_name">Плитка</p>
+						<p class="constructor-cost">9 999 рублей</p>
 					</div>
-					<div class="right-constructor-item">
-						<img src="/img/constructor/washes/Ocean-К-600/black.png" alt="#">
+				</div>
+				<div class="col-lg-6 mx-auto d-flex">
+						<div class="info">
+							<div class="info_symbol">
+								<img src="/img/constructor/info.png" alt="info">
+							</div>
+							<div class="delegate_right"></div>
+							<p>Параметры</p>
+							<div class="show-parameters">
+								<div class="description_table">
+									<div class="material">
+										<p class="helvetica14NoUpCaseBlack">Материал</p>
+										<p class="helvetica14NoUpCaseBlack">Дуб</p>
+									</div>
+									<div class="width">
+										<p class="helvetica14NoUpCaseBlack">Ширина</p>
+										<p class="helvetica14NoUpCaseBlack">250 см</p>
+									</div>
+									<div class="height">
+										<p class="helvetica14NoUpCaseBlack">Высота</p>
+										<p class="helvetica14NoUpCaseBlack">250 см</p>
+									</div>
+									<div class="bowl-depth">
+										<p class="helvetica14NoUpCaseBlack">Глубина</p>
+										<p class="helvetica14NoUpCaseBlack">5см</p>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="col-lg-12 d-flex aprons">
+					<!--<div class="owl-carousel owl-theme owl_constructor_5">
+					    <div class="aprons_slide"> <img src="/img/constructor/bg22.png" alt=""> </div>
+					    <div class="aprons_slide"> <img src="/img/constructor/bg23.png" alt=""> </div>
+					    <div class="aprons_slide"> <img src="/img/constructor/bg24.png" alt=""> </div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Шестая часть-->
+	<section class="content tab_constructor" id="sixth_constructor">
+		<div class="container-fluid rp-0 lp-0">
+			<div class="row">
+				<div class="col-lg-6 mx-auto d-flex justify-content-end">
+					<div class="name">
+						<p class="name_name">Ваш кит</p>
+						<p class="final-cost">34 848 рублей</p>
 					</div>
-					<div class="pre-right-constructor-item">
-						<img src="/img/constructor/washes/Pond-K-850M/black.png" alt="#">
+				</div>
+				<div class="col-lg-6 mx-auto d-flex">
+					<div class="info">
+						<div class="info_symbol">
+							<img src="/img/constructor/info.png" alt="info">
+						</div>
+						<p>Параметры</p>
+						<div class="show-parameters">
+							<div class="description_table">
+								<div class="material">
+									<p class="helvetica14NoUpCaseBlack">Материал</p>
+									<p class="helvetica14NoUpCaseBlack">Дуб</p>
+								</div>
+								<div class="width">
+									<p class="helvetica14NoUpCaseBlack">Ширина</p>
+									<p class="helvetica14NoUpCaseBlack">250 см</p>
+								</div>
+								<div class="height">
+									<p class="helvetica14NoUpCaseBlack">Высота</p>
+									<p class="helvetica14NoUpCaseBlack">250 см</p>
+								</div>
+								<div class="bowl-depth">
+									<p class="helvetica14NoUpCaseBlack">Глубина</p>
+									<p class="helvetica14NoUpCaseBlack">5см</p>
+								</div>
+							</div>
+						</div>
 					</div>
+				</div>
+				<div class="col-lg-12 d-flex final-kit">
 				</div>
 			</div>
 		</div>
@@ -413,56 +523,135 @@
 			</div>
 		</div>
 	</section>
+	<!--Переход с четвертой части-->
+	<section class="content" id="button_red_arrow_4">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 d-flex pd-l-60" id="tab_desk_3_back">
+					<a class="choose_desk choose_desk_left" href="#third_constructor">
+						<div>
+							<img src="/img/constructor/black_left_arrow.png" alt="black_left_arrow">
+						</div>
+						<p class="helvetica10UpCaseBlack">выбрать подставку</p>
+					</a>
+				</div>
+				<div class="col-lg-4 d-flex justify-content-center">
+					<div class="button_add">
+						<p class="helvetica10UpCaseWhite">добавить в кит</p>
+					</div>
+				</div>
+				<div class="col-lg-4 d-flex justify-content-end pd-r-40" id="tab_desk_4">
+					<a class="choose_desk" href="#fifth_constructor">
+						<p>выбрать кухонный фартук</p>
+						<div>
+							<img src="/img/constructor/red_right_arrow.png" alt="red_right_arrow">
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Переход с пятой части-->
+	<section class="content" id="button_red_arrow_5">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 d-flex pd-l-60" id="tab_desk_4_back">
+					<a class="choose_desk choose_desk_left" href="#fourth_constructor">
+						<div>
+							<img src="/img/constructor/black_left_arrow.png" alt="black_left_arrow">
+						</div>
+						<p class="helvetica10UpCaseBlack">выбрать столешницу</p>
+					</a>
+				</div>
+				<div class="col-lg-4 d-flex justify-content-center">
+					<div class="button_add">
+						<p class="helvetica10UpCaseWhite">добавить в кит</p>
+					</div>
+				</div>
+				<div class="col-lg-4 d-flex justify-content-end pd-r-40" id="tab_desk_5">
+					<a class="choose_desk" href="#sixth_constructor">
+						<p>ваш кит</p>
+						<div>
+							<img src="/img/constructor/red_right_arrow.png" alt="red_right_arrow">
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Переход с шестой части-->
+	<section class="content" id="button_red_arrow_6">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 d-flex pd-l-60" id="tab_desk_5_back">
+					<a class="choose_desk choose_desk_left" href="#fifth_constructor">
+						<div>
+							<img src="/img/constructor/black_left_arrow.png" alt="black_left_arrow">
+						</div>
+						<p class="helvetica10UpCaseBlack">выбрать кухонный фартук</p>
+					</a>
+				</div>
+				<div class="col-lg-4 d-flex justify-content-center">
+					<div class="button_add">
+						<a href="#" class="helvetica10UpCaseWhite">оформить покупку</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<footer>
-			<div class="footer">
-				<div class="logo_white">
-					<img src="/img/global/logo2.png" alt="logo">
-				</div>
-				<div class="wrap_foot">
-					<div class="first_column">
-						<div class="telephone">
-							<p>Телефон:</p>
-							<a href="tel:+74957777777"> +7 495 777 77 77</a>
-						</div>
-						<div class="email">
-							<p>Email:</p>
-							<a href="mailto:support@kitkraken.com">support@kitkraken.com</a>
-						</div>
-						<p>&#169; 2019, все права защищены</p>
-					</div>
-					<div class="social_sites">
-						<a class="facebook" href="#">
-							<img src="/img/global/facebook.png" alt="facebook">
-						</a>
-						<a class="instagram" href="#">
-							<img src="/img/global/instagram.png" alt="instagram">
-						</a>
-						<a class="vk" href="#">
-							<img src="/img/global/vk.png" alt="vk">
-						</a>
-					</div>
-					<div class="sign">
-						<div class="up_sign">
-							<p>Подпишитесь на рассылку</p>
-						</div>
-						<div class="down_sign">
-							<p>Получите возможность первыми узнавать о новостях и эксклюзивных предложениях</p>
-						</div>
-						<form class="email_form" action="#" method="post">
-							<input type="email" placeholder="Email">
-							<input type="image" src="img/constructor/right_arrow.png" alt="ok">
-						</form>
-					</div>
-				</div>
+	<div class="footer">
+		<div class="logo_white">
+		<img src="/img/global/logo2.png" alt="logo">
+		</div>
+			<div class="wrap_foot">
+			<div class="first_column">
+			<div class="telephone">
+			<p>Телефон:</p>
+			<a href="tel:+74957777777"> +7 495 777 77 77</a>
+			</div>
+			<div class="email">
+			<p>Email:</p>
+			<a href="mailto:support@kitkraken.com">support@kitkraken.com</a>
+			</div>
+			<p>© 2019, все права защищены</p>
+			</div>
+			<div class="social_sites">
+			<a class="facebook" href="#">
+			<img src="/img/global/facebook.png" alt="facebook">
+			</a>
+			<a class="instagram" href="#">
+			<img src="/img/global/instagram.png" alt="instagram">
+			</a>
+			<a class="vk" href="#">
+			<img src="/img/global/vk.png" alt="vk">
+			</a>
+			</div>
+			<p class="helvetica14NoUpCaseWhiteOpacity03 sm-open">© 2019, все права защищены</p>
+			<div class="sign">
+			<div class="up_sign">
+			<p>Подпишитесь на рассылку</p>
+			</div>
+			<div class="down_sign">
+			<p>Получите возможность первыми узнавать о новостях и эксклюзивных предложениях</p>
+			</div>
+			<form class="email_form" action="#" method="post">
+			<input type="email" placeholder="Email">
+			<input type="image" src="img/constructor/right_arrow.png" alt="ok">
+			</form>
 			</div>
 			</div>
+		</div>
+	</div>
 	</footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="/OwlCarousel/dist/owl.carousel.min.js"></script>
 <script src="/js/main2.js"></script>
 
 </body>

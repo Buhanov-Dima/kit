@@ -169,11 +169,13 @@ $('.add-to-basket').on('click', function(){
 $('.nmb_user_basket a:eq(1)').on('click', function(e){
 	e.preventDefault();
 	$(".basket").css('display', 'block');
+	if($('.basket').children('.basket-item').length == 0) $('.basket').css("display","none");
 });
 
 $('.nmb_user_basket_white a:eq(1)').on('click', function(e){
 	e.preventDefault();
 	$(".basket").css('display', 'block');
+	if($('.basket').children('.basket-item').length == 0) $('.basket').css("display","none");
 });
 
 $('.minus').on('click', function(){
@@ -188,8 +190,8 @@ $('.plus').on('click', function(){
 });
 
 $('.close-button').on('click', function(){
-	$(this).parents	('.basket-item').remove();
-	if(!($('basket').is('.basket-item'))) $('.basket').css("display","none");
+	$(this).parents('.basket-item').remove();
+	if($('.basket').children('.basket-item').length == 0) $('.basket').css("display","none");
 });
 
 $(document).mouseup(function (e) {
@@ -199,7 +201,7 @@ $(document).mouseup(function (e) {
     }
 });
 
-$('#info_symbol').on('click', function(e){
+$('.info_symbol').on('click', function(e){
 	e.preventDefault();
 	$(".show-parameters").css('display', 'block');
 });
@@ -259,312 +261,223 @@ $('.filter').on('click', function(){
 
 
 
+$(function(){
 
-/*!!!!Конструктор!!!!*/
+$('.fotorama').on('fotorama:show', function (e, fotorama) {
+ 	$('.fotorama__stage__shaft').css({'transition':'.1s cubic-bezier(.98,.05,.16,.96)'});
+ 	/*$('.fotorama__stage__shaft img').css({'transform':'scale(1.2)','transition':'0.3s cubic-bezier(.94,.1,.33,.91)'});*/	
+ }).fotorama();
 
-var foldersWashes = ["Creek-У-900M", "Gulf-K-850.2B", "Lake-О-510", "Ocean-К-600", "Pond-K-850M", "River-K-775", "Sea-K-850", "Spring-C510", "Stream-С-510М"];
-var foldersDesks = ["K-600", "K-775", "K-850.2B", "K-850M", "O-510", "Y-900M"];
-var foldersStands = ["Y-900M", "K-850.2B", "О-510", "K-850", "C-510"];
-var leftIncrementfoldersWashes = 4;	
-var leftIncrementfoldersDesks = 4;
-var leftIncrementfoldersStands = 4;
-$('.left_arrow').on('click', function(){
-	if($('.tab_constructor:eq(0)').css('display') != "none"){
-		leftIncrementfoldersWashes++;
-		if(leftIncrementfoldersWashes == 8) leftIncrementfoldersWashes = 0;
-		$('.central-constructor-item').animate({left:'-490px'}, 1000, "linear");	
-		$('.left-constructor-item').animate({left:"-890px"}, 1000, "linear");;
-		$('.right-constructor-item').animate({left:'300px'}, 1000, "linear");
-	 	$('.pre-right-constructor-item').animate({left:'1065px'}, 1000, "linear");
-	 	$('.pre-left-constructor-item').remove();
-	 	$('.left-constructor-item').addClass('pre-left-constructor-item').removeClass('left-constructor-item');
-		$('.central-constructor-item').addClass('left-constructor-item').removeClass('central-constructor-item');
-		$('.right-constructor-item').addClass('central-constructor-item').removeClass('right-constructor-item');
-		$('.pre-right-constructor-item').addClass('right-constructor-item').removeClass('pre-right-constructor-item');
-		$('.washes').append('<div class="pre-right-constructor-item"><img src="/img/constructor/washes/' + foldersWashes[leftIncrementfoldersWashes] + '/black.png"></div>');
-		$('.desks').append('<div class="pre-right-constructor-item"><img src="/img/constructor/washes/' + foldersWashes[leftIncrementfoldersWashes] + '/black.png"></div>');
-		var now = $('.central-constructor-item img').attr('src').split('/');
-		now2 = now[now.length-2];
-		now3 = now2.split('-');
-		$('.name_name').text(now3[0]); /*Здесь мы получаем Имя элемента находящегося в центре путем разделения его пути на составляющие и вычленении из нужной составляющей имени итема*/
-		if(now3[0] == "Gulf"){ /*Сравниваем*/
-			$('.constructor-cost').text('6 200 рублей');
-			$('.material p:eq(1)').text('Керамика');
-			$('.width p:eq(1)').text('188 см');
-			$('.height p:eq(1)').text('153 см');
-			$('.bowl-depth p:eq(1)').text('30 см');
-		};
-		if(now3[0] == "Spring"){
-			$('.constructor-cost').text('11 200 рублей');
-			$('.material p:eq(1)').text('Керамика');
-			$('.width p:eq(1)').text('150 см');
-			$('.height p:eq(1)').text('155 см');
-			$('.bowl-depth p:eq(1)').text('78 см');
-		}
-		if(now3[0] == "Ocean") {
-			$('.constructor-cost').text('7 356 рублей');
-			$('.material p:eq(1)').text('Керамика');
-			$('.width p:eq(1)').text('333 см');
-			$('.height p:eq(1)').text('456 см');
-			$('.bowl-depth p:eq(1)').text('11 см');
-		};
-	}
-	if($('.tab_constructor:eq(1)').css('display') != "none"){
-		/*leftIncrementfoldersDesks++;
-		if(leftIncrementfoldersWashes == 8) leftIncrementfoldersWashes = 0;*/
-		$('.central-constructor-item').animate({left:'-345px'}, 1000, "linear");	
-		$('.left-constructor-item').animate({left:"-845px"}, 1000, "linear");;
-		$('.right-constructor-item').animate({left:'409px'}, 1000, "linear");
-	 	$('.pre-right-constructor-item').animate({left:'1090px'}, 1000, "linear");
-	 	$('.pre-left-constructor-item').remove();
-	 	$('.left-constructor-item').addClass('pre-left-constructor-item').removeClass('left-constructor-item');
-		$('.central-constructor-item').addClass('left-constructor-item').removeClass('central-constructor-item');
-		$('.right-constructor-item').addClass('central-constructor-item').removeClass('right-constructor-item');
-		$('.pre-right-constructor-item').addClass('right-constructor-item').removeClass('pre-right-constructor-item');
-		$('.washes').append('<div class="pre-right-constructor-item"><img src="' + suitable_desk + '"></div>');
-		$('.desks').append('<div class="pre-right-constructor-item"><img src="' + suitable_desk + '"></div>');
-		/*var now = $('.central-constructor-item img').attr('src').split('/');
-		now2 = now[now.length-2];
-		now3 = now2.split('-');
-		$('.name_name').text(now3[0]); Здесь мы получаем Имя элемента находящегося в центре путем разделения его пути на составляющие и вычленении из нужной составляющей имени итема
-		if(now3[0] == "Gulf"){ Сравниваем
-			$('.constructor-cost').text('6 200 рублей');
-			$('.material p:eq(1)').text('Керамика');
-			$('.width p:eq(1)').text('188 см');
-			$('.height p:eq(1)').text('153 см');
-			$('.bowl-depth p:eq(1)').text('30 см');
-		};
-		if(now3[0] == "Spring"){
-			$('.constructor-cost').text('11 200 рублей');
-			$('.material p:eq(1)').text('Керамика');
-			$('.width p:eq(1)').text('150 см');
-			$('.height p:eq(1)').text('155 см');
-			$('.bowl-depth p:eq(1)').text('78 см');
-		}
-		if(now3[0] == "Ocean") {
-			$('.constructor-cost').text('7 356 рублей');
-			$('.material p:eq(1)').text('Керамика');
-			$('.width p:eq(1)').text('333 см');
-			$('.height p:eq(1)').text('456 см');
-			$('.bowl-depth p:eq(1)').text('11 см');
-		}*/
-	}
-});
-var rightIncrementfoldersWashes = 9;
-$('.right_arrow').on('click', function(){
-	if($('.tab_constructor:eq(0)').css('display') != "none"){
-		rightIncrementfoldersWashes--;
-		if(rightIncrementfoldersWashes == -1) rightIncrementfoldersWashes = 8;
-		$('.right-constructor-item').animate({left:'1800px'}, 1000, "linear");
-		$('.central-constructor-item').animate({left:'1065px'}, 1000, "linear");	
-		$('.left-constructor-item').animate({left:"300px"}, 1000, "linear");
-	 	$('.pre-left-constructor-item').animate({left:'-490px'}, 1000, "linear");
-	 	$('.pre-right-constructor-item').remove();
-	 	$('.right-constructor-item').addClass('pre-right-constructor-item').removeClass('right-constructor-item');
-		$('.central-constructor-item').addClass('right-constructor-item').removeClass('central-constructor-item');
-		$('.left-constructor-item').addClass('central-constructor-item').removeClass('left-constructor-item');
-		$('.pre-left-constructor-item').addClass('left-constructor-item').removeClass('pre-left-constructor-item');
-		$('.washes').prepend('<div class="pre-left-constructor-item"><img src="/img/constructor/washes/' + foldersWashes[rightIncrementfoldersWashes] + '/black.png"></div>');
-		$('.desks').prepend('<div class="pre-left-constructor-item"><img src="/img/constructor/washes/' + foldersWashes[rightIncrementfoldersWashes] + '/black.png"></div>');
-		var now = $('.central-constructor-item img').attr('src').split('/');
-		now2 = now[now.length-2];
-		now3 = now2.split('-');
-		$('.name_name').text(now3[0]);
-		if(now3[0] == "Gulf"){
-			$('.constructor-cost').text('6 200 рублей');
-			$('.material p:eq(1)').text('Ceramica1');
-			$('.width p:eq(1)').text('188 см');
-			$('.height p:eq(1)').text('153 см');
-			$('.bowl-depth p:eq(1)').text('30 см');
-		};
-		if(now3[0] == "Spring"){
-			$('.constructor-cost').text('11 200 рублей');
-			$('.material p:eq(1)').text('Ceramica2');
-			$('.width p:eq(1)').text('18 см');
-			$('.height p:eq(1)').text('155 см');
-			$('.bowl-depth p:eq(1)').text('78 см');
-		}
-		if(now3[0] == "Ocean") {
-			$('.constructor-cost').text('7 356 рублей');
-			$('.material p:eq(1)').text('Ceramica3');
-			$('.width p:eq(1)').text('333 см');
-			$('.height p:eq(1)').text('456 см');
-			$('.bowl-depth p:eq(1)').text('11 см');
-		}
-	}
-	if($('.tab_constructor:eq(1)').css('display') != "none"){
-		/*leftIncrementfoldersDesks++;
-		if(leftIncrementfoldersWashes == 8) leftIncrementfoldersWashes = 0;*/
-		$('.right-constructor-item').animate({left:'1600px'}, 1000, "linear");
-		$('.central-constructor-item').animate({left:'1090px'}, 1000, "linear");	
-		$('.left-constructor-item').animate({left:"409px"}, 1000, "linear");
-	 	$('.pre-left-constructor-item').animate({left:'-345px'}, 1000, "linear");
-	 	$('.pre-right-constructor-item').remove();
-	 	$('.right-constructor-item').addClass('pre-right-constructor-item').removeClass('right-constructor-item');
-		$('.central-constructor-item').addClass('right-constructor-item').removeClass('central-constructor-item');
-		$('.left-constructor-item').addClass('central-constructor-item').removeClass('left-constructor-item');
-		$('.pre-left-constructor-item').addClass('left-constructor-item').removeClass('pre-left-constructor-item');
-		$('.washes').prepend('<div class="pre-left-constructor-item"><img src="' + suitable_desk + '"></div>');
-		$('.desks').prepend('<div class="pre-left-constructor-item"><img src="' + suitable_desk + '"></div>');
-		var foo = $('.final-wash');
-		foo.detach();
-		foo.prependTo('.desks');
-		/*var now = $('.central-constructor-item img').attr('src').split('/');
-		now2 = now[now.length-2];
-		now3 = now2.split('-');
-		$('.name_name').text(now3[0]); Здесь мы получаем Имя элемента находящегося в центре путем разделения его пути на составляющие и вычленении из нужной составляющей имени итема
-		if(now3[0] == "Gulf"){ Сравниваем
-			$('.constructor-cost').text('6 200 рублей');
-			$('.material p:eq(1)').text('Керамика');
-			$('.width p:eq(1)').text('188 см');
-			$('.height p:eq(1)').text('153 см');
-			$('.bowl-depth p:eq(1)').text('30 см');
-		};
-		if(now3[0] == "Spring"){
-			$('.constructor-cost').text('11 200 рублей');
-			$('.material p:eq(1)').text('Керамика');
-			$('.width p:eq(1)').text('150 см');
-			$('.height p:eq(1)').text('155 см');
-			$('.bowl-depth p:eq(1)').text('78 см');
-		}
-		if(now3[0] == "Ocean") {
-			$('.constructor-cost').text('7 356 рублей');
-			$('.material p:eq(1)').text('Керамика');
-			$('.width p:eq(1)').text('333 см');
-			$('.height p:eq(1)').text('456 см');
-			$('.bowl-depth p:eq(1)').text('11 см');
-		}*/
-	}
+
+/*$('.fotorama').on('fotorama:showend', function (e, fotorama) {
+ 	$('.fotorama__stage__shaft img').css({'transform':'scale(1)'});
+ }).fotorama();*/
+
 });
 
-$('.colors>div').on('click', function(){
-	var src = $('.central-constructor-item img').attr('src'); /*получаем путь центрального итема*/
-	r = src.split('/'); /*делим путь на подстроки. подстрока кончается символом "/"   */
-	if($(this).index() == 0) substr = "dark-grey";
-	if($(this).index() == 1) substr = "grey";
-	if($(this).index() == 2) substr = "white";
-	if($(this).index() == 3) substr = "brown";
-	if($(this).index() == 4) substr = "black";
-	$('.central-constructor-item img').fadeOut(300);
-	for (let i=0; i<r.length; i++){ /*идем по массиву подстрок и ищем в нем сопадения по пути(один точно совпадет) */
-		if(r[i] == "Creek-У-900M") {$('.central-constructor-item img').attr('src', '/img/constructor/washes/Creek-У-900M/' + substr + '.png'); break;}  
-		if(r[i] == "Lake-О-510") {$('.central-constructor-item img').attr('src', '/img/constructor/washes/Lake-О-510/' + substr + '.png'); break;}
-		if(r[i] == "Gulf-K-850.2B") {$('.central-constructor-item img').attr('src', '/img/constructor/washes/Gulf-K-850.2B/' + substr + '.png'); break;}
-		if(r[i] == "Ocean-К-600") {$('.central-constructor-item img').attr('src', '/img/constructor/washes/Ocean-К-600/' + substr + '.png'); break;}
-		if(r[i] == "Pond-K-850M") {$('.central-constructor-item img').attr('src', '/img/constructor/washes/Pond-K-850M/' + substr + '.png'); break;}
-		if(r[i] == "River-K-775") {$('.central-constructor-item img').attr('src', '/img/constructor/washes/River-K-775/' + substr + '.png'); break;}
-		if(r[i] == "Sea-K-850") {$('.central-constructor-item img').attr('src', '/img/constructor/washes/Sea-K-850/' + substr + '.png'); break;}
-		if(r[i] == "Spring-C510") {$('.central-constructor-item img').attr('src', '/img/constructor/washes/Spring-C510/' + substr + '.png'); break;}
-		if(r[i] == "Stream-С-510М") {$('.central-constructor-item img').attr('src', '/img/constructor/washes/Stream-С-510М/' + substr + '.png'); break;}
-	}
-	$('.central-constructor-item img').fadeIn(300);
-});
+
+
+
+
+
+
+
+
 
 var save_wash;
-$('.button_add').on('click', function(){
-	save_wash = $('.central-constructor-item img').attr('src');
+var save_desk;
+var save_stand;
+var save_countertop;
+var save_apron;
+
+var foldersWashes = ['Creek_Y900M', 'Gulf_K850.2B', 'Lake_510', 'Ocean_К600', 'Pond_K850M', 
+					 'River_K775', 'Sea_K850', 'Spring_C510', 'Stream_С510М'];
+var foldersDesks = ['K600', 'K775', 'K850.2B', 'K850M', '510', 'Y900M'];
+var foldersStands = ['C510', 'K850', 'K850.2B', 'O510', 'Y900M', 'River_K775', 'Sea_K850', 'Spring_C510', 'Stream_С510М']; 
+var st = ['black', 'blue', 'dark-grey', 'grey', 'pink', 'red', 'turquoise', 'yellow'];
+
+$(document).ready(function(){
+	$('.owl_constructor_1').owlCarousel({
+		items: 1,
+		margin: 250,
+		autoWidth: true,
+		center: true,
+		loop: true,
+		nav:true,
+		smartSpeed:1000,
+		navText: ["<img src='/img/constructor/right_arrow.png'>","<img src='/img/constructor/left_arrow.png'>"],
+		dots: false 
+	});
+
+	$('.owl_constructor_2').owlCarousel({
+		items: 1,
+		margin: 50,
+		autoWidth: true,
+		center: true,
+		loop: true,
+		nav:true,
+		smartSpeed:1000,
+		navText: ["<img src='/img/constructor/right_arrow.png'>","<img src='/img/constructor/left_arrow.png'>"],
+		dots: false 
+	});
+	$('.owl_constructor_3').owlCarousel({
+		items: 1,
+		margin: 570,
+		autoWidth: true,
+		center: true,
+		loop: true,
+		nav:true,
+		smartSpeed:1000,
+		navText: ["<img src='/img/constructor/right_arrow.png'>","<img src='/img/constructor/left_arrow.png'>"],
+		dots: false 
+	});
+	$('.owl_constructor_4').owlCarousel({
+		items: 1,
+		margin: 570,
+		autoWidth: true,
+		center: true,
+		loop: true,
+		nav:true,
+		smartSpeed:1000,
+		navText: ["<img src='/img/constructor/right_arrow.png'>","<img src='/img/constructor/left_arrow.png'>"],
+		dots: false 
+	});
+	$('.owl_constructor_5').owlCarousel({
+		items: 1,
+		margin: 570,
+		autoWidth: true,
+		center: true,
+		loop: true,
+		nav:true,
+		smartSpeed:1000,
+		navText: ["<img src='/img/constructor/right_arrow.png'>","<img src='/img/constructor/left_arrow.png'>"],
+		dots: false 
+	});
+});
+$('.delegate_right').click(function(){
+	$('.owl_constructor_5').trigger('prev.owl.carousel');
+});
+
+$('.delegate_left').click(function(){
+	$('.owl_constructor_5').trigger('next.owl.carousel');
+});
+
+
+var k = 0;
+console.log(k);
+$('.tab_constructor .colors>div').on('click', function(){
+	k++;
+	console.log(k);
+	var start_slide = $('.owl-item.active.center').index();
+	if($(this).index() == 0){
+		if(k<=1){
+			r = start_slide;
+		}
+		else{var r = 0;}
+		for(let i = 0; i<$('.owl-item').length; i++){
+			if(r == 9) r = 0;
+			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/dark-grey.png');
+			r++;
+		}
+	}
+	if($(this).index() == 1){
+		if(k<=1){
+			r = start_slide;
+		}
+		else{var r = 0;}
+		for(let i = 0; i<$('.owl-item').length; i++){
+			if(r == 9) r = 0;
+			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/grey.png');
+			r++;
+		}
+	}
+	if($(this).index() == 2){
+		if(k<=1){
+			r = start_slide;
+		}
+		else{var r = 0;}
+		for(let i = 0; i<$('.owl-item').length; i++){
+			if(r == 9) r = 0;
+			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/white.png');
+			r++;
+		}
+	}
+	if($(this).index() == 3){
+		if(k<=1){
+			r = start_slide;
+		}
+		else{var r = 0;}
+		for(let i = 0; i<$('.owl-item').length; i++){
+			if(r == 9) r = 0;
+			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/brown.png');
+			r++;
+		}
+	}
+	if($(this).index() == 4){
+		if(k<=1){
+			r = start_slide;
+		}
+		else{var r = 0;}
+		for(let i = 0; i<$('.owl-item').length; i++){
+			if(r == 9) r = 0;
+			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/black.png');
+			r++;
+		}
+	}
+})
+
+
+
+$('.owl_constructor_1').on('translated.owl.carousel', function(){
+	var s1 = $('.owl-item.active.center img').attr('src');
+	var s2 = s1.split('/');
+	var s3 = s2[s2.length-2];
+	var s4 = s3.split('_');
+	var search_name = s4[0];
+	$('#first_constructor .name_name').text(search_name);
+});
+
+/*НАЧАЛО СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ПЕРВОМ ЭКРАНЕ*/
+
+$('#button_red_arrow_1 .button_add').on('click', function(){
+	save_wash = $('.owl_constructor_1 .owl-item.active.center img').attr('src');
 	$(this).children('p').css('background','rgb(39, 143, 37)');
 	$(this).children('p').text('Добавлено');
 	$(this).css('box-shadow','rgba(39, 143, 37, 0.2) 0px 22px 32px, rgba(39, 143, 37, 0.1) 0px 10px 16px');
 	$('.desks').prepend('<div class="final-wash"></div>');
 	$('.final-wash').append('<img src="' + save_wash +'">');
-});
 
-var suitable_desk;
+});
 
 $('#tab_desk_1 a').on('click', function(e){
 	e.preventDefault();
 	var trans_link = $(this).attr('href');
 	$('.tab_constructor').not(trans_link).css('display','none');
 	$(trans_link).fadeIn(400);
-	var r1 = save_wash.split('/');
-	var r2 = r1[r1.length-2].split('-');
-	var search_desk = r2[0];
-	if(search_desk == "Ocean"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/desks/K-600/DR-K-600.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/desks/K-600/DR-K-600.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/desks/K-600/DR-K-600.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/desks/K-600/DR-K-600.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/desks/K-600/DR-K-600.png');
-	}
-	if(search_desk == "River"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/desks/K-775/DR-K-775.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/desks/K-775/DR-K-775.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/desks/K-775/DR-K-775.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/desks/K-775/DR-K-775.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/desks/K-775/DR-K-775.png');
-	}
-	if(search_desk == "Gulf"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/desks/K-850.2B/DR-K-850.2B.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/desks/K-850.2B/DR-K-850.2B.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/desks/K-850.2B/DR-K-850.2B.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/desks/K-850.2B/DR-K-850.2B.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/desks/K-850.2B/DR-K-850.2B.png');
-	}
-	if(search_desk == "Pond"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-	}
-	if(search_desk == "Lake"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-	}
-	if(search_desk == "Creek"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-	}
-	if(search_desk == "Stream"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/desks/K-850M/DR-K-850M.png');
-	}
-	if(search_desk == "Spring"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/desks/O-510/DR-O-510.png');
-	}
-	if(search_desk == "Sea"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/desks/Y-900M/DR1-Y-900M.png');
-	}
+	
 	$(".button_add").children('p').css('background','#D91F43');
 	$(".button_add").children('p').text('Добавить в кит');
 	$(".button_add").css('box-shadow','0px 10px 40px rgba(217, 31, 67, 0.5)');
 
 	$('#button_red_arrow_1').css('display', 'none');
 	$('#button_red_arrow_2').css('display','block');
-	suitable_desk = $('.central-constructor-item img').attr('src'); /*Нужна для подгрузки только тех досок, которые нужно выводить для данной мойки. Уйдет когда появятся разные материалы досок*/
-});	
 
+	var r1 = save_wash.split('/');
+	var r2 = r1[r1.length-2];
+	var r3 = r2.split('_');
+	var type_of_desk = r3[1];
+	for(let i = 0; i<19; i++){
+		$('.desks_slide').eq(i).children('img').attr('src', '/img/constructor/desks/' + type_of_desk + '/' + type_of_desk + '.png');
+	}
+});	
+/*КОНЕЦ СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ПЕРВОМ ЭКРАНЕ*/
+
+/*НАЧАЛО СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ВТОРОМ ЭКРАНЕ*/
 $('#tab_desk_1_back a').on('click', function(e){
 	e.preventDefault();
 	var trans_link = $(this).attr('href');
 	$('.tab_constructor').not(trans_link).css('display','none');
-	$('.tab_constructor').has(trans_link).css('display','block');
 	$(trans_link).fadeIn(400);
-
-	$('.pre-left-constructor-item img').attr('src', "/img/constructor/washes/Creek-У-900M/black.png");
-	$('.left-constructor-item img').attr('src', "/img/constructor/washes/Gulf-K-850.2B/black.png");
-	$('.central-constructor-item img').attr('src', "/img/constructor/washes/Lake-О-510/black.png");
-	$('.right-constructor-item img').attr('src', "/img/constructor/washes/Ocean-К-600/black.png");
-	$('.pre-right-constructor-item img').attr('src', "/img/constructor/washes/Pond-K-850M/black.png");
-
 
 	$(".button_add").children('p').css('background','#D91F43');
 	$(".button_add").children('p').text('Добавить в кит');
@@ -575,87 +488,46 @@ $('#tab_desk_1_back a').on('click', function(e){
 	$('.final-wash').remove();
 });	
 
+$('#button_red_arrow_2 .button_add').on('click', function(){
+	save_desk = $('.owl_constructor_2 .owl-item.active.center img').attr('src');
+	$(this).children('p').css('background','rgb(39, 143, 37)');
+	$(this).children('p').text('Добавлено');
+	$(this).css('box-shadow','rgba(39, 143, 37, 0.2) 0px 22px 32px, rgba(39, 143, 37, 0.1) 0px 10px 16px');
+	$('.stands').prepend('<div class="final-desk"></div>');
+	$('.final-desk').append('<img src="' + save_desk +'">');
+	$('.stands').prepend('<div class="final-wash"></div>');
+	$('.final-wash:eq(1)').append('<img src="' + save_wash +'">');
+});
+
+
 $('#tab_desk_2 a').on('click', function(e){
 	e.preventDefault();
 	var trans_link = $(this).attr('href');
 	$('.tab_constructor').not(trans_link).css('display','none');
-	$('.tab_constructor').has(trans_link).css('display','block');
 	$(trans_link).fadeIn(400);
-	var r1 = save_wash.split('/');
-	var r2 = r1[r1.length-2].split('-');
-	var search_desk = r2[0];
-	if(search_desk == "Ocean"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/grey.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/pink.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/red.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/turquoise.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/yellow.png');
-	}
-	if(search_desk == "Spring"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/stands/C-510/grey.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/stands/C-510/pink.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/stands/C-510/red.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/stands/C-510/turquoise.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/stands/C-510/yellow.png');
-	}
-	if(search_desk == "Gulf"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/grey.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/pink.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/red.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/turquoise.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/stands/K-850.2B/yellow.png');
-	}
-	if(search_desk == "Sea"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/stands/K-850/grey.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/stands/K-850/pink.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/stands/K-850/red.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/stands/K-850/turquoise.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/stands/K-850/yellow.png');
-	}
-	if(search_desk == "Lake"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/stands/O-510/grey.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/stands/O-510/pink.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/stands/O-510/red.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/stands/O-510/turquoise.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/stands/O-510/yellow.png');
-	}
-	if(search_desk == "Creek"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/stands/Y-900M/grey.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/stands/Y-900M/pink.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/stands/Y-900M/red.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/stands/Y-900M/turquoise.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/stands/Y-900M/yellow.png');
-	}
-	if(search_desk == "Pond"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/stands/K-850/grey.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/stands/K-850/pink.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/stands/K-850/red.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/stands/K-850/turquoise.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/stands/K-850/yellow.png');
-	}
-	if(search_desk == "Stream"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/stands/O-510/grey.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/stands/O-510/pink.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/stands/O-510/red.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/stands/O-510/turquoise.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/stands/O-510/yellow.png');
-	}
-	if(search_desk == "River"){
-		$('.pre-left-constructor-item img').attr('src','/img/constructor/stands/Y-900M/grey.png');
-		$('.left-constructor-item img').attr('src','/img/constructor/stands/Y-900M/pink.png');
-		$('.central-constructor-item img').attr('src','/img/constructor/stands/Y-900M/red.png');
-		$('.right-constructor-item img').attr('src','/img/constructor/stands/Y-900M/turquoise.png');
-		$('.pre-right-constructor-item img').attr('src','/img/constructor/stands/Y-900M/yellow.png');
-	}
-
+	
 	$(".button_add").children('p').css('background','#D91F43');
 	$(".button_add").children('p').text('Добавить в кит');
 	$(".button_add").css('box-shadow','0px 10px 40px rgba(217, 31, 67, 0.5)');
 
 	$('#button_red_arrow_2').css('display', 'none');
 	$('#button_red_arrow_3').css('display','block');
-});	
 
+	var r1 = save_wash.split('/');
+	var r2 = r1[r1.length-2];
+	var r3 = r2.split('_');
+	var type_of_desk = r3[1];
+	var m = 0;
+	for(let i = 0; i<19; i++){
+		
+		if(m == 8) m = 0;
+		$('.stands_slide').eq(i).children('img').attr('src', '/img/constructor/stands/' + type_of_desk + '/' + st[m] + '.png');
+		m++;
+	}
+});	
+/*КОНЕЦ СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ВТОРОМ ЭКРАНЕ*/
+
+/*НАЧАЛО СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ТРЕТЬЕМ ЭКРАНЕ*/
 $('#tab_desk_2_back a').on('click', function(e){
 	e.preventDefault();
 	var trans_link = $(this).attr('href');
@@ -663,17 +535,228 @@ $('#tab_desk_2_back a').on('click', function(e){
 	$('.tab_constructor').has(trans_link).css('display','block');
 	$(trans_link).fadeIn(400);
 
-	$('.pre-left-constructor-item img').attr('src', "/img/constructor/washes/Creek-У-900M/black.png");
-	$('.left-constructor-item img').attr('src', "/img/constructor/washes/Gulf-K-850.2B/black.png");
-	$('.central-constructor-item img').attr('src', "/img/constructor/washes/Lake-О-510/black.png");
-	$('.right-constructor-item img').attr('src', "/img/constructor/washes/Ocean-К-600/black.png");
-	$('.pre-right-constructor-item img').attr('src', "/img/constructor/washes/Pond-K-850M/black.png");
-
-
 	$(".button_add").children('p').css('background','#D91F43');
 	$(".button_add").children('p').text('Добавить в кит');
 	$(".button_add").css('box-shadow','0px 10px 40px rgba(217, 31, 67, 0.5)');
 
 	$('#button_red_arrow_2').css('display', 'block');
 	$('#button_red_arrow_3').css('display','none');
+	$('.final-desk').remove();
+	$('.final-wash:eq(1)').remove();
 });	
+
+$('#button_red_arrow_3 .button_add').on('click', function(){
+	save_stand = $('.owl_constructor_3 .owl-item.active.center img').attr('src');
+	$(this).children('p').css('background','rgb(39, 143, 37)');
+	$(this).children('p').text('Добавлено');
+	$(this).css('box-shadow','rgba(39, 143, 37, 0.2) 0px 22px 32px, rgba(39, 143, 37, 0.1) 0px 10px 16px');
+	$('.countertops').prepend('<div class="final-stand"></div>');
+	$('.final-stand').append('<img src="' + save_stand +'">');
+	$('.countertops').prepend('<div class="final-desk"></div>');
+	$('.final-desk:eq(1)').append('<img src="' + save_desk +'">');
+	$('.countertops').prepend('<div class="final-wash"></div>');
+	$('.final-wash:eq(2)').append('<img src="' + save_wash +'">');
+});
+
+$('#tab_desk_3 a').on('click', function(e){
+	e.preventDefault();
+	var trans_link = $(this).attr('href');
+	$('.tab_constructor').not(trans_link).css('display','none');
+	$(trans_link).fadeIn(400);
+	
+	$(".button_add").children('p').css('background','#D91F43');
+	$(".button_add").children('p').text('Добавить в кит');
+	$(".button_add").css('box-shadow','0px 10px 40px rgba(217, 31, 67, 0.5)');
+
+	$('#button_red_arrow_3').css('display', 'none');
+	$('#button_red_arrow_4').css('display','block');
+});	
+/*КОНЕЦ СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ТРЕТЬЕМ ЭКРАНЕ*/
+
+/*НАЧАЛО СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ЧЕТВЕРТОМ ЭКРАНЕ*/
+$('#tab_desk_3_back a').on('click', function(e){
+	e.preventDefault();
+	var trans_link = $(this).attr('href');
+	$('.tab_constructor').not(trans_link).css('display','none');
+	$('.tab_constructor').has(trans_link).css('display','block');
+	$(trans_link).fadeIn(400);
+
+	$(".button_add").children('p').css('background','#D91F43');
+	$(".button_add").children('p').text('Добавить в кит');
+	$(".button_add").css('box-shadow','0px 10px 40px rgba(217, 31, 67, 0.5)');
+
+	$('#button_red_arrow_3').css('display', 'block');
+	$('#button_red_arrow_4').css('display','none');
+	$('.final-stand').remove();
+	$('.final-desk:eq(1)').remove();
+	$('.final-wash:eq(2)').remove();
+});	
+
+$('#button_red_arrow_4 .button_add').on('click', function(){
+	save_countertop = $('.owl_constructor_4 .owl-item.active.center img').attr('src');
+	$(this).children('p').css('background','rgb(39, 143, 37)');
+	$(this).children('p').text('Добавлено');
+	$(this).css('box-shadow','rgba(39, 143, 37, 0.2) 0px 22px 32px, rgba(39, 143, 37, 0.1) 0px 10px 16px');
+	$('.aprons').prepend('<div class="final-stand"></div>');
+	$('.final-stand:eq(1)').append('<img src="' + save_stand +'">');
+	$('.aprons').prepend('<div class="final-desk"></div>');
+	$('.final-desk:eq(2)').append('<img src="' + save_desk +'">');
+	$('.aprons').prepend('<div class="final-wash"></div>');
+	$('.final-wash:eq(3)').append('<img src="' + save_wash +'">');
+	$('.aprons').prepend('<div class="final-countertop"></div>');
+	$('.final-countertop').append('<img src="' + save_countertop +'">');
+});
+
+$('#tab_desk_4 a').on('click', function(e){
+	e.preventDefault();
+	var trans_link = $(this).attr('href');
+	$('.tab_constructor').not(trans_link).css('display','none');
+	$(trans_link).fadeIn(400);
+	
+	$(".button_add").children('p').css('background','#D91F43');
+	$(".button_add").children('p').text('Добавить в кит');
+	$(".button_add").css('box-shadow','0px 10px 40px rgba(217, 31, 67, 0.5)');
+
+	$('#button_red_arrow_4').css('display', 'none');
+	$('#button_red_arrow_5').css('display','block');
+});	
+
+/*КОНЕЦ СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ЧЕТВЕРТОМ ЭКРАНЕ*/
+
+/*НАЧАЛО СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ПЯТОМ ЭКРАНЕ*/
+
+$('#tab_desk_4_back a').on('click', function(e){
+	e.preventDefault();
+	var trans_link = $(this).attr('href');
+	$('.tab_constructor').not(trans_link).css('display','none');
+	$('.tab_constructor').has(trans_link).css('display','block');
+	$(trans_link).fadeIn(400);
+
+	$(".button_add").children('p').css('background','#D91F43');
+	$(".button_add").children('p').text('Добавить в кит');
+	$(".button_add").css('box-shadow','0px 10px 40px rgba(217, 31, 67, 0.5)');
+
+	$('#button_red_arrow_4').css('display', 'block');
+	$('#button_red_arrow_5').css('display','none');
+	$('.final-countertop').remove();
+	$('.final-stand:eq(1)').remove();
+	$('.final-desk:eq(2)').remove();
+	$('.final-wash:eq(3)').remove();
+});	
+
+$('#button_red_arrow_5 .button_add').on('click', function(){
+	save_apron = $('.owl_constructor_5 .owl-item.active.center img').attr('src');
+	$(this).children('p').css('background','rgb(39, 143, 37)');
+	$(this).children('p').text('Добавлено');
+	$(this).css('box-shadow','rgba(39, 143, 37, 0.2) 0px 22px 32px, rgba(39, 143, 37, 0.1) 0px 10px 16px');
+	$('#sixth_constructor').css('background','url(' + save_apron + ') center no-repeat');
+	$('.final-kit').prepend('<div class="final-stand"></div>');
+	$('.final-stand:eq(2)').append('<img src="' + save_stand +'">');
+	$('.final-kit').prepend('<div class="final-desk"></div>');
+	$('.final-desk:eq(3)').append('<img src="' + save_desk +'">');
+	$('.final-kit').prepend('<div class="final-wash"></div>');
+	$('.final-wash:eq(4)').append('<img src="' + save_wash +'">');
+	$('.final-kit').prepend('<div class="final-countertop"></div>');
+	$('.final-countertop:eq(1)').append('<img src="' + save_countertop +'">');
+	var r3 = 0; /*Начинается подсчет суммы всех выбранных итемов. Происходит сначала преобразования строки в число для вычисления суммы, затем происходит обратное преобразование числа в строку для разделения десятков тысяч от сотен и последующая подмена текста в final-cost*/
+	for(let i = 0; i<5;i++){
+		var parse_cost = $('.constructor-cost').eq(i).text();
+		var r1 = parse_cost.split(' ');
+		var r2 = r1[0] + r1[1]; 
+		r3 += Number.parseInt(r2);
+	}
+	var r6 = String(r3);
+	var r4 = r6.split('');
+	var sum_firstPart = r4[0]+r4[1];
+	var sum_secondPart = r4[2]+r4[3]+r4[4];
+	$('.final-cost').text(sum_firstPart + ' ' + sum_secondPart + ' рублей');
+
+});
+
+$('#tab_desk_5 a').on('click', function(e){
+	e.preventDefault();
+	var trans_link = $(this).attr('href');
+	$('.tab_constructor').not(trans_link).css('display','none');
+	$(trans_link).fadeIn(400);
+	
+	$(".button_add").children('p').css('background','#D91F43');
+	$(".button_add").children('p').text('Добавить в кит');
+	$(".button_add").css('box-shadow','0px 10px 40px rgba(217, 31, 67, 0.5)');
+
+	$('#button_red_arrow_5').css('display', 'none');
+	$('#button_red_arrow_6').css('display','block');
+
+});	
+
+/*КОНЕЦ СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ПЯТОМ ЭКРАНЕ*/
+
+/*НАЧАЛО СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ШЕСТОМ ЭКРАНЕ*/
+$('#tab_desk_5_back a').on('click', function(e){
+	e.preventDefault();
+	var trans_link = $(this).attr('href');
+	$('.tab_constructor').not(trans_link).css('display','none');
+	$('.tab_constructor').has(trans_link).css('display','block');
+	$(trans_link).fadeIn(400);
+
+	$(".button_add").children('p').css('background','#D91F43');
+	$(".button_add").children('p').text('Добавить в кит');
+	$(".button_add").css('box-shadow','0px 10px 40px rgba(217, 31, 67, 0.5)');
+
+	$('#button_red_arrow_5').css('display', 'block');
+	$('#button_red_arrow_6').css('display','none');
+	$('.final-countertop:eq(1)').remove();
+	$('.final-stand:eq(2)').remove();
+	$('.final-desk:eq(3)').remove();
+	$('.final-wash:eq(4)').remove();
+});	
+
+$('#button_red_arrow_6 .button_add').on('click', function(e){
+	e.preventDefault();
+	save_apron = $('.owl_constructor_5 .owl-item.active.center img').attr('src');
+	$(this).children('a').css('background','rgb(39, 143, 37)');
+	$(this).children('a').text('кит собран');
+	$(this).css('box-shadow','rgba(39, 143, 37, 0.2) 0px 22px 32px, rgba(39, 143, 37, 0.1) 0px 10px 16px');
+	
+	var r1 = save_wash.split('/');
+	var r2 = r1[r1.length-2];
+	var r3 = r2.split('_');
+	var wash_name = r3[0];
+
+	var r1 = save_desk.split('/');
+	var r2 = r1[r1.length-2];
+	var desk_name = r2;
+
+	var r1 = save_stand.split('/');
+	var r2 = r1[r1.length-2];
+	var stand_name = r3[0];
+
+	/*var r1 = save_countertop.split('/');
+	var r2 = r1[r1.length-2];
+	var r3 = r2.split('_');  ПОЯВИТСЯ КОГДА ПОЯВЯТСЯ ИТЕМЫ*/
+	var countertop_name = 'Hooray!';
+
+	/*var r1 = save_apron.split('/');
+	var r2 = r1[r1.length-2];
+	var r3 = r2.split('_');  ПОЯВИТСЯ КОГДА ПОЯВЯТСЯ ИТЕМЫ*/
+	var apron_name = "Плитка-улитка";
+
+	for(let i=0; i<5; i++){
+		if(i==0){
+			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_wash + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонная мойка ' + wash_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+		}
+		if(i==1){
+			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_desk + '"></div><p class="helvetica14NoUpCaseBlackNorm">Разделочная доска ' + desk_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+		}
+		if(i==2){
+			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_stand + '"></div><p class="helvetica14NoUpCaseBlackNorm">Подставка ' + stand_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+		}
+		if(i==3){
+			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_countertop + '"></div><p class="helvetica14NoUpCaseBlackNorm">Столешница ' + countertop_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+		}
+		if(i==4){
+			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_apron + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонный фартук ' + apron_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+		}
+	}
+
+});
+/*КОНЕЦ СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ШЕСТОМ ЭКРАНЕ*/
