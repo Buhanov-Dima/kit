@@ -257,10 +257,20 @@ $('.filter').on('click', function(){
 	$('.hide-filter').toggleClass('show-filter');
 });
 
+/*!!!CONFLICT!!!*/
+$('.fotorama').on(
+  'fotorama:show fotorama:showend',
+  function (e, fotorama, extra) {
+    console.log(e.type + (extra.user ? ' after user’s touch' : ''));
+    console.log('transition duration: ' + extra.time);
+  }
+);
+/*!!!CONFLICT!!!*/
 
 
 
 
+/*!!!CONFLICT!!!*/
 $(function(){
 
 $('.fotorama').on('fotorama:show', function (e, fotorama) {
@@ -296,6 +306,17 @@ var foldersDesks = ['K600', 'K775', 'K850.2B', 'K850M', '510', 'Y900M'];
 var foldersStands = ['C510', 'K850', 'K850.2B', 'O510', 'Y900M', 'River_K775', 'Sea_K850', 'Spring_C510', 'Stream_С510М']; 
 var st = ['black', 'blue', 'dark-grey', 'grey', 'pink', 'red', 'turquoise', 'yellow'];
 
+/*!!!CONFLICT!!!*/
+
+
+
+
+var foldersWashes = ['Creek_Y900M', 'Gulf_K850.2B', 'Lake_510', 'Ocean_К600', 'Pond_K850M', 
+					 'River_K775', 'Sea_K850', 'Spring_C510', 'Stream_С510М'];
+var foldersDesks = ['K600', 'K775', 'K850.2B', 'K850M', 'O510', 'River_K775', 'Y900M'];
+var foldersStands = ['C510', 'K850', 'K850.2B', 'O510', 'Y900M', 'River_K775', 'Sea_K850', 'Spring_C510', 'Stream_С510М']; 
+var st = ['black', 'blue', 'dark-grey', 'grey', 'pink', 'red', 'turquoise', 'yellow'];
+/*!!!CONFLICT!!!*/
 $(document).ready(function(){
 	$('.owl_constructor_1').owlCarousel({
 		items: 1,
@@ -331,6 +352,7 @@ $(document).ready(function(){
 		navText: ["<img src='/img/constructor/right_arrow.png'>","<img src='/img/constructor/left_arrow.png'>"],
 		dots: false 
 	});
+/*!!!CONFLICT!!!*/
 	$('.owl_constructor_4').owlCarousel({
 		items: 1,
 		margin: 570,
@@ -375,23 +397,38 @@ $('.tab_constructor .colors>div').on('click', function(){
 		}
 		else{var r = 0;}
 		for(let i = 0; i<$('.owl-item').length; i++){
+/*!!!CONFLICT!!!*/
+});
+
+
+$('.tab_constructor .colors>div').on('click', function(){
+	if($(this).index() == 0){
+		var r = 0;
+		for(let i = 0; i<19; i++){
+/*!!!CONFLICT!!!*/
 			if(r == 9) r = 0;
 			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/dark-grey.png');
 			r++;
 		}
 	}
 	if($(this).index() == 1){
+/*!!!CONFLICT!!!*/
 		if(k<=1){
 			r = start_slide;
 		}
 		else{var r = 0;}
 		for(let i = 0; i<$('.owl-item').length; i++){
+/*!!!CONFLICT!!!*/
+		var r = 0;
+		for(let i = 0; i<19; i++){
+/*!!!CONFLICT!!!*/
 			if(r == 9) r = 0;
 			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/grey.png');
 			r++;
 		}
 	}
 	if($(this).index() == 2){
+/*!!!CONFLICT!!!*/
 		if(k<=1){
 			r = start_slide;
 		}
@@ -424,6 +461,31 @@ $('.tab_constructor .colors>div').on('click', function(){
 			r++;
 		}
 	}
+/*!!!CONFLICT!!!*/
+		var r = 0;
+		for(let i = 0; i<19; i++){
+			if(r == 9) r = 0;
+			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/white.png');
+			r++;
+		}
+	}
+	if($(this).index() == 3){
+		var r = 0;
+		for(let i = 0; i<19; i++){
+			if(r == 9) r = 0;
+			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/brown.png');
+			r++;
+		}
+	}
+	if($(this).index() == 4){
+		var r = 0;
+		for(let i = 0; i<19; i++){
+			if(r == 9) r = 0;
+			$('.washes_slide').eq(i).children('img').attr('src', '/img/constructor/washes/' + foldersWashes[r] + '/black.png');
+			r++;
+		}
+	}
+/*!!!CONFLICT!!!*/
 })
 
 
@@ -437,7 +499,13 @@ $('.owl_constructor_1').on('translated.owl.carousel', function(){
 	$('#first_constructor .name_name').text(search_name);
 });
 
+/*!!!CONFLICT!!!*/
 /*НАЧАЛО СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ПЕРВОМ ЭКРАНЕ*/
+/*!!!CONFLICT!!!*/
+
+var save_wash;
+var save_desk;
+/*!!!CONFLICT!!!*/
 
 $('#button_red_arrow_1 .button_add').on('click', function(){
 	save_wash = $('.owl_constructor_1 .owl-item.active.center img').attr('src');
@@ -447,8 +515,10 @@ $('#button_red_arrow_1 .button_add').on('click', function(){
 	$('.desks').prepend('<div class="final-wash"></div>');
 	$('.final-wash').append('<img src="' + save_wash +'">');
 
+/*!!!CONFLICT!!!*/
 });
 
+/*!!!CONFLICT!!!*/
 $('#tab_desk_1 a').on('click', function(e){
 	e.preventDefault();
 	var trans_link = $(this).attr('href');
@@ -543,6 +613,7 @@ $('#tab_desk_2_back a').on('click', function(e){
 	$('#button_red_arrow_3').css('display','none');
 	$('.final-desk').remove();
 	$('.final-wash:eq(1)').remove();
+/*!!!CONFLICT!!!*/
 });	
 
 $('#button_red_arrow_3 .button_add').on('click', function(){
@@ -760,3 +831,6 @@ $('#button_red_arrow_6 .button_add').on('click', function(e){
 
 });
 /*КОНЕЦ СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ШЕСТОМ ЭКРАНЕ*/
+/*!!!CONFLICT!!!*/
+});	
+/*!!!CONFLICT!!!*/

@@ -1966,11 +1966,14 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 .owl-prev{
 	position: absolute;
 	right: 0;
+/*!!!CONFLICT!!!*/
 	outline: none !important;
+/*!!!CONFLICT!!!*/
 }
 .owl-next{
 	position: absolute;
 	left: 0;
+/*!!!CONFLICT!!!*/
 	outline: none !important;
 }
 
@@ -1984,10 +1987,34 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	display: none;
 }
 
+/*!!!CONFLICT!!!*/
+
+#second_constructor{
+	display: none;
+}
+#third_constructor{
+	display: none;
+}
+
+#button_red_arrow_2{
+	display: none;
+}
+
+#button_red_arrow_3{
+	display: none;
+}
+
+.final-wash{
+	position: absolute;
+	left: 370px;
+	top: 84px;
+}
+/*!!!CONFLICT!!!*/
 
 .final-wash img{
 	width: 740px;
 	height: 250px;
+/*!!!CONFLICT!!!*/
 	position: absolute;
 	left: 0;
 	top: 84px;
@@ -1995,6 +2022,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	max-width: 100%;
 	margin: auto;
 	top: 84px;
+/*!!!CONFLICT!!!*/
 }
 
 .desks{
@@ -2006,6 +2034,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	height: 376px;
 }
 
+/*!!!CONFLICT!!!*/
 .final-desk img{
 	width: 684px;
 	height: 376px;
@@ -2014,8 +2043,19 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	top: -50px;
 	right: 0;
 	margin: auto;
+/*!!!CONFLICT!!!*/
+}
+.final-desk{
+	position: absolute;
+	left: 415px;
+	top: -50px;
 }
 
+.final-desk img{
+	width: 684px;
+	height: 376px;
+/*!!!CONFLICT!!!*/
+}
 .stands{
 	margin-top: 35px;
 	position: relative;	
@@ -2025,6 +2065,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	height: 90px;
 }
 
+/*!!!CONFLICT!!!*/
 .stands .final-wash img{
 	top: 35px;
 }
@@ -2069,6 +2110,12 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 .final-kit .final-desk img{
 	top: 10px;
 }
+/*!!!CONFLICT!!!*/
+.stands .final-wash{
+	left: 385px;
+	top: 30px;
+/*!!!CONFLICT!!!*/
+}
 
 .owl_constructor_3 .owl-item.active.center{
 	margin-left: 32px;
@@ -2081,13 +2128,16 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 
 #third_constructor .name{
 	margin-right: 137px;
+/*!!!CONFLICT!!!*/
 	margin-top: 123px;
+/*!!!CONFLICT!!!*/
 }
 
 #second_constructor .info, #third_constructor .info{
 	margin-top: 125px;
 }
 
+/*!!!CONFLICT!!!*/
 #first_constructor .owl-nav{
 	position: absolute;
 	text-align: center;
@@ -2101,10 +2151,16 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 #second_constructor .owl-nav{
 	top: -35px;
 	max-width: 762px;
+/*!!!CONFLICT!!!*/
+}
+#second_constructor .owl-nav{
+	top: -35px;
+/*!!!CONFLICT!!!*/
 }
 
 #third_constructor .owl-nav{
 	top: -84px;
+/*!!!CONFLICT!!!*/
 	max-width: 762px;
 }
 
@@ -2149,3 +2205,10 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 }
 
 
+/*!!!CONFLICT!!!*/
+}
+
+.fotorama__stage__shaft{
+	transition-duration: 1000px !important;
+}
+/*!!!CONFLICT!!!*/
