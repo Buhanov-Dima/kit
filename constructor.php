@@ -212,14 +212,14 @@
 				</div>
 				<div class="col-lg-12 d-flex countertops">
 					<div class="owl-carousel owl-theme owl_constructor_4">
-					    <div class="stands_slide"> <img src="/img/constructor/desks/Creek_Y900M/black.png" alt=""> </div>
-					    <div class="stands_slide"> <img src="/img/constructor/desks/Gulf_K850.2B/black.png" alt=""> </div>
-					    <div class="stands_slide"> <img src="/img/constructor/desks/Lake_О510/black.png" alt=""> </div>
-					    <div class="stands_slide"> <img src="/img/constructor/desks/Ocean_К600/black.png" alt=""> </div>
-					    <div class="stands_slide"> <img src="/img/constructor/desks/Pond_K850M/black.png" alt=""> </div>
-					    <div class="stands_slide"> <img src="/img/constructor/desks/River_K775/black.png" alt=""> </div>
-					    <div class="stands_slide"> <img src="/img/constructor/desks/Sea_K850/black.png" alt=""> </div>
-					    <div class="stands_slide"> <img src="/img/constructor/desks/Spring_C510/black.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Creek_Y900M/black1.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Gulf_K850.2B/black1.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Lake_О510/black1.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Ocean_К600/black1.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Pond_K850M/black1.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/River_K775/black1.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Sea_K850/black1.png" alt=""> </div>
+					    <div class="stands_slide"> <img src="/img/constructor/desks/Spring_C510/black1.png" alt=""> </div>
 					</div>
 				</div>
 			</div>
@@ -241,8 +241,8 @@
 							<div class="info_symbol">
 								<img src="/img/constructor/info.png" alt="info">
 							</div>
-							<div class="delegate_right"></div>
 							<p>Параметры</p>
+							<div class="delegate_right"></div>
 							<div class="show-parameters">
 								<div class="description_table">
 									<div class="material">
@@ -266,11 +266,11 @@
 						</div>
 				</div>
 				<div class="col-lg-12 d-flex aprons">
-					<!--<div class="owl-carousel owl-theme owl_constructor_5">
+					<div class="owl-carousel owl-theme owl_constructor_5">
 					    <div class="aprons_slide"> <img src="/img/constructor/bg22.png" alt=""> </div>
 					    <div class="aprons_slide"> <img src="/img/constructor/bg23.png" alt=""> </div>
 					    <div class="aprons_slide"> <img src="/img/constructor/bg24.png" alt=""> </div>
-					</div>-->
+					</div>
 				</div>
 			</div>
 		</div>

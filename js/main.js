@@ -296,13 +296,18 @@ $( document ).ready(function() {
 
 
 
-
+/*РАБОТА СЛАЙДЕРА CATALOGY. ИСПОЛЬЗОВАЛСЯ СЛАЙДЕР ИЗ СТАНДАРТНОЙ JQUERY UI БИБЛИОТЕКИ НАЧАЛО*/
 
 $(function() {
-  
+ 
   var $width = $(document).width();
   if($width >=769){
-  	$('.price-range:eq(0)').remove();
+  	$('.price-range').remove();
+  	$('.polzun:eq(1)').append('<div class="price-range"></div>');
+  }
+  if($width < 769){
+  	$('.price-range').remove();
+  	$('.polzun:eq(0)').append('<div class="price-range"></div>');
   }
   var $range = $('.price-range');  
   $('.price-range').slider({       
@@ -331,8 +336,10 @@ $(function() {
   $('.to').text("до " + $('.price-range').slider('values',1) + " руб");
   $('.from').text("от " + $('.price-range').slider('values',0) + " руб");
   }); 
+/*РАБОТА СЛАЙДЕРА CATALOGY. ИСПОЛЬЗОВАЛСЯ СЛАЙДЕР ИЗ СТАНДАРТНОЙ JQUERY UI БИБЛИОТЕКИ КОНЕЦ*/
 
 
+/*АНИМАЦИЯ КНОПКИ SHARE НАЧАЛО*/
 $('.button-share img[src="/img/item-card/share.svg"]').on('mouseover', function(){
 	$(this).css("display","none");
 	$('.button-share img[src="/img/item-card/share_red.svg"]').css("display", "block");
@@ -341,15 +348,15 @@ $('.button-share img[src="/img/item-card/share_red.svg"]').on('mouseout', functi
 	$(this).css("display","none");
 	$('.button-share img[src="/img/item-card/share.svg"]').css("display", "block");
 });
+/*АНИМАЦИЯ КНОПКИ SHARE КОНЕЦ*/
 
+/*ОТКРЫТИЕ-ЗАКРЫТИЕ КНОПКИ SHARE (ПЕРВЫЕ ПЯТЬ КНОПОК ДЛЯ ДЕСКТОПА, ВТОРЫЕ ПЯТЬ КНОПОК ДЛЯ АДАПТИВА) НАЧАЛО*/
 var count = 1;
 
 $('.button-share').on('click', function(){
 	count++;
 	if(count%2===0){
 		$('.share a').each(function(index){
-			if($('.share').siblings('.descript')) index = index;
-			if($('.share').siblings('.description_table')) index = index-5;
 			if(index == 0){
 				$(this).delay(100*index).animate({"left":"17px","bottom":"60px", "opacity":"1"}, 100, "linear");	
 			}
@@ -390,9 +397,9 @@ $('.button-share').on('click', function(){
 	}
 
 });
+/*ОТКРЫТИЕ-ЗАКРЫТИЕ КНОПКИ SHARE (ПЕРВЫЕ ПЯТЬ КНОПОК ДЛЯ ДЕСКТОПА, ВТОРЫЕ ПЯТЬ КНОПОК ДЛЯ АДАПТИВА) КОНЕЦ*/
 
-
-
+/*ВЫБОР ЦВЕТОВ НА ITEM-CARD И CATALOG НАЧАЛО*/
 $('#choose_colors>div').on('mouseover', function(){
 	$(this).addClass('active_hover_white');
 });
@@ -422,7 +429,9 @@ $('.colors>div').on('click', function(){
 		$(this).addClass('active');
 	}
 });
+/*ВЫБОР ЦВЕТОВ НА ITEM-CARD И CATALOG КОНЕЦ*/
 
+/*ВЫБОР ЦВЕТОВ НА CONSTRUCTOR НАЧАЛО*/
 $('#first_constructor .colors>div').on('mouseover', function(){
 	$(this).addClass('active_hover_white');
 });
@@ -441,6 +450,9 @@ $('#first_constructor .colors>div').on('click', function(){
 	}
 });
 
+/*ВЫБОР ЦВЕТОВ НА CONSTRUCTOR КОНЕЦ*/
+
+/*СМЕНА НАБОРА ИЗ ПЯТИ КНОПОК НА ITEM-CARD С ЧЕРНОГО НА ХОВЕР НАЧАЛО*/
 $('.buttons div').on('mouseover', function(){
 	$(this).children("img:eq(0)").css("display","none");
 	$(this).children("img:eq(1)").css("display", "block");
@@ -452,8 +464,10 @@ $('.buttons div').on('mouseout', function(){
 	$(this).children("img:eq(1)").css("display", "none");
 	$(this).children("p").addClass("hide");
 });
+/*СМЕНА НАБОРА ИЗ ПЯТИ КНОПОК НА ITEM-CARD С ЧЕРНОГО НА ХОВЕР КОНЕЦ*/
 
 
+/*РАБОТА С КОРЗИНОЙ НАЧАЛО*/
 $('.add-to-basket').on('click', function(){
 	$(this).children('p').css({"background-color":"#278F25;","box-shadow":"0px 22px 32px rgba(39, 143, 37, 0.2), 0px 10px 16px rgba(39, 143, 37, 0.1)", "padding":"19px 70px"});
 	$(this).css("box-shadow","none");
@@ -464,27 +478,29 @@ $('.add-to-basket').on('click', function(){
 $('.nmb_user_basket a:eq(4)').on('click', function(e){
 	e.preventDefault();
 	$(".basket").css('display', 'block');
+	if(($('.basket-item').length == 0)) $('.basket').css("display","none");
 });
 
 $('.nmb_user_basket_white a:eq(4)').on('click', function(e){
 	e.preventDefault();
 	$(".basket").css('display', 'block');
+	if(($('.basket-item').length == 0)) $('.basket').css("display","none");
 });
 
-$('.minus').on('click', function(){
+$('.basket').on('click','.minus', function(){
 	if($(this).siblings(".value").text() == 0) return;
 	var r = $(this).siblings(".value").text();
 	$(this).siblings(".value").text(r-1);
 });
 
-$('.plus').on('click', function(){
+$('.basket').on('click','.plus', function(){
 	var r = $(this).siblings(".value").text();
 	$(this).siblings(".value").text(1+(+r));
 });
 
-$('.close-button').on('click', function(){
+$('.basket').on('click','.close-button', function(){
 	$(this).parents('.basket-item').remove();
-	if(!($('.basket').children('.basket-item').length != 0)) $('.basket').css("display","none");
+	if(($('.basket-item').length == 0)) $('.basket').css("display","none");
 });
 
 $(document).mouseup(function (e) {
@@ -494,6 +510,9 @@ $(document).mouseup(function (e) {
     }
 });
 
+/*РАБОТА С КОРЗИНОЙ КОНЕЦ*/
+
+/*ПОКАЗ INFO НА CONSTRUCTOR'Е НАЧАЛО*/
 $('.info_symbol').on('click', function(e){
 	e.preventDefault();
 	$(".show-parameters").css('display', 'block');
@@ -506,14 +525,26 @@ $(document).mouseup(function (e) {
     }
 });
 
+/*ПОКАЗ INFO НА CONSTRUCTOR'Е КОНЕЦ*/
+
+/*СМЕНА ИТЕМОВ ВВЕРХУ СТРАНИЦЫ ITEM-CARD НАЧАЛО*/
+
 $('.left-arrow-item-card').on('click', function(){
 	var c = $('.central-item>img').attr('src');
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
 
+	$('.central-item>img').fadeOut(0);	
+	$('.left-picture img').fadeOut(0);
+	$('.right-picture img').fadeOut(0);
+
 	$('.central-item>img').attr('src', r);	
 	$('.left-picture img').attr('src', c);
 	$('.right-picture img').attr('src', l);
+
+	$('.central-item>img').delay(300).fadeIn(300);	
+	$('.left-picture img').delay(300).fadeIn(300);
+	$('.right-picture img').delay(300).fadeIn(300);
 });
 
 $('.right-arrow-item-card').on('click', function(){
@@ -521,9 +552,17 @@ $('.right-arrow-item-card').on('click', function(){
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
 
+	$('.central-item>img').fadeOut(0);	
+	$('.left-picture img').fadeOut(0);
+	$('.right-picture img').fadeOut(0);
+
 	$('.central-item>img').attr('src', l);	
 	$('.left-picture img').attr('src', r);
 	$('.right-picture img').attr('src', c);
+
+	$('.central-item>img').delay(300).fadeIn(300);	
+	$('.left-picture img').delay(300).fadeIn(300);
+	$('.right-picture img').delay(300).fadeIn(300);
 });
 
 $('.little-left-arrow').on('click', function(){
@@ -531,9 +570,17 @@ $('.little-left-arrow').on('click', function(){
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
 
+	$('.central-item>img').fadeOut(0);	
+	$('.left-picture img').fadeOut(0);
+	$('.right-picture img').fadeOut(0);
+
 	$('.central-item>img').attr('src', r);	
 	$('.left-picture img').attr('src', c);
 	$('.right-picture img').attr('src', l);
+
+	$('.central-item>img').delay(300).fadeIn(300);	
+	$('.left-picture img').delay(300).fadeIn(300);
+	$('.right-picture img').delay(300).fadeIn(300);
 });
 
 $('.little-right-arrow').on('click', function(){
@@ -541,46 +588,54 @@ $('.little-right-arrow').on('click', function(){
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
 
+	$('.central-item>img').fadeOut(0);	
+	$('.left-picture img').fadeOut(0);
+	$('.right-picture img').fadeOut(0);
+
 	$('.central-item>img').attr('src', l);	
 	$('.left-picture img').attr('src', r);
 	$('.right-picture img').attr('src', c);
+
+	$('.central-item>img').delay(300).fadeIn(300);	
+	$('.left-picture img').delay(300).fadeIn(300);
+	$('.right-picture img').delay(300).fadeIn(300);
 });
 
 $('.filter').on('click', function(){
 	$('.hide-filter').toggleClass('show-filter');
 });
 
+/*СМЕНА ИТЕМОВ ВВЕРХУ СТРАНИЦЫ ITEM-CARD КОНЕЦ*/
 
+/*РВАНАЯ СМЕНА СЛАЙДОВ FOTORAM'Ы ITEM-CARD НАЧАЛО*/
 $(function(){
 $('.fotorama').on('fotorama:show', function (e, fotorama) {
  	$('.fotorama__stage__shaft').css({'transition':'.1s cubic-bezier(.98,.05,.16,.96)'});
  }).fotorama();
 });
+/*РВАНАЯ СМЕНА СЛАЙДОВ FOTORAM'Ы ITEM-CARD КОНЕЦ*/
 
 
 
-
-
+/*УЛЕТ ЦЕНТРАЛЬНОГО ИТЕМА В КОРЗИНУ ITEM-CARD НАЧАЛО*/
 $('#item-card .add-to-basket').on('click',function(){
 	var r = $('.central-item>img').attr('src');
 	$('.image-to-basket img').attr('src',r);
 	$('.image-to-basket').css('display','block');
-	$('.image-to-basket').animate({top:'-171px',left: '988px'},500,'linear');
-	$('.image-to-basket img').animate({position: 'absolute', top:'0px',right: '0', width:'0'},500,'linear');
-	$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + r + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонная мойка ' + wash_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+	$('.image-to-basket').animate({top:'-107%',left: '177%'},10000,'linear');
+	$('.image-to-basket img').animate({width:'0px'},10000,'linear');
+	$('.basket').prepend('<div class="basket-item"><div class="basket-item-header"><div><img src="' + r + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонная мойка ' + r + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
 
-})
+});
 
-
-
-
+/*УЛЕТ ЦЕНТРАЛЬНОГО ИТЕМА В КОРЗИНУ ITEM-CARD КОНЕЦ*/
 
 
 
 
 
 
-
+/*!!!!!!!!!!!!!!!!!!!!!!КОНСТРУКТОР!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 var save_wash;
 var save_desk;
 var save_stand;
@@ -707,7 +762,7 @@ $('.tab_constructor .colors>div').on('click', function(){
 });
 
 
-
+/*ИСХОДЯ ИЗ ТОГО, ЧТО ПОКАЗАНО НА ЭКРАНЕ НА ЦЕНТРАЛЬНОМ IMAGE ФОРМИРУЕТСЯ НАЗВАНИЕ НА #FIRST_CONSTRUCTOR НАЧАЛО*/
 $('.owl_constructor_1').on('translated.owl.carousel', function(){
 	var s1 = $('.owl-item.active.center img').attr('src');
 	var s2 = s1.split('/');
@@ -716,9 +771,9 @@ $('.owl_constructor_1').on('translated.owl.carousel', function(){
 	var search_name = s4[0];
 	$('#first_constructor .name_name').text(search_name);
 });
+/*ИСХОДЯ ИЗ ТОГО, ЧТО ПОКАЗАНО НА ЭКРАНЕ НА ЦЕНТРАЛЬНОМ IMAGE ФОРМИРУЕТСЯ НАЗВАНИЕ НА #FIRST_CONSTRUCTOR КОНЕЦ*/
 
 /*НАЧАЛО СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ПЕРВОМ ЭКРАНЕ*/
-
 
 $('#button_red_arrow_1 .button_add').on('click', function(){
 	save_wash = $('.owl_constructor_1 .owl-item.active.center img').attr('src');
@@ -807,6 +862,28 @@ $('#tab_desk_2 a').on('click', function(e){
 });	
 /*КОНЕЦ СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ВТОРОМ ЭКРАНЕ*/
 
+
+/*ИСХОДЯ ИЗ ТОГО, ЧТО ПОКАЗАНО НА ЭКРАНЕ НА ЦЕНТРАЛЬНОМ IMAGE ФОРМИРУЕТСЯ НАЗВАНИЕ НА #THIRD_CONSTRUCTOR НАЧАЛО*/
+$('.owl_constructor_3').on('translated.owl.carousel', function(){
+	var s1 = $('.owl_constructor_3 .owl-item.active.center img').attr('src');
+	var s2 = s1.split('/');
+	var s3 = s2[s2.length-1];
+	var s4 = s3.split('.');
+	var search_color_rus = 0;
+	var search_color_eng = s4[0];
+	if (search_color_eng == 'black') search_color_rus = 'Черная';
+	if (search_color_eng == 'dark-grey') search_color_rus = 'Темно-серая'; 
+	if (search_color_eng == 'grey') search_color_rus = 'Серая'; 
+	if (search_color_eng == 'pink') search_color_rus = 'Розовая'; 
+	if (search_color_eng == 'yellow') search_color_rus = 'Желтая'; 
+	if (search_color_eng == 'blue') search_color_rus = 'Синяя'; 
+	if (search_color_eng == 'turquoise') search_color_rus = 'Бирюзовая'; 
+	if (search_color_eng == 'red') search_color_rus = 'Красная';   
+	$('#third_constructor .name_name').text(search_color_rus);
+});
+/*ИСХОДЯ ИЗ ТОГО, ЧТО ПОКАЗАНО НА ЭКРАНЕ НА ЦЕНТРАЛЬНОМ IMAGE ФОРМИРУЕТСЯ НАЗВАНИЕ НА #THIRD_CONSTRUCTOR КОНЕЦ*/
+
+
 /*НАЧАЛО СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ТРЕТЬЕМ ЭКРАНЕ*/
 $('#tab_desk_2_back a').on('click', function(e){
 	e.preventDefault();
@@ -885,6 +962,7 @@ $('#button_red_arrow_4 .button_add').on('click', function(){
 	$('.final-wash:eq(3)').append('<img src="' + save_wash +'">');
 	$('.aprons').prepend('<div class="final-countertop"></div>');
 	$('.final-countertop').append('<img src="' + save_countertop +'">');
+	$('#fifth_constructor').css('background','none');
 });
 
 $('#tab_desk_4 a').on('click', function(e){
@@ -1022,19 +1100,19 @@ $('#button_red_arrow_6 .button_add').on('click', function(e){
 
 	for(let i=0; i<5; i++){
 		if(i==0){
-			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_wash + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонная мойка ' + wash_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+			$('.basket').prepend('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_wash + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонная мойка ' + wash_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
 		}
 		if(i==1){
-			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_desk + '"></div><p class="helvetica14NoUpCaseBlackNorm">Разделочная доска ' + desk_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+			$('.basket').prepend('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_desk + '"></div><p class="helvetica14NoUpCaseBlackNorm">Разделочная доска ' + desk_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
 		}
 		if(i==2){
-			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_stand + '"></div><p class="helvetica14NoUpCaseBlackNorm">Подставка ' + stand_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+			$('.basket').prepend('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_stand + '"></div><p class="helvetica14NoUpCaseBlackNorm">Подставка ' + stand_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
 		}
 		if(i==3){
-			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_countertop + '"></div><p class="helvetica14NoUpCaseBlackNorm">Столешница ' + countertop_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+			$('.basket').prepend('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_countertop + '"></div><p class="helvetica14NoUpCaseBlackNorm">Столешница ' + countertop_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
 		}
 		if(i==4){
-			$('.go-to-basket').before('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_apron + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонный фартук ' + apron_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+			$('.basket').prepend('<div class="basket-item"><div class="basket-item-header"><div><img src="' + save_apron + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонный фартук ' + apron_name + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
 		}
 	}
 
