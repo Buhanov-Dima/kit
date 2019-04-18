@@ -365,6 +365,7 @@ p {margin: 0;}
 	position: relative;
 	z-index: 15;
 	bottom: 5vh;
+	transition: 1s;
 }
 
 .m_img {overflow-y: hidden; min-height: 252px;}
@@ -823,7 +824,8 @@ svg.hover_arrow{
 	margin-bottom: 25px;
 	justify-content: flex-end;
 	width: 100%;
-	display: none;
+	opacity: 0;
+	transition: 1s;
 }
 .kit_review.right-side a{
 	margin-left: 54px;
@@ -891,7 +893,7 @@ svg.hover_arrow{
 
 /**********menu**********/
 .menu_hide{
-	background: url(http://test.watosu.ru/kit/img/assets/bg_menu.png) no-repeat;
+	background: url(/img/assets/bg_menu.png) no-repeat;
     position: absolute;
     background-size: contain;
     top: -5vh;
@@ -899,6 +901,7 @@ svg.hover_arrow{
     width: 100%;
     height: calc(100vh);
     z-index: 100;
+    transition: .3s;
 }
 .menu_link{
     width: 685px;
@@ -3124,9 +3127,10 @@ p.labels {
 .item-image{
 	display: flex;
 	justify-content: center;
+	height: 230px;
 }
 .item>div{
-	margin-top: 45px;
+	margin-top: 0;
 }
 .river{
 	background: linear-gradient(180deg, #F5F3F0 0%, #DED8D0 100%);
