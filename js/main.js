@@ -650,8 +650,8 @@ var foldersStands = ['C510', 'K850', 'K850.2B', 'O510', 'Y900M', 'River_K775', '
 var st = ['black', 'blue', 'dark-grey', 'grey', 'pink', 'red', 'turquoise', 'yellow'];	
 $(document).ready(function(){
 	$('.owl_constructor_1').owlCarousel({
-		items: 1,
-		margin: 250,
+		items: 3,
+		margin: 10,
 		autoWidth: true,
 		center: true,
 		loop: true,
@@ -662,8 +662,8 @@ $(document).ready(function(){
 	});
 
 	$('.owl_constructor_2').owlCarousel({
-		items: 1,
-		margin: 50,
+		items: 3,
+		margin: 200,
 		autoWidth: true,
 		center: true,
 		loop: true,

@@ -5,7 +5,7 @@
 <?php include ('header-black.php'); ?>
 
 	<section class="content tab_constructor" id="first_constructor">
-		<div class="container-fluid pr-0 pl-0">
+		<div class="container-fluid pdg-0">
 			<div class="row">
 				<div class="col-lg-6 mx-auto d-flex justify-content-end">
 						<div class="name">
@@ -66,7 +66,7 @@
 	</section>
 	<!--Вторая часть-->
 	<section class="content tab_constructor" id="second_constructor">
-		<div class="container-fluid pr-0 pl-0">
+		<div class="container-fluid pdg-0">
 			<div class="row">
 				<div class="col-lg-6 mx-auto d-flex justify-content-end">
 						<div class="name">
