@@ -2432,7 +2432,7 @@ body, .onepage-wrapper, html{
 	padding-top: 110px;
 	overflow-x: hidden;
 	background: url('/img/constructor/bg.png') no-repeat top;
-	background-size: contain;
+	background-size: cover;
 }
 .line_process{	
 	display: flex;
