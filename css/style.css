@@ -365,6 +365,9 @@ p {margin: 0;}
 	position: relative;
 	z-index: 15;
 	bottom: 5vh;
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	transition: 1s;
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 }
 
 .m_img {overflow-y: hidden; min-height: 252px;}
@@ -823,7 +826,11 @@ svg.hover_arrow{
 	margin-bottom: 25px;
 	justify-content: flex-end;
 	width: 100%;
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 	display: none;
+	opacity: 0;
+	transition: 1s;
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 }
 .kit_review.right-side a{
 	margin-left: 54px;
@@ -891,7 +898,10 @@ svg.hover_arrow{
 
 /**********menu**********/
 .menu_hide{
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 	background: url(http://test.watosu.ru/kit/img/assets/bg_menu.png) no-repeat;
+	background: url(/img/assets/bg_menu.png) no-repeat;
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
     position: absolute;
     background-size: contain;
     top: -5vh;
@@ -899,6 +909,9 @@ svg.hover_arrow{
     width: 100%;
     height: calc(100vh);
     z-index: 100;
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    transition: .3s;
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 }
 .menu_link{
     width: 685px;
@@ -3132,8 +3145,10 @@ p.labels {
 	display: flex;
 	justify-content: center;
 }
+
 .item>div{
-	margin-top: 45px;
+	margin-top: 0;
+
 }
 .river{
 	background: linear-gradient(180deg, #F5F3F0 0%, #DED8D0 100%);
@@ -3410,6 +3425,7 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	justify-content: center;
 	align-items: center;
 }
+
 
 .colors>div.active{
 	border: 1px solid #3B4150;

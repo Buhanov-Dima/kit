@@ -348,6 +348,8 @@ $('.button-share').on('click', function(){
 	count++;
 	if(count%2===0){
 		$('.share a').each(function(index){
+			if($('.share').siblings('.descript')) index = index;
+			if($('.share').siblings('.description_table')) index = index-5;
 			if(index == 0){
 				$(this).delay(100*index).animate({"left":"17px","bottom":"60px", "opacity":"1"}, 100, "linear");	
 			}
@@ -388,6 +390,7 @@ $('.button-share').on('click', function(){
 	}
 
 });
+
 
 
 $('#choose_colors>div').on('mouseover', function(){
@@ -1036,4 +1039,3 @@ $('#button_red_arrow_6 .button_add').on('click', function(e){
 	}
 
 });
-/*КОНЕЦ СОБЫТИЙ КНОПКИ И ПЕРЕХОДОВ НА ШЕСТОМ ЭКРАНЕ*/
