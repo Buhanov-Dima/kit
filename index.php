@@ -241,8 +241,6 @@
 					<h2 class="last_main_h">подберите свой кит</h2>
 
 					<p class="last_main_txt">Одно из направлений, в котором мы развиваемся сейчас — изготовление моек для кухонь. В нашей инновационной коллекции кухонных моек KitKraken мы объединили высокое качество, доступное благодаря нашей технической подготовке и европейский дизайн.</p>
-
-					<p id="showScroll"></p>
 				</div>
 				<div class="col-lg-12 cnt-flex justify-content-end"">
 					<div class="bg_last_main text-center">
@@ -254,6 +252,15 @@
 			</div>
 		</div>
 	</section>
+</div>
+
+<div id="showScroll" class="md-close">
+	<svg width="9" height="44" viewBox="0 0 9 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path class="main_line_arrow" d="M4.20658 0.621094L4.20658 42.6211H5.20658L5.20658 0.621094L4.20658 0.621094Z" fill="#D91F43"/>
+		<path class="bort_line_arrow" d="M0.463938 39.6215L4.70658 43.8642L5.41368 43.1571L1.17104 38.9144L0.463938 39.6215Z" fill="#D91F43"/>
+		<path class="bort_line_arrow" d="M8.24211 38.9144L3.99947 43.1571L4.70658 43.8642L8.94922 39.6215L8.24211 38.9144Z" fill="#D91F43"/>
+	</svg>
+	<p>вернитесь к началу</p>
 </div>
 
 

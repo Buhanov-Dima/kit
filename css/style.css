@@ -186,7 +186,15 @@ p {margin: 0;}
 	opacity: 0.2;
 	padding-right: 5px;
 }
-#b1{display: block;}
+#b1, #b2, #b3, #b4, #b5, #b6, #b7{position: absolute; width: 100%; height: 100%; left: 0;}
+#b1{top: 0;}
+#b2{top: -100%;}
+#b3{top: -200%;}
+#b4{top: -300%;}
+#b5{top: -400%;}
+#b6{top: -500%;}
+#b7{top: -600%;}
+
 #b1 .sm-open{
 	display: none;
 }
@@ -208,13 +216,13 @@ p {margin: 0;}
 	margin: auto;
 	position: relative;
 }
-.main_scroll{width: 100%; height: 100%; overflow: hidden;}
+.main_scroll{width: 100%; height: 100%;}
 .main_content{
 	padding-top: 5%;
 	max-width: 1440px;
 	overflow: hidden;
 	margin: auto;
-	transition: ease-in .5s;
+	transition: ease-in .7s;
 	left: 0;
 	right: 0;
 	width: 100%;
@@ -421,7 +429,7 @@ p {margin: 0;}
 	top: -50px;
 	left: 2px;
 }
-.scroll_arrow{
+#showScroll p, .scroll_arrow{
 	position: relative;
     font-family: HelveticaNeueCyr;
     font-size: 11px;
@@ -432,6 +440,22 @@ p {margin: 0;}
     cursor: pointer;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+    transition: ease-in .4s;
+}
+
+#showScroll{
+	position: absolute;
+	left: 60px;
+	bottom: 25px;
+	opacity: 0;
+	z-index: -20;
+	transition: ease-in .4s;
+}
+
+#showScroll svg{
+	transform: rotate(180deg);
+	position: relative;
+	left: 2px;
 }
 
 svg.hover_arrow{
@@ -508,7 +532,7 @@ svg.hover_arrow{
     background-color: #3B4150;
 }
 
-.scroll_bar a.red_square{
+.scroll_bar a.active{
 	display: block;
 	color: #D91F43;
 }
@@ -540,8 +564,8 @@ svg.hover_arrow{
     position: absolute;
     right: -19px;
     width: 1px;
-    top: -39px;
-    height: 100px;
+    top: 7px;
+    height: 50px;
     background: #D91F43;
 }
 .sb_6.active::before{
@@ -569,7 +593,7 @@ svg.hover_arrow{
 	width: 12px;
 	background-color: #D91F43;
 }
-.red_square i{
+.active i{
 	display: block;
 	position: absolute;
 	top: 3px;
@@ -2226,7 +2250,7 @@ svg.hover_arrow{
 .main_content .container{height: 100%;}
 .wrap-left_right-bar{max-width: 1440px; position: absolute; width: 100%; top: 10vh; bottom: 0; left: 0; right: 0; margin: auto;}
 
-.main_content.active {opacity: 1; transition: .5s; height: 100%;}
+.main_content.active {opacity: 1; height: 100%;}
 .cnt-flex{display: flex; flex-direction: column; justify-content: center;}
 
 .onepage-wrapper{
