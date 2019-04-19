@@ -57,35 +57,54 @@ $( document ).ready(function() {
 		var elem6 = $('.main_content:eq(5)').hasClass('active');
 		var elem7 = $('.main_content:eq(6)').hasClass('active');
 		console.log(sc);
-		if(flag == false){
+	if(flag == false){
 		setTimeout(function(){
 			if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
-				sc--;
-				if (scroll_plus == -100) {
-					scroll_plus = 0;
+				scroll_point -= 100;
+				if (scroll_point == -100) {
+					scroll_point = 0;
 				}
-				var db_scroll = scroll_plus + 100;
-				for (scroll_plus; scroll_plus < db_scroll; scroll_plus++){
-					$('.main_scroll').css({"transform":"translate3d(0px, "+scroll_plus+"%, 0px)", "transition":"all 1000ms ease 0s"});
-				}
+				$('.main_scroll').css({"transform":"translate3d(0px, "+scroll_point+"%, 0px)"});
 			}
 			else{
-				sc++;
-				if (scroll_plus == 700) {
-					scroll_plus = 600;
+				scroll_point += 100;
+				if (scroll_point == 700) {
+					scroll_point = 600;
 				}
-				var db_scroll = scroll_plus - 100;
-				for (scroll_plus; scroll_plus < db_scroll; scroll_plus++){
-					$('.main_scroll').css({"transform":"translate3d(0px, "+scroll_plus+"%, 0px)", "transition":"all 1000ms ease 0s"});
-				}
+				$('.main_scroll').css({"transform":"translate3d(0px, "+scroll_point+"%, 0px)"});
 			}
 			flag = false;
         }, 1000);
 	}
 	flag = true;
 
+	
 
 
+		if(scroll_point == 100){
+			$('.main_content').removeClass('active');
+			$('.main_content:eq(1)').addClass('active');
+		}
+		else if(scroll_point == 200){
+			$('.main_content').removeClass('active');
+			$('.main_content:eq(2)').addClass('active');
+		}
+		else if(scroll_point == 300){
+			$('.main_content').removeClass('active');
+			$('.main_content:eq(3)').addClass('active');
+		}
+		else if(scroll_point == 400){
+			$('.main_content').removeClass('active');
+			$('.main_content:eq(4)').addClass('active');
+		}
+		else if(scroll_point == 500){
+			$('.main_content').removeClass('active');
+			$('.main_content:eq(5)').addClass('active');
+		}
+		else if(scroll_point == 600){
+			$('.main_content').removeClass('active');
+			$('.main_content:eq(6)').addClass('active');
+		}
 
 		if (elem1){
 			$('.index_foo').css("opacity", "0");
