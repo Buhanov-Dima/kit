@@ -3516,10 +3516,6 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	top:0;
 	z-index: 5;
 }
-.image-to-basket img{
-	position: absolute;
-}
-
 
 .number-of-items{
 	width: 50px;
@@ -3851,12 +3847,6 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 	justify-content: center;
 	align-items: center;
 	position: relative;
-}
-
-.central-item>img{
-	min-width: 300px;
-	max-height: 300px;
-	width: auto;
 }
 
 .left-picture img, .right-picture img{
