@@ -90,7 +90,7 @@
 								<div><div></div></div>
 							</div>
 							<div class="flex-basis-manual">
-								<div class="add-to-basket"><p class="helvetica10UpCaseWhite">добавить корзину</p></div>
+								<div class="add-to-basket"><p class="helvetica10UpCaseWhite">добавить в корзину</p></div>
 							</div>
 						</div>
 						<div class="d-md-flex d-none justify-content-md-center justify-content-sm-left">
@@ -101,7 +101,7 @@
 						</div>
 						<div class="d-md-flex d-none justify-content-center mg-t-27">
 							<div class="number-of-items helvetica14NoUpCaseBlack d-sm-none d-md-flex"><p>1</p></div>
-							<div class="add-to-basket"><p class="helvetica10UpCaseWhite">добавить корзину</p></div>
+							<div class="add-to-basket"><p class="helvetica10UpCaseWhite">добавить в корзину</p></div>
 						</div>
 						</div>
 					<div class="col-xl-3 rp-0 justify-content-xl-end col-lg-8 mx-lg-auto justify-content-lg-center d-md-flex flex-md-wrap col-md-8 mx-md-auto d-none">

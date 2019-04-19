@@ -494,14 +494,16 @@ $('.buttons div').on('mouseout', function(){
 	$(this).children("p").addClass("hide");
 });
 /*СМЕНА НАБОРА ИЗ ПЯТИ КНОПОК НА ITEM-CARD С ЧЕРНОГО НА ХОВЕР КОНЕЦ*/
-
-
+  
+                         
 /*РАБОТА С КОРЗИНОЙ НАЧАЛО*/
 $('.add-to-basket').on('click', function(){
-	$(this).children('p').css({"background-color":"#278F25;","box-shadow":"0px 22px 32px rgba(39, 143, 37, 0.2), 0px 10px 16px rgba(39, 143, 37, 0.1)", "padding":"19px 70px"});
-	$(this).css("box-shadow","none");
+	$(this).children('p').css({"background-color":"#278F25", "padding":"19px 70px"});
+	$(this).css("box-shadow","0px 22px 32px rgba(39, 143, 37, 0.2), 0px 10px 16px rgba(39, 143, 37, 0.1)");
 	$(this).children('p').text('добавлено');
-	$('.nmb_user_basket').children("a:eq(1)").css('background','radial-gradient(circle closest-side at 11px 9px, red 100%, rgba(255,255,255,0)) 100%');
+	setTimeout(function(){
+		$('.nmb_user_basket').children("a:eq(4)").css('background','radial-gradient(circle 70px at 11px 3px, red 4.2%, rgba(255,255,255,0) 4.2%)');
+	}, 1800);
 });
 
 $('.nmb_user_basket a:eq(4)').on('click', function(e){
@@ -530,6 +532,7 @@ $('.basket').on('click','.plus', function(){
 $('.basket').on('click','.close-button', function(){
 	$(this).parents('.basket-item').remove();
 	if(($('.basket-item').length == 0)) $('.basket').css("display","none");
+	if(($('.basket-item').length == 0)) $('.nmb_user_basket').children("a:eq(4)").css('background','none');
 });
 
 $(document).mouseup(function (e) {
@@ -574,6 +577,10 @@ $('.left-arrow-item-card').on('click', function(){
 	$('.central-item>img').delay(300).fadeIn(300);	
 	$('.left-picture img').delay(300).fadeIn(300);
 	$('.right-picture img').delay(300).fadeIn(300);
+	if($('.add-to-basket:eq(1) p').text() == 'добавлено'){
+		$('.add-to-basket:eq(1) p').css({'background':'#D91F43'});
+		$('.add-to-basket:eq(1) p').text('Добавить в корзину');
+	}
 });
 
 $('.right-arrow-item-card').on('click', function(){
@@ -592,6 +599,10 @@ $('.right-arrow-item-card').on('click', function(){
 	$('.central-item>img').delay(300).fadeIn(300);	
 	$('.left-picture img').delay(300).fadeIn(300);
 	$('.right-picture img').delay(300).fadeIn(300);
+	if($('.add-to-basket:eq(1) p').text() == 'добавлено'){
+		$('.add-to-basket:eq(1) p').css({'background':'#D91F43'});
+		$('.add-to-basket:eq(1) p').text('Добавить в корзину');
+	}
 });
 
 $('.little-left-arrow').on('click', function(){
@@ -610,6 +621,10 @@ $('.little-left-arrow').on('click', function(){
 	$('.central-item>img').delay(300).fadeIn(300);	
 	$('.left-picture img').delay(300).fadeIn(300);
 	$('.right-picture img').delay(300).fadeIn(300);
+	if($('.add-to-basket:eq(0) p').text() == 'добавлено'){
+		$('.add-to-basket:eq(0) p').css({'background':'#D91F43'});
+		$('.add-to-basket:eq(0) p').text('Добавить в корзину');
+	}
 });
 
 $('.little-right-arrow').on('click', function(){
@@ -628,6 +643,11 @@ $('.little-right-arrow').on('click', function(){
 	$('.central-item>img').delay(300).fadeIn(300);	
 	$('.left-picture img').delay(300).fadeIn(300);
 	$('.right-picture img').delay(300).fadeIn(300);
+	if($('.add-to-basket:eq(0) p').text() == 'добавлено'){
+		$('.add-to-basket p').css({'background':'#D91F43','box-shadow':'none'});
+		$('.add-to-basket').css({'box-shadow':'0px 10px 40px rgba(217, 31, 67, 0.5)'});
+		$('.add-to-basket p').text('Добавить в корзину');
+	}
 });
 
 $('.filter').on('click', function(){
@@ -647,18 +667,146 @@ $('.fotorama').on('fotorama:show', function (e, fotorama) {
 
 
 /*УЛЕТ ЦЕНТРАЛЬНОГО ИТЕМА В КОРЗИНУ ITEM-CARD НАЧАЛО*/
-$('#item-card .add-to-basket').on('click',function(){
-	var r = $('.central-item>img').attr('src');
-	$('.image-to-basket img').attr('src',r);
-	$('.image-to-basket').css('display','block');
-	$('.image-to-basket').animate({top:'-107%',left: '177%'},10000,'linear');
-	$('.image-to-basket img').animate({width:'0px'},10000,'linear');
-	$('.basket').prepend('<div class="basket-item"><div class="basket-item-header"><div><img src="' + r + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонная мойка ' + r + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
 
-});
+$('#item-card .add-to-basket').on('click', function () {
+        if($(document).width() >= 768){
+        var cart = $('.nmb_user_basket a:eq(4)');
+        var r = $('.central-item>img').attr('src');
+        var imgtodrag = $('.central-item');
+            var imgclone = imgtodrag.clone(true, true)
+                .offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            })
+                .css({
+                'opacity': '0.5',
+                'position': 'absolute',
+                'z-index': '100'
+            })
+                .appendTo($('body'))
+                .animate({
+                'top': cart.offset().top - 50,
+                    'left': cart.offset().left - 20,
+                    'width': 50,
+                    'height': 50
+            }, 1000, 'easeInOutExpo');
+            
+            setTimeout(function () {
+                cart.effect("shake", {
+                    times: 2
+                }, 200);
+            }, 1500);
+
+            imgclone.animate({
+                'width': 0,
+                'height': 0,
+                'top': cart.offset().top + 10,
+                'left': cart.offset().left + 10
+            }, function () {
+                $(this).detach()
+            });
+        }
+        if($(document).width() < 768 && $(document).width() >= 576){
+        var cart = $('.nmb_user_basket a:eq(4)');
+        var r = $('.central-item>img').attr('src');
+        var imgtodrag = $('.central-item>img');
+        $('.central-item').css({'position':'relative','width':'100%'})
+            var imgclone = imgtodrag.clone(true, true)
+                .offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            })
+                .css({
+                'opacity': '0.5',
+                'position': 'absolute',
+                'margin':'auto',
+                'width': '70%',
+                'left':'0',
+                'right': '0',
+                'margin':'auto',
+                'height': '130px',
+                'z-index': '100'
+            })
+                .appendTo($('body'))
+                .animate({
+                'top': cart.offset().top - 60,
+                    'left': cart.offset().left - 70,
+                    'width': 80,
+                    'height': 45
+            }, 1000, 'easeInOutExpo');
+            
+            setTimeout(function () {
+                cart.effect("shake", {
+                    times: 2
+                }, 200);
+            }, 1500);
+
+            imgclone.animate({
+                'width': 0,
+                'height': 0,
+                'top': cart.offset().top + 10,
+                'left': cart.offset().left -70
+            }, function () {
+                $(this).detach()
+            });
+        }
+        if($(document).width() < 576){
+        var cart = $('.nmb_user_basket a:eq(4)');
+        var r = $('.central-item>img').attr('src');
+        var imgtodrag = $('.central-item>img');
+        $('.central-item').css({'position':'relative','width':'100%'})
+            var imgclone = imgtodrag.clone(true, true)
+                .offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            })
+                .css({
+                'opacity': '0.5',
+                'position': 'absolute',
+                'margin':'auto',
+                'width': '70%',
+                'left':'0',
+                'right': '0',
+                'margin':'auto',
+                'height': '130px',
+                'z-index': '100'
+            })
+                .appendTo($('body'))
+                .animate({
+                'top': cart.offset().top - 60,
+                    'left': cart.offset().left - 30,
+                    'width': 80,
+                    'height': 45
+            }, 1000, 'easeInOutExpo');
+            
+            setTimeout(function () {
+                cart.effect("shake", {
+                    times: 2
+                }, 200);
+            }, 1500);
+
+            imgclone.animate({
+                'width': 0,
+                'height': 0,
+                'top': cart.offset().top + 10,
+                'left': cart.offset().left - 30
+            }, function () {
+                $(this).detach()
+            });
+        }
+            $('.basket').prepend('<div class="basket-item"><div class="basket-item-header"><div><img src="' + r + '"></div><p class="helvetica14NoUpCaseBlackNorm">Кухонная мойка ' + r + '</p><div class="close-button"><img src="/img/item-card/close.png" alt="close"></div></div><div class="cost-number-total"><div class="cost-basket"><p class="helvetica8UpCaseBlackOpacity03">цена</p><p class="helvetica14NoUpCaseBlack">18 999 руб.</p></div><div class="number-basket"><p class="helvetica8UpCaseBlackOpacity03">количество</p><div><div class="minus"><img src="/img/item-card/minus.png" alt="minus"></div><p class="helvetica14NoUpCaseBlack value">1</p><div class="plus"><img src="/img/item-card/plus.png" alt="plus"></div></div></div><div class="total"><p class="helvetica8UpCaseBlackOpacity03">всего</p><p class="helvetica14NoUpCaseBlack">37 998 руб.</p></div></div></div>');
+
+    });
 
 /*УЛЕТ ЦЕНТРАЛЬНОГО ИТЕМА В КОРЗИНУ ITEM-CARD КОНЕЦ*/
 
+
+$('.nmb_user_basket a:eq(4)').on('mouseover', function(){
+	$('.nmb_user_basket a:eq(4)>img').attr('src','/img/assets/shopping-bag-red.svg');
+});
+$('.nmb_user_basket a:eq(4)').on('mouseout', function(){
+	$('.nmb_user_basket a:eq(4)>img').attr('src','/img/assets/shopping-bag.svg');
+})
 
 
 
