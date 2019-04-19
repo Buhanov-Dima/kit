@@ -23,6 +23,13 @@
 	</div>
 </div>
 
+<div class="kit_review md-open">
+	<a href="#" class="h_catalogy">
+		Перейти в каталог
+		<i></i><i></i><i></i><i></i>
+	</a>
+</div>
+
 <div class="wrap-scroll_bar">
 	<div class="scroll_bar md-close">
 		<span id="progress"></span>
@@ -43,7 +50,7 @@
 				<div class="col-lg-8 mx-auto">
 					<h1 class="main_h">Кварцевые<br>Моики</h1>
 				</div>
-				<div class="col-xl-5 col-lg-7 col-md-8 mx-auto d-none d-lg-block">
+				<div class="col-xl-5 col-lg-7 col-md-8 mx-auto d-none d-md-block">
 					<div class="kit_review">
 						<a href="#" class="h_washes">
 								Выбрать мойку
@@ -59,7 +66,7 @@
 							</a>
 					</div>
 				</div>
-				<div class="col-xl-12 col-lg-12 mx-auto">
+				<div class="col-xl-12 col-lg-12 mx-auto text-center">
 					<div class="m_img">
 						<img src="/img/main/1.svg" class="sm-none" alt="">
 					</div>

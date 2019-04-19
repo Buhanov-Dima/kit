@@ -2,11 +2,10 @@
 	<div class="wrap_head">
 		<div class="menu">
 			<a href="#" class="md-close">меню <i></i><i></i><i></i></a>
-			<a href="#" class="md-open"></a>
+			<a href="#" class="md-open"><i></i><i></i><i></i></a>
 		</div>
 		<div class="logo">
-			<a href="/"><img class="md-close" src="/img/logo.svg" alt="logo"></a>
-			<img class="md-open" src="/img/mobile/logo.svg" alt="logo">
+			<a href="/"><img class="md-close" src="/img/logo.svg" alt="logo"><img class="md-open" src="/img/mobile/logo.svg" alt="logo"></a>
 		</div>
 		<div class="nmb_user_basket d-flex">
 			<a href="tel:+7 495 780 65 65" class="md-close">+7 495 780 65 65</a>
@@ -101,10 +100,6 @@
 			</div>
 			<div class="menu_hide_bg"></div>
 		</div>
-	</div>
-
-	<div class="kit_review md-open">
-		<a href="#">Выбрать мойку</a>
 	</div>
 
 </header>

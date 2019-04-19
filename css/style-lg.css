@@ -1,8 +1,8 @@
 h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{margin-top: 80px;}
 .kit_review.right-side{margin-top: 28px;} #main_03{max-width: 526px; top: -30px;} #main_04{max-width: 531px; top: -30px;}
 #main_05{max-width: 500px; top: -40px;} #main_06{max-width: 335px; top: -97px;} .kit_review.last{top: 206px;}
-.main_content{height: 740px;} .scroll_arrow {top: 515px;} .menu_link{padding: 145px 0 60px 80px; background-size: 501px 692px; width: 723px; height: 715px;}
-.menu_hide{height: 740px; width: 550px; background-size: 550px 740px;}.m2_info{top: 342px; left: 250px;} #btn_2{top: 500px; left: 420px;}
+.main_content{height: 740px;} .scroll_arrow {top: 515px;} .menu_link{top: 3vh; left: 0vh; padding-left: 20vh;}
+.menu_hide{width: 550px;}.m2_info{top: 342px; left: 250px; display: none;} #btn_2{top: 500px; left: 420px;}
 #btn_3{top: 461px; left: 432px;} #btn_4{top: 380px; left: 294px;} #btn_4-1{top: 340px; left: 328px;}
 #btn_4-2{left: 522px; top: 380px;} #btn_5-1{top: 405px; left: 550px;} #btn_5{left: 382px; top: 325px;}
 #btn_6{top: 344px; left: 480px;} .wrap_img_m2{max-height: 285px;} .scroll_bar{top: 50px;}
@@ -20,7 +20,8 @@ h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{margin-top:
 /**********CONFLICT**********/
 .descript{margin-bottom: 0;} .info-and-buttons>p{text-align: center; margin-bottom: 10px;} .advanced-items>div div{height: 300px;} 
 
-
+header{top: 25px;}
+.nmb_user_basket a{margin-left: 8px;}
 .item{
 	width:50%;
 }
