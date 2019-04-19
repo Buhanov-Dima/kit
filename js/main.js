@@ -47,6 +47,31 @@ $( document ).ready(function() {
 	var sc = 0;
 	var scroll_plus = 0;
 	
+	    function Timing(scroll_plus){
+        	setTimeout(function(){
+				if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
+					sc--;
+					if (scroll_plus == -100) {
+						scroll_plus = 0;
+					}
+					var db_scroll = scroll_plus + 100;
+					for (scroll_plus; scroll_plus < db_scroll; scroll_plus++){
+						$('.main_scroll').css({"transform":"translate3d(0px, "+scroll_plus+"%, 0px)", "transition":"all 1000ms ease 0s"});
+					}
+				}
+				else{
+					sc++;
+					if (scroll_plus == 700) {
+						scroll_plus = 600;
+					}
+					var db_scroll = scroll_plus - 100;
+					for (scroll_plus; scroll_plus < db_scroll; scroll_plus++){
+						$('.main_scroll').css({"transform":"translate3d(0px, "+scroll_plus+"%, 0px)", "transition":"all 1000ms ease 0s"});
+					}
+				}
+	        }, 1000);
+        }
+
 	$(window).bind('mousewheel DOMMouseScroll', function(event){
 		var elem1 = $('.main_content:eq(0)').hasClass('active');
 		var elem2 = $('.main_content:eq(1)').hasClass('active');
@@ -55,27 +80,13 @@ $( document ).ready(function() {
 		var elem5 = $('.main_content:eq(4)').hasClass('active');
 		var elem6 = $('.main_content:eq(5)').hasClass('active');
 		var elem7 = $('.main_content:eq(6)').hasClass('active');
-		
-		if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
-			sc--;
-			if (scroll_plus == -100) {
-				scroll_plus = 0;
-			}
-			$('.main_scroll').css({"top":+scroll_plus+"%", "transition":"ease-in .7s"});
-		}
-		else{
-			sc++;
-			if (scroll_plus == 700) {
-				scroll_plus = 600;
-			}
-			var db_scroll = scroll_plus + 100;
-			for (scroll_plus; scroll_plus < db_scroll; scroll_plus++){
-				$('.main_scroll').css({"transform":"translate3d(0px, "+scroll_plus+"%, 0px)", "transition":"all 1000ms ease 0s"});
-			}
-		}
+
 		console.log(sc);
 
-
+		Timing(scroll_plus);
+		while(Timing()){
+			event.preventDefault();
+		}
 
 
 
