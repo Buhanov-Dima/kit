@@ -203,19 +203,23 @@ p {margin: 0;}
 	background-size: 1200px auto;
 	max-width: 1440px;
 	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	margin: auto;
 	position: relative;
 }
+.main_scroll{width: 100%; height: 100%; overflow: hidden;}
 .main_content{
 	padding-top: 5%;
 	max-width: 1440px;
-/*	height: 760px;	*/
 	overflow: hidden;
 	margin: auto;
 	transition: ease-in .5s;
 	left: 0;
 	right: 0;
+	width: 100%;
 	height: 100%;
+	opacity: 0;
 }
 .content.dark{
 	padding-top: 0;
@@ -2222,7 +2226,6 @@ svg.hover_arrow{
 .main_content .container{height: 100%;}
 .wrap-left_right-bar{max-width: 1440px; position: absolute; width: 100%; top: 10vh; bottom: 0; left: 0; right: 0; margin: auto;}
 
-.main_content{opacity: 0;}
 .main_content.active {opacity: 1; transition: .5s; height: 100%;}
 .cnt-flex{display: flex; flex-direction: column; justify-content: center;}
 

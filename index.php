@@ -42,7 +42,7 @@
 	</div>
 </div>
 
-<div class="main">
+<div class="main_scroll">
 
 	<section id="b1" class="main_content active">
 		<div class="container">

@@ -1,24 +1,6 @@
 $( document ).ready(function() {
 
-//one page_scroll для index
-	if(window.location.pathname == '/'){
-		$(".index_page .main").onepage_scroll({
-		   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-		   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-		                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-		   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-		   pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-		   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-		   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-		   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
-		   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-		   keyboard: true,                  // You can activate the keyboard controls
-		   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-		                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-			                                 // the browser's width is less than 600, the fallback will kick in.
-		   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-		});
-	}
+
 //кнопка доп инфы на главной странице
 	$(".m2_info").click(function () {
     	$(this).toggleClass("active");
@@ -62,6 +44,9 @@ $( document ).ready(function() {
 
 	var main_height = $('.main_content:eq(0)').height();
 
+	var sc = 0;
+	var scroll_plus = 0;
+	
 	$(window).bind('mousewheel DOMMouseScroll', function(event){
 		var elem1 = $('.main_content:eq(0)').hasClass('active');
 		var elem2 = $('.main_content:eq(1)').hasClass('active');
@@ -71,6 +56,30 @@ $( document ).ready(function() {
 		var elem6 = $('.main_content:eq(5)').hasClass('active');
 		var elem7 = $('.main_content:eq(6)').hasClass('active');
 		
+		if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
+			sc--;
+			if (scroll_plus == -100) {
+				scroll_plus = 0;
+			}
+			$('.main_scroll').css({"top":+scroll_plus+"%", "transition":"ease-in .7s"});
+		}
+		else{
+			sc++;
+			if (scroll_plus == 700) {
+				scroll_plus = 600;
+			}
+			var db_scroll = scroll_plus + 100;
+			for (scroll_plus; scroll_plus < db_scroll; scroll_plus++){
+				$('.main_scroll').css({"transform":"translate3d(0px, "+scroll_plus+"%, 0px)", "transition":"all 1000ms ease 0s"});
+			}
+		}
+		console.log(sc);
+
+
+
+
+
+
 		if (elem1){
 			$('.index_foo').css("opacity", "0");
 		}
@@ -136,7 +145,7 @@ $( document ).ready(function() {
 */		
 		
 		var scroll_Len = $('.scroll_bar a.active').length;
-		console.log(scroll_Len);
+//		console.log(scroll_Len);
 		function progress_bar(scroll_Len){
 			$('.scroll_bar a').removeClass('red_square');
 			$('.scroll_bar a.active').eq(scroll_Len - 1).addClass('red_square');
