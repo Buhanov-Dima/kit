@@ -7,8 +7,8 @@
 <div class="wrapper_left">
 	<div class="wrap_left_side">
 		<div class="left_side">
-			<a href="#"><img src="/img/assets/inst.svg" alt=""></a>
-			<a href="#"><img src="/img/assets/fb.svg" alt=""></a>
+			<a href="#"><img src="/img/assets/instagram.svg" alt=""></a>
+			<a href="#"><img src="/img/assets/facebook.svg" alt=""></a>
 			<p>сделано для людей с любовью</p>
 		</div>
 

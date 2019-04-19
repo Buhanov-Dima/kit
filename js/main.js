@@ -72,14 +72,16 @@ $( document ).ready(function() {
 		var elem7 = $('.main_content:eq(6)').hasClass('active');
 		
 		if (elem1){
-			$('.kit_review.right-side').removeClass("right-side");
-			$('.index_foo').css("display", "none");
-			$('.index_foo').css({"margin":"5vh"});
+			$('.index_foo').css("opacity", "0");
+		}
+		else if(elem7){
+			$('.index_foo .kit_review').removeClass("right-side");
+			$('.index_foo').addClass("active");
 		}
 		else{
-			$('.index_foo').css("display", "flex");
-			$('.kit_review').css("display", "flex");
-			$('.kit_review').addClass("right-side");
+			$('.index_foo').removeClass("active");
+			$('.index_foo .kit_review').addClass("right-side");
+			$('.index_foo').css("opacity", "1");
 		}
 
 		if(elem2 || elem3 || elem4 || elem5 || elem6 || elem7){
@@ -118,7 +120,7 @@ $( document ).ready(function() {
 			$('.sb_6').removeClass('active');
 		}
 
-		if(elem1){
+/*		if(elem1){
 			$('.kit_review').removeClass('right-side');
 		}
 		else if(elem7){
@@ -131,7 +133,7 @@ $( document ).ready(function() {
 			$('.kit_review').addClass('right-side');
 			$('.index_foo').css({"right": "120px", "left":"auto"});
 		}
-		
+*/		
 		
 		var scroll_Len = $('.scroll_bar a.active').length;
 		console.log(scroll_Len);
@@ -151,8 +153,11 @@ $( document ).ready(function() {
 	  	if(($(".main_content").hasClass("active"))){
 			console.log(mainTop);
 			mainTop -= 100;
-			if(mainTop != -600){
+			if(mainTop != -700){
 				$(".main").css({"transform":"translate3d(0px, "+mainTop+'%'+", 0px)", "position":"relative", "transition":"all 1000ms ease 0s"})
+			}
+			else if(elem7 == -700){
+
 			}
 			else{
 				mainTop += 100;
@@ -179,12 +184,36 @@ $( document ).ready(function() {
 	});
 
 
+//sell_card validator
 
 
+	
 
 
+	$('.sl_for_first input').on('change', function() {
+		var val = $('.radio:checked').val(); //r2
+		console.log(val);
+		if(val == 'r1'){
+			$('.input_pay_card').removeClass('active');
+			$('.sell_in_file').addClass('active');
+		}
+		if(val == 'r2'){
+			$('.sell_in_file').removeClass('active');
+			$('.input_pay_card').addClass('active');
+		}
+	});
 
 
+	$('.sl_for_second input').on('change', function() {
+		var val = $('.sl_for_second .radio:checked').val(); //r2
+		console.log(val);
+		if(val == 'r4'){
+			$('.sell_adress').addClass('active');
+		}
+		else{
+			$('.sell_adress').removeClass('active');
+		}
+	});
 
 
 

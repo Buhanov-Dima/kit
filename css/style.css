@@ -330,11 +330,14 @@ p {margin: 0;}
 	padding-bottom: 60px;
 	margin-bottom: 40px;
 }
+.left_side img{
+	max-width: 16px;
+	opacity: .5;
+}
 .left_side a {
 	position: absolute;
-	left: -4px;
+	left: -3px;
 }
-
 .left_side a:first-child{
 	bottom: 30px;
 }
@@ -369,13 +372,13 @@ p {margin: 0;}
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 5vh;
 	position: relative;
 	z-index: 15;
-	bottom: 5vh;
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	bottom: 0vh;
+	opacity: 1;
+	max-width: 650px;
+	margin: 5vh auto 0;
 	transition: 1s;
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 }
 
 .m_img {overflow-y: hidden; min-height: 252px;}
@@ -390,7 +393,7 @@ p {margin: 0;}
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     justify-content: center;
     margin-left: 60px;
@@ -405,9 +408,14 @@ p {margin: 0;}
     align-items: center;
     z-index: 5;
 }
+.scroll_arrow svg{
+	transform: rotate(-180deg);
+	position: absolute;
+	top: -50px;
+	left: 2px;
+}
 .scroll_arrow{
 	position: relative;
-	left: 0px;
     font-family: HelveticaNeueCyr;
     font-size: 11px;
     line-height: normal;
@@ -418,28 +426,22 @@ p {margin: 0;}
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
-.scroll_arrow svg{
-	position: absolute;
-	top: -50px;
-	left: 2px;
-	transform: rotate(-180deg);
-}
 
 svg.hover_arrow{
-	animation: Arrow 0.4s cubic-bezier(0, 0.2, 0.1, 1) forwards;
+	animation: Arrow 0.8s cubic-bezier(0, 0.2, 0.1, 1) infinite;
 }
 .bort_line_arrow.hover_arrow{
-	animation: rightArrowEnd 1.2s cubic-bezier(0, 0.2, 0.1, 1) infinite;
+	animation: rightArrowEnd 0.8s cubic-bezier(0, 0.2, 0.1, 1) infinite;
 }
 
 .main_line_arrow.hover_arrow{
-	animation: rightArrowLineEnd 1.2s cubic-bezier(0.3, 0.2, 0.1, 1) infinite;
+	animation: rightArrowLineEnd 0.8s cubic-bezier(0.3, 0.2, 0.1, 1) infinite;
 
 }
 
 @keyframes Arrow {
 	0% { top: -50px; }
-	100% { top: -70px; }
+	100% { top: -85px; }
 }
 
 @keyframes rightArrowEnd {
@@ -829,16 +831,11 @@ svg.hover_arrow{
     left: 720px;
 }
 .kit_review.right-side{
-	margin-top: 30px;
-	margin-right: 15px;
+	max-width: 650px;
 	margin-bottom: 25px;
-	justify-content: flex-end;
+	margin-left: auto;
+	margin-right: 120px;
 	width: 100%;
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-	display: none;
-	opacity: 0;
-	transition: 1s;
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONFLICT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 }
 .kit_review.right-side a{
 	margin-left: 54px;
@@ -992,16 +989,17 @@ svg.hover_arrow{
 
 .close_menu{
 	font-family: HelveticaNeueCyr;
-	font-size: 9px;
-	line-height: normal;
+	font-size: 11px;
+	line-height: 14px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: #FFFFFF;
 	cursor: pointer;
 	position: absolute;
 	top: 7vh;
-	left: 10vh;
+	left: 7vh;
 	z-index: 110;
+	padding-left: 25px;
 }
 
 .close_menu::before{
@@ -1011,7 +1009,7 @@ svg.hover_arrow{
     height: 2px;
     background-color: #fff;
     top: 0;
-    left: -80px;
+    left: -55px;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -1024,7 +1022,7 @@ svg.hover_arrow{
     height: 2px;
     background-color: #fff;
     top: 0;
-    left: -80px;
+    left: -55px;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -1292,6 +1290,7 @@ svg.hover_arrow{
 	mix-blend-mode: normal;
 	border: 1px solid rgba(112, 114, 125, .3);
 	box-sizing: border-box;
+	padding-left: 15px;
 	border-radius: 1px;
 }
 .contacts_submit, .sell_submit{
@@ -1400,7 +1399,47 @@ svg.hover_arrow{
 
 /*********sell_card*********/
 
+.sell_in_file input{
+	position: absolute;
+	opacity: 0;
+}
+.sell_in_file.active, .input_pay_card.active, .sell_adress.active{
+	height: 50px;
+}
+.input_pay_card, .sell_in_file, .sell_adress{
+	height: 0;
+	overflow: hidden;
+	transition: ease-in .3s;
+}
+.btn_file{
+	font-family: HelveticaNeueCyr;
+	font-size: 14px;
+	line-height: 48px;
+	position: relative;
+	color: #FFFFFF;
+	padding-left: 20px;
 
+	/* Rectangle */
+
+	max-width: 300px;
+	width: 100%;
+	height: 50px;
+
+	background: #3B4150;
+	mix-blend-mode: normal;
+	border-radius: 1px;
+}
+.btn_file::before{
+	content: '';
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	right: 23px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: url('/img/assets/download.svg') no-repeat center;
+}
 
 .sell_info{
 	display: flex;
@@ -2205,18 +2244,9 @@ body, .onepage-wrapper, html{
     width: 100%;
     height: 100%;
 }
-.index_foo{position: absolute; bottom: 0; right: 120px;}
+.index_foo {position: absolute; left: 0; bottom: 0; right: 0; width: 100%; max-width: 1440px; opacity: 0; transition: ease-in 1s; text-align: center;}
 
-
-
-
-
-
-
-
-
-
-
+.index_foo .kit_review{justify-content: space-around; margin-bottom: 7vh;}
 
 
 
@@ -3148,11 +3178,11 @@ p.labels {
 .item-image{
 	display: flex;
 	justify-content: center;
+	height: 230px;
 }
 
 .item>div{
 	margin-top: 0;
-
 }
 .river{
 	background: linear-gradient(180deg, #F5F3F0 0%, #DED8D0 100%);

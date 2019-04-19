@@ -77,12 +77,12 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<form action="" class="in_radio">
-					<div class="sell_form">
+					<div class="sell_form sl_for_first">
 						<span>Способ оплаты</span>
 						<div class="sell_radio">
-							<input type="radio" name="rad" class="radio" id="radio1" />
+							<input type="radio" name="rad" class="radio" id="radio1" value="r1" checked />
 							<label for="radio1">Выставить счет</label>
-							<input type="radio" name="rad" class="radio" id="radio" />
+							<input type="radio" name="rad" class="radio" id="radio" value="r2" />
 							<label for="radio">Онлайн-оплата картой </label>
 							<div class="pay_card_hov"><img src="/img/assets/question.png" class="ques" alt="">
 								<div class="pay_card">В случае отказа отмены заказа, денежные средства вернутся в течение 10 дней после возвращения товара на склад или отмены заказа.</div>
@@ -91,19 +91,29 @@
 						<div class="sell_input">
 							<input type="text" placeholder="Иван">
 							<input type="text" placeholder="+7 999 999 99 99">
+							<div class="sell_in_file active">
+								<input type="file" id="file_req">
+								<label for="file_req" class=" btn_file">Загрузить реквизиты</label>
+							</div>
+							<div class="input_pay_card">
+								<select name="" id="">
+									<option value="">Строймаркет</option>
+									<option value="">Самара</option>
+								</select>
+							</div>
 						</div>
 					</div>
 
 
-					<div class="sell_form">
+					<div class="sell_form sl_for_second">
 						<span>Способ доставки</span>
 						<div class="sell_radio">
-							<input type="radio" name="rad2" class="radio" id="radio2" />
+							<input type="radio" name="rad2" class="radio" id="radio2" value="r3" />
 							<label for="radio2">Доставка (бесплатно)</label>
-							<input type="radio" name="rad2" class="radio" id="radio3" />
+							<input type="radio" name="rad2" class="radio" id="radio3" value="r4" checked/>
 							<label for="radio3">Пункт выдачи</label>
 						</div>
-						<div class="sell_input">
+						<div class="sell_input active">
 							<select name="" id="">
 								<option value="">Москва</option>
 								<option value="">Самара</option>
@@ -113,6 +123,14 @@
 								<option value="">Златоустинский переулок</option>
 								<option value="">Златоустинский</option>
 							</select>
+
+							<div class="sell_adress active">
+								<input type="text" name="" id="" placeholder="Ваш адрес">
+								<input data-provide="datepicker">
+							</div>
+						</div>
+						<div class="sell_dilivery">
+							
 						</div>
 					</div>
 				</form>
