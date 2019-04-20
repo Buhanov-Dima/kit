@@ -1,8 +1,8 @@
-h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{margin-top: 80px;}
+h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{}
 .kit_review.right-side{margin-top: 28px;} #main_03{max-width: 526px; top: -30px;} #main_04{max-width: 531px; top: -30px;}
 #main_05{max-width: 500px; top: -40px;} #main_06{max-width: 335px; top: -97px;} .kit_review.last{top: 206px;}
-.main_content{height: 740px;} .scroll_arrow {top: 515px;} .menu_link{top: 3vh; left: 0vh; padding-left: 20vh;}
-.menu_hide{width: 550px;}.m2_info{top: 342px; left: 250px; display: none;} #btn_2{top: 500px; left: 420px;}
+.main_content{height: 740px;} .menu_link{top: 3vh; left: 0vh; padding-left: 20vh;}
+.menu_hide{top: 0;}.m2_info{top: 342px; left: 250px; display: none;} #btn_2{top: 500px; left: 420px;}
 #btn_3{top: 461px; left: 432px;} #btn_4{top: 380px; left: 294px;} #btn_4-1{top: 340px; left: 328px;}
 #btn_4-2{left: 522px; top: 380px;} #btn_5-1{top: 405px; left: 550px;} #btn_5{left: 382px; top: 325px;}
 #btn_6{top: 344px; left: 480px;} .wrap_img_m2{max-height: 285px;} .scroll_bar{top: 50px;}
@@ -13,14 +13,12 @@ h1.main_h {font-size: 106px;} .m2_img img{max-width: 536px;} .m2_img{margin-top:
 .m_img img {margin-top: 37px;}
 
 .left-picture, .right-picture{display:none;} .descript{max-width: none; text-align: center;} .mg-t-20-lg{margin-top: 20px;} .description_table{width: 270px; margin-bottom: 0; margin-top: 20px; max-width: 567px; width: 100%;}
-/**********CONFLICT**********/
+.wrap_head{padding: 15px 60px;}
 .descript{margin-bottom: 0;} .info-and-buttons>p{text-align: center; margin-bottom: 10px;} .advanced-items>div div{height: 300px;}.logo{position: absolute; left: 0; right: 0; text-align: center;} .logo img{margin: auto;}
 .cnt_form_flex {width: 48%;} .txt_input{width: 100%;} #cnt_captcha{max-width: none;} #txt_area{margin-top: 10px;}
 .email_form>input[type="email"]{padding-right: 70px;} .sign{margin-right: 0;} .first_column{flex-basis: 28%;}
-/**********CONFLICT**********/
-.descript{margin-bottom: 0;} .info-and-buttons>p{text-align: center; margin-bottom: 10px;} .advanced-items>div div{height: 300px;} 
-
-header{top: 25px;}
+.last_main_h{margin-top: 80px;}
+header{top: 0;}
 .nmb_user_basket a{margin-left: 8px;}
 .item{
 	width:50%;
