@@ -14,7 +14,7 @@
 
 		<div class="scroll_arrow md-close">
 			<p>скрольте  вниз</p>
-			<svg width="9" height="44" viewBox="0 0 9 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg class="svg_up" width="9" height="44" viewBox="0 0 9 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path class="main_line_arrow" d="M4.20658 0.621094L4.20658 42.6211H5.20658L5.20658 0.621094L4.20658 0.621094Z" fill="#D91F43"/>
 				<path class="bort_line_arrow" d="M0.463938 39.6215L4.70658 43.8642L5.41368 43.1571L1.17104 38.9144L0.463938 39.6215Z" fill="#D91F43"/>
 				<path class="bort_line_arrow" d="M8.24211 38.9144L3.99947 43.1571L4.70658 43.8642L8.94922 39.6215L8.24211 38.9144Z" fill="#D91F43"/>
@@ -255,7 +255,7 @@
 </div>
 
 <div id="showScroll" class="md-close">
-	<svg width="9" height="44" viewBox="0 0 9 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg class="svg_down" width="9" height="44" viewBox="0 0 9 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path class="main_line_arrow" d="M4.20658 0.621094L4.20658 42.6211H5.20658L5.20658 0.621094L4.20658 0.621094Z" fill="#D91F43"/>
 		<path class="bort_line_arrow" d="M0.463938 39.6215L4.70658 43.8642L5.41368 43.1571L1.17104 38.9144L0.463938 39.6215Z" fill="#D91F43"/>
 		<path class="bort_line_arrow" d="M8.24211 38.9144L3.99947 43.1571L4.70658 43.8642L8.94922 39.6215L8.24211 38.9144Z" fill="#D91F43"/>
