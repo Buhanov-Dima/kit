@@ -423,8 +423,7 @@ p {margin: 0;}
     align-items: center;
     z-index: 5;
 }
-/*
-.scroll_arrow svg{
+.svg_up{
 	transform: rotate(-180deg);
 	position: absolute;
 	top: -50px;
@@ -453,13 +452,14 @@ p {margin: 0;}
 	transition: ease-in .4s;
 }
 
-#showScroll svg{
+.svg_down{
 	transform: rotate(180deg);
-	position: relative;
+	position: absolute;
 	left: 2px;
+	top: -50px;
 }
 
-svg.hover_arrow{
+.svg_up.hover_arrow{
 	animation: Arrow 0.8s cubic-bezier(0, 0.2, 0.1, 1) infinite;
 }
 .bort_line_arrow.hover_arrow{
@@ -485,7 +485,35 @@ svg.hover_arrow{
 	0% {transform: translateY(0px);}
 	100% { transform: translateY(44px);}
 }
-*/
+
+
+.svg_down.hover_arrow_down{
+	animation: Arrow_down 0.8s cubic-bezier(0, 0.2, 0.1, 1) infinite;
+}
+.bort_line_arrow.hover_arrow_down{
+	animation: rightArrowEnd_down 0.8s cubic-bezier(0, 0.2, 0.1, 1) infinite;
+}
+
+.main_line_arrow.hover_arrow_down{
+	animation: rightArrowLineEnd_down 0.8s cubic-bezier(0.3, 0.2, 0.1, 1) infinite;
+
+}
+
+@keyframes Arrow_down {
+	0% { top: -50px; }
+	100% { top: -100px; }
+}
+
+@keyframes rightArrowEnd_down {
+	0% { transform: translateY(0px); }
+	100% { transform: translateY(5px); }
+}
+
+@keyframes rightArrowLineEnd_down {
+	0% {transform: translateY(0px);}
+	100% { transform: translateY(44px);}
+}
+
 
 .wrap_scroll_arrow{
 	position: absolute;
@@ -4406,93 +4434,3 @@ img[src="/img/item-card/left_arrow_black.png"], img[src="/img/item-card/right_ar
 
 
 
-.svg_up{
-	transform: rotate(-180deg);
-	position: absolute;
-	top: -50px;
-	left: 2px;
-}
-#showScroll p, .scroll_arrow{
-	position: relative;
-    font-family: HelveticaNeueCyr;
-    font-size: 11px;
-    line-height: normal;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #3B4150;
-    cursor: pointer;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    transition: ease-in .4s;
-}
-
-#showScroll{
-	position: absolute;
-	left: 60px;
-	bottom: 25px;
-	opacity: 0;
-	z-index: -20;
-	transition: ease-in .4s;
-}
-
-.svg_down{
-	transform: rotate(180deg);
-	position: absolute;
-	left: 2px;
-	top: -50px;
-}
-
-.svg_up.hover_arrow{
-	animation: Arrow 0.8s cubic-bezier(0, 0.2, 0.1, 1) infinite;
-}
-.bort_line_arrow.hover_arrow{
-	animation: rightArrowEnd 0.8s cubic-bezier(0, 0.2, 0.1, 1) infinite;
-}
-
-.main_line_arrow.hover_arrow{
-	animation: rightArrowLineEnd 0.8s cubic-bezier(0.3, 0.2, 0.1, 1) infinite;
-
-}
-
-@keyframes Arrow {
-	0% { top: -50px; }
-	100% { top: -85px; }
-}
-
-@keyframes rightArrowEnd {
-	0% { transform: translateY(0px); }
-	100% { transform: translateY(5px); }
-}
-
-@keyframes rightArrowLineEnd {
-	0% {transform: translateY(0px);}
-	100% { transform: translateY(44px);}
-}
-
-
-.svg_down.hover_arrow_down{
-	animation: Arrow_down 0.8s cubic-bezier(0, 0.2, 0.1, 1) infinite;
-}
-.bort_line_arrow.hover_arrow_down{
-	animation: rightArrowEnd_down 0.8s cubic-bezier(0, 0.2, 0.1, 1) infinite;
-}
-
-.main_line_arrow.hover_arrow_down{
-	animation: rightArrowLineEnd_down 0.8s cubic-bezier(0.3, 0.2, 0.1, 1) infinite;
-
-}
-
-@keyframes Arrow_down {
-	0% { top: -50px; }
-	100% { top: -100px; }
-}
-
-@keyframes rightArrowEnd_down {
-	0% { transform: translateY(0px); }
-	100% { transform: translateY(5px); }
-}
-
-@keyframes rightArrowLineEnd_down {
-	0% {transform: translateY(0px);}
-	100% { transform: translateY(44px);}
-}
