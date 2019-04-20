@@ -120,17 +120,51 @@ $( document ).ready(function() {
 				$('.scroll_arrow').css({"opacity":"0", "z-index":"-20"})
 				$('#showScroll').css({"opacity":"1", "z-index":"20"});
 			}
+
 			if(scroll_point != 600){
 				$('.scroll_arrow').css({"opacity":"1", "z-index":"20"})
 				$('#showScroll').css({"opacity":"0", "z-index":"-20"});
 			}
 			flag = false;
-        }, 1000);
+        }, 600);
 
 	}
 	flag = true;
 
 	console.log(scroll_point);
+
+	$( ".scroll_arrow" ).click(function() {
+
+		var v = $(".main_content.active").attr("id");
+		console.log(v);
+		console.log(scroll_point);
+		if(v == 'b1'){
+			r = 0;
+		}
+		if(v == 'b2'){
+			r = 1;
+		}
+		if(v == 'b3'){
+			r = 2;
+		}
+		if(v == 'b4'){
+			r = 3;
+		}
+		if(v == 'b5'){
+			r = 4;
+		}
+		if(v == 'b6'){
+			r = 5;
+		}
+		if(v == 'b7'){
+			r = 6;
+		}
+		$(".main_scroll").css({"transform":"translate3d(0px, "+scroll_point+'%'+", 0px)"});
+		$(".main_content.active").removeClass("active");
+		$(".main_content").eq(r).addClass("active");
+	});
+
+
 
 
 		if (elem1){
@@ -175,28 +209,8 @@ $( document ).ready(function() {
 */		
 	});
 
-	var mainTop = 0;
 
-	$( ".scroll_arrow" ).click(function() {
-
-		var r = ($(".main_content.active").index()) + 1;
-	  	if(($(".main_content").hasClass("active"))){
-			console.log(mainTop);
-			mainTop -= 100;
-			if(mainTop != -700){
-				$(".main").css({"transform":"translate3d(0px, "+mainTop+'%'+", 0px)", "position":"relative", "transition":"all 1000ms ease 0s"})
-			}
-			else if(elem7 == -700){
-
-			}
-			else{
-				mainTop += 100;
-				$(".main").css({"transform":"translate3d(0px, "+mainTop+'%'+", 0px)", "position":"relative", "transition":"all 1000ms ease 0s"})
-			}			
-			$(".main_content.active").removeClass("active");
-			$(".main_content").eq(r).addClass("active");
-		}
-	});
+	
 
 	
 
