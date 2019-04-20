@@ -227,6 +227,18 @@ $( document ).ready(function() {
 		$('.scroll_arrow svg').removeClass('hover_arrow');
 	});
 
+	$('#showScroll').mouseover(function(){
+		$('.main_line_arrow').addClass('hover_arrow_down');
+		$('.bort_line_arrow').addClass('hover_arrow_down');
+		$('.scroll_arrow svg').addClass('hover_arrow_down');
+	});
+
+	$('#showScroll').mouseout(function(){
+		$('.main_line_arrow').removeClass('hover_arrow_down');
+		$('.bort_line_arrow').removeClass('hover_arrow_down');
+		$('.scroll_arrow svg').removeClass('hover_arrow_down');
+	});
+
 
 //sell_card validator
 
