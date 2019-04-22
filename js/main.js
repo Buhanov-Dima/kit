@@ -633,7 +633,19 @@ $(document).mouseup(function (e) {
 
 /*СМЕНА ИТЕМОВ ВВЕРХУ СТРАНИЦЫ ITEM-CARD НАЧАЛО*/
 
+var item_card_washes = ['Creek','Gulf','Lake','Ocean','Pond','River','Sea','Spring','Stream'];
+
+var check = 0;
+var check_left = 0;
+var check_right = 0;
+var iterator_left = 2;
 $('.left-arrow-item-card').on('click', function(){
+	check++;
+	if(check - check_left > 1) iterator_left = iterator_right + 2;
+	check_left = check;
+	iterator_left++;
+	if(iterator_left == 9) iterator_left = 0;
+	if(iterator_left == 10) iterator_left = 1;
 	var c = $('.central-item>img').attr('src');
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
@@ -644,7 +656,17 @@ $('.left-arrow-item-card').on('click', function(){
 
 	$('.central-item>img').attr('src', r);	
 	$('.left-picture img').attr('src', c);
-	$('.right-picture img').attr('src', l);
+	$('.right-picture img').attr('src', '/img/item-card/washes/' + item_card_washes[iterator_left] + '.png');
+
+	var centr = iterator_left - 1;
+	var left_text = iterator_left - 2;
+	if(centr == -1) centr = 8;
+	if(left_text == -1) left_text = 8;
+	if(left_text == -2) left_text = 7; 
+	console.log(centr);
+	$('.central-item-name').text(item_card_washes[centr]);	
+	$('.left-picture p').text(item_card_washes[left_text]);
+	$('.right-picture p').text(item_card_washes[iterator_left]);
 
 	$('.central-item>img').delay(300).fadeIn(300);	
 	$('.left-picture img').delay(300).fadeIn(300);
@@ -655,7 +677,15 @@ $('.left-arrow-item-card').on('click', function(){
 	}
 });
 
+var iterator_right = 0;
+
 $('.right-arrow-item-card').on('click', function(){
+	check++;
+	if(check - check_right > 1) iterator_right = iterator_left - 2;
+	check_right = check;
+	iterator_right--;
+	if(iterator_right == -1) iterator_right = 8;
+	if(iterator_right == -2) iterator_right = 7;
 	var c = $('.central-item>img').attr('src');
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
@@ -665,8 +695,17 @@ $('.right-arrow-item-card').on('click', function(){
 	$('.right-picture img').fadeOut(0);
 
 	$('.central-item>img').attr('src', l);	
-	$('.left-picture img').attr('src', r);
 	$('.right-picture img').attr('src', c);
+	$('.left-picture img').attr('src', '/img/item-card/washes/' + item_card_washes[iterator_right] + '.png');
+
+	var centr = iterator_right + 1;
+	var right_text = iterator_right + 2;
+	if(centr == 9) centr = 0;
+	if(right_text == 9) right_text = 0;
+	if(right_text == 10) right_text = 1; 
+	$('.central-item-name').text(item_card_washes[centr]);	
+	$('.left-picture p').text(item_card_washes[iterator_right]);
+	$('.right-picture p').text(item_card_washes[right_text]);
 
 	$('.central-item>img').delay(300).fadeIn(300);	
 	$('.left-picture img').delay(300).fadeIn(300);
@@ -677,7 +716,18 @@ $('.right-arrow-item-card').on('click', function(){
 	}
 });
 
+var check_little = 0;
+var check_left_little = 0;
+var check_right_little = 0;
+var iterator_left_little = 2;
+
 $('.little-left-arrow').on('click', function(){
+	check++;
+	if(check - check_left > 1) iterator_left = iterator_right + 2;
+	check_left = check;
+	iterator_left++;
+	if(iterator_left == 9) iterator_left = 0;
+	if(iterator_left == 10) iterator_left = 1;
 	var c = $('.central-item>img').attr('src');
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
@@ -688,7 +738,16 @@ $('.little-left-arrow').on('click', function(){
 
 	$('.central-item>img').attr('src', r);	
 	$('.left-picture img').attr('src', c);
-	$('.right-picture img').attr('src', l);
+	$('.right-picture img').attr('src', '/img/item-card/washes/' + item_card_washes[iterator_left] + '.png');
+
+	var centr = iterator_right + 1;
+	var right_text = iterator_right + 2;
+	if(centr == 9) centr = 0;
+	if(right_text == 9) right_text = 0;
+	if(right_text == 10) right_text = 1; 
+	$('.central-item-name').text(item_card_washes[centr]);	
+	$('.left-picture p').text(item_card_washes[iterator_right]);
+	$('.right-picture p').text(item_card_washes[right_text]);
 
 	$('.central-item>img').delay(300).fadeIn(300);	
 	$('.left-picture img').delay(300).fadeIn(300);
@@ -699,7 +758,15 @@ $('.little-left-arrow').on('click', function(){
 	}
 });
 
+var iterator_right_little = 0;
+
 $('.little-right-arrow').on('click', function(){
+	check++;
+	if(check - check_right > 1) iterator_right = iterator_left - 2;
+	check_right = check;
+	iterator_right--;
+	if(iterator_right == -1) iterator_right = 8;
+	if(iterator_right == -2) iterator_right = 7;
 	var c = $('.central-item>img').attr('src');
 	var l = $('.left-picture img').attr('src');
 	var r = $('.right-picture img').attr('src');
@@ -709,8 +776,17 @@ $('.little-right-arrow').on('click', function(){
 	$('.right-picture img').fadeOut(0);
 
 	$('.central-item>img').attr('src', l);	
-	$('.left-picture img').attr('src', r);
 	$('.right-picture img').attr('src', c);
+	$('.left-picture img').attr('src', '/img/item-card/washes/' + item_card_washes[iterator_right] + '.png');
+
+	var centr = iterator_right + 1;
+	var right_text = iterator_right + 2;
+	if(centr == 9) centr = 0;
+	if(right_text == 9) right_text = 0;
+	if(right_text == 10) right_text = 1; 
+	$('.central-item-name').text(item_card_washes[centr]);	
+	$('.left-picture p').text(item_card_washes[iterator_right]);
+	$('.right-picture p').text(item_card_washes[right_text]);
 
 	$('.central-item>img').delay(300).fadeIn(300);	
 	$('.left-picture img').delay(300).fadeIn(300);

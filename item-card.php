@@ -23,8 +23,8 @@
 					</div>
 					<div class="col-xl-3 col-lg-8 mx-lg-auto mg-t-20-lg lp-0">
 						<div class="left-picture">
-							<img src="/img/catalog/duolake.svg" alt="river">
-							<p class="helvetica16NoUpCaseBlack">River</p>
+							<img src="/img/item-card/washes/Creek.png" alt="creek">
+							<p class="helvetica16NoUpCaseBlack">Creek</p>
 						</div>
 						<div class="descript d-none d-md-block">
 							<h4 class="helvetica10UpCaseBDBDBD mg-b-18">Описание</h4>
@@ -52,7 +52,7 @@
 							<div class="left-arrow-item-card">
 								<img src="/img/item-card/left_arrow_black.png" alt="left-arrow">
 							</div>
-							<p class="helvetica24NoUpCaseBlack">Gult</p>
+							<p class="helvetica24NoUpCaseBlack central-item-name">Gulf</p>
 							<div class="right-arrow-item-card">
 								<img src="/img/item-card/right_arrow_black.png" alt="right-arrow">
 							</div>
@@ -68,7 +68,7 @@
 							<div>
 								<img src="/img/item-card/little-left-arrow.png" alt="left-arrow" class="d-sm-block d-md-none little-left-arrow">
 							</div>
-								<img src="/img/item-card/gult.png" alt="gult">
+								<img src="/img/item-card/washes/Gulf.png" alt="gulf">
 								<div class="image-to-basket">
 									<img src="/img/item-card/gult.png" alt="gult">
 								</div>
@@ -106,8 +106,8 @@
 						</div>
 					<div class="col-xl-3 rp-0 justify-content-xl-end col-lg-8 mx-lg-auto justify-content-lg-center d-md-flex flex-md-wrap col-md-8 mx-md-auto d-none">
 						<div class="right-picture">
-							<img src="/img/item-card/table-top-white.png" alt="duolake">
-							<p class="helvetica16NoUpCaseBlack">Duolake</p>
+							<img src="/img/item-card/washes/Lake.png" alt="lake">
+							<p class="helvetica16NoUpCaseBlack">Lake</p>
 						</div>
 						<div class="description_table">
 							<h4 class="helvetica10UpCaseBDBDBD">Параметры</h4>
